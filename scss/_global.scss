@@ -8,9 +8,11 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  background: url(../images/Homebg.png);
-    background-size:cover;
-    background-repeat: no-repeat;
+}
+.bg-about{
+  background: url(../images/About\ bg.png);
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .wrapper {

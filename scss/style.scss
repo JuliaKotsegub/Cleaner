@@ -765,7 +765,6 @@ form {
       0px 0px 16px -4px rgba(16, 24, 40, 0.08);
   }
   &__inner-title {
-    padding-top: 48px;
     align-items: start;
     width: 1010px;
   }
@@ -774,4 +773,19 @@ form {
     width: 140px;
     margin: 14px 16px;
   }
+  &__title{
+    padding-bottom: 48px;
+  }
 }
+
+
+// ---PAGE BLOG---
+
+.blog-top__inner {
+  padding: 96px 0;
+  display: flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+}
+
