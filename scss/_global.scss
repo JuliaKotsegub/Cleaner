@@ -97,3 +97,11 @@ body {
      color: $white;
      background-color: $color-orange;
    }
+   .menu__list-link:hover,
+   .menu__list-link:active{
+   transition: color 0.5s ease-in-out;
+  }
+   .menu__list-link:hover,
+  nav button.active{
+    color: $color-orange;
+   }

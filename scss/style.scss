@@ -625,19 +625,19 @@ form {
     border-radius: 15px;
     padding: 24px;
   }
-  &__arrow {
-    display: flex;
-    padding: 16px;
-    align-items: flex-start;
-    border-radius: 100px;
-    background: #fff;
-  }
   &__deploy[open] .deploy__arrow {
     transform: rotate(270deg);
   }
   &__info {
     width: 776px;
   }
+}
+.deploy__arrow {
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  border-radius: 100px;
+  background: #fff;
 }
 
 .question__deploy summary::-webkit-details-marker,
@@ -654,7 +654,7 @@ form {
 .descriptoin__inner {
   padding: 71px 0 56px;
 }
-
+.women-img,
 .bg-team__inner {
   max-height: 604px;
   background-repeat: no-repeat;
@@ -875,4 +875,24 @@ form {
     border: 1px solid $border-color;
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   }
+}
+
+//---PAGE SERVICES--
+
+
+.services-top__inner{
+  padding: 72px 0 56px;
+}
+
+.slider{
+  height: 551px;
+  padding-top: 88px;
+}
+.job__left-width{
+width: 487px;
+}
+
+.profitably__text-items{
+  padding-top: 24px;
+  color: #595959;
 }
