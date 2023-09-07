@@ -1,0 +1,87 @@
+html,
+body {
+  height: 100%;
+  font-family: "Manrope", sans-serif;
+  color: #060606;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  background: url(../images/Homebg.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1216px;
+  margin: 0 auto;
+}
+
+.title-top {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 80px;
+}
+.title-medium {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: capitalize;
+}
+
+.small-title {
+  color: $small-title;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.inner {
+  padding-top: 144px;
+}
+
+.color-orange {
+  color: $color-orange;
+}
+
+
+.button-offer {
+	display: flex;
+   padding: 12px 40px;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   border-radius: 100px;
+   background: rgba(249, 123, 34, 0.98);
+   color: $white;
+   font-size: 14px;
+   font-weight: 700;
+   letter-spacing: -0.04px;
+   }
+
+   .reviews-arrow:active,
+   .reviews-arrow:hover,
+   .carousel-arrow:active,
+   .carousel-arrow:hover{
+     color: $white;
+     background-color: $color-orange;
+   }

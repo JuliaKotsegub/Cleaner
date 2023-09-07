@@ -1,0 +1,29 @@
+$color-orange: #f97b22;
+$white: #fff;
+$light-grey: #414141;
+$border-color: #e7e8e9;
+$small-title: #101828;
+$small-text: #475467;
+
+%blog-text {
+  color: #7e7e7e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+
+%blog-data {
+  color: rgba(6, 6, 6, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@keyframes fade {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
