@@ -12,6 +12,26 @@
   line-height: 20px;
 }
 
+.text__item-title {
+  padding-bottom: 24px;
+  color: #101828;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.text__item-paragraph {
+  font-size: 18px;
+}
+
+.text__item-subtitle {
+  color: #101828;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
 @keyframes fade {
   from {
     opacity: 0.3;
@@ -120,6 +140,18 @@ body {
 
 .bg-about {
   background: url(../images/About\ bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-blog {
+  background: url(../images/Blog\ bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.article-bg {
+  background: url(../images/article/articlebg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -943,4 +975,84 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+}
+
+.article__data {
+  font-weight: 600;
+}
+
+.article-top__img {
+  padding-top: 57px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 516px;
+}
+
+.text__items {
+  padding: 0 104px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.text__item-paragraph {
+  font-size: 18px;
+}
+.text__item-subtitle {
+  padding-bottom: 16px;
+}
+.text__item-conclusion {
+  display: flex;
+  padding: 32px 32px 40px 32px;
+  flex-direction: column;
+  border-radius: 16px;
+  background: #F9FAFB;
+}
+.text__writer {
+  display: flex;
+  padding-top: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  border-top: 1px solid #eaecf0;
+}
+.text__writer-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.text__writer-name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.text__writer-position {
+  color: #595959;
+  font-weight: 400;
+  line-height: 24px;
+}
+.text__link-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.text__link {
+  padding: 10px 16px;
+  display: flex;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #e7e8e9;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.text__link-text {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.text__link-social {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e7e8e9;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }/*# sourceMappingURL=style.css.map */

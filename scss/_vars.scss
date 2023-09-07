@@ -4,6 +4,8 @@ $light-grey: #414141;
 $border-color: #e7e8e9;
 $small-title: #101828;
 $small-text: #475467;
+$article-title: #101828;
+$bg-conclusion: #F9FAFB;
 
 %blog-text {
   color: #7e7e7e;
@@ -17,6 +19,24 @@ $small-text: #475467;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
+}
+%article-title{
+  padding-bottom: 24px;
+  color:  $article-title;
+font-size: 30px;
+font-weight: 600;
+line-height: 40px; 
+}
+%article-paragraph{
+font-size: 18px;
+
+}
+%article-subtitle{
+  color: $article-title;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px;
 }
 
 @keyframes fade {
