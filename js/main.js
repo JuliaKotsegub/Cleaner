@@ -15,7 +15,7 @@ function animateValue(element, start, end, duration) {
 }
 
 const countElements = document.querySelectorAll(".count");
-const triggerElement = document.querySelector(".quality__left-item"); // Блок, який ви хочете використовувати як тригер для анімації
+const triggerElement = document.querySelector(".count-block"); // Блок, який ви хочете використовувати як тригер для анімації
 let hasTriggered = false;
 
 function startAnimationIfVisible() {

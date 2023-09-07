@@ -120,11 +120,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 49px;
 }
 
 .form-btn {
   width: 168px;
-  height: 48px;
+  height: 49px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -156,6 +157,7 @@ form {
 .bg__image {
   min-height: 600px;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .quality {
@@ -193,7 +195,16 @@ form {
 .tab-pane {
   display: none;
 }
+.tab-content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-content: center;
+}
 
+.block.double-width {
+  grid-column: span 2; /* This will make the block take up 2 columns */
+  grid-row: span 2; /* This will make the block take up 2 rows */
+}
 .tab-pane.active {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -636,4 +647,131 @@ form {
 
 .question__deploy summary {
   list-style: none;
+}
+
+// ---PAGE ABOUT----
+
+.descriptoin__inner {
+  padding: 71px 0 56px;
+}
+
+.bg-team__inner {
+  max-height: 604px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.why__img {
+  width: 32px;
+  height: 32px;
+  padding-bottom: 16px;
+}
+
+.advantages {
+  &__inner-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 73px;
+  }
+  &__inner-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 0;
+  }
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  &__text {
+    color: #595959;
+    font-size: 14px;
+    font-style: normal;
+  }
+}
+
+.asset {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding-top: 56px;
+  }
+  &__item {
+    padding: 24px 16px;
+    border-radius: 12px;
+    border: 1px solid $border-color;
+    background: url(../images/Home/bg-tab-block.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.photo {
+  overflow: hidden;
+  &__inner {
+    margin: 88px 0 144px;
+    width: 1440px;
+  }
+  &__items {
+    display: flex;
+    gap: 56px;
+    align-items: end;
+  }
+  &__item {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.photo-first-top,
+.photo__four-top {
+  padding-bottom: 32px;
+}
+
+.founder {
+  position: relative;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__inner-img {
+    position: absolute;
+    left: 0;
+  }
+  &__inner-right {
+    width: 592px;
+  }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px; /* 160% */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 4px 0 24px;
+  }
+}
+
+.about-form {
+  &__inner {
+    padding: 144px 0;
+  }
+  &__block {
+    padding: 48px 103px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03),
+      0px 0px 16px -4px rgba(16, 24, 40, 0.08);
+  }
+  &__inner-title {
+    padding-top: 48px;
+    align-items: start;
+    width: 1010px;
+  }
+  &__inner-title select {
+    align-items: center;
+    width: 140px;
+    margin: 14px 16px;
+  }
 }
