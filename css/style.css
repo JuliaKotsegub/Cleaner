@@ -385,10 +385,17 @@ form {
   line-height: 20px;
 }
 
+.bg {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .bg__image {
   min-height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .quality__block {
@@ -597,6 +604,10 @@ form {
   width: 592px;
 }
 
+.collage {
+  margin: 0 auto;
+  width: 100%;
+}
 .collage__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -869,6 +880,7 @@ form {
   max-height: 604px;
   background-repeat: no-repeat;
   background-size: contain;
+  width: 100%;
 }
 
 .why__img {
@@ -919,7 +931,7 @@ form {
 }
 .photo__inner {
   margin: 88px 0 144px;
-  width: 1440px;
+  width: 100%;
 }
 .photo__items {
   display: flex;
@@ -938,10 +950,16 @@ form {
 
 .founder {
   position: relative;
+  margin: 0 auto;
+}
+.founder__inner-left {
+  margin: 0 auto;
+  width: 100%;
 }
 .founder__inner {
   display: flex;
   justify-content: space-between;
+  gap: 112px;
 }
 .founder__inner-img {
   position: absolute;
