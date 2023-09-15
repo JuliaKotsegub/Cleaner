@@ -88,47 +88,6 @@ function showTab(tabIndex) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var slides = document.querySelectorAll('.carousel__slide');
-    var arrows = document.querySelectorAll('.carousel-arrow');
-    var currentSlide = 0;
-  
-    function showSlide(index) {
-      slides.forEach(function(slide) {
-        slide.classList.remove('active');
-      });
-      slides[index].classList.add('active');
-    }
-  
-    function prevSlide() {
-      currentSlide--;
-      if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
-      }
-      showSlide(currentSlide);
-    }
-  
-    function nextSlide() {
-      currentSlide++;
-      if (currentSlide >= slides.length) {
-        currentSlide = 0;
-      }
-      showSlide(currentSlide);
-    }
-  
-    arrows.forEach(function(arrow) {
-      arrow.addEventListener('click', function() {
-        if (this.classList.contains('prev')) {
-          prevSlide();
-        } else if (this.classList.contains('next')) {
-          nextSlide();
-        }
-      });
-    });
-  
-    showSlide(currentSlide);
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
     var slides = document.querySelectorAll('.carousel-slide');
     var arrows = document.querySelectorAll('.reviews-arrow');
     var currentSlide = 0;
@@ -170,6 +129,43 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+$(document).ready(function(){
+    $('.slider-container').slick({
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: true,
+        prevArrow: $('.carousel-arrow.next'), 
+        nextArrow: $('.carousel-arrow.prev'), 
+    });
+});
+
+
+// Slider 
+
+
+$(document).ready(function () {
+    var $slider = $('.collagge');
+
+    $slider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: true,
+      prevArrow: $('.collagge-arrow.prev'),
+      nextArrow: $('.collagge-arrow.next'),
+    });
+
+   
+    $('.dot').on('click', function () {
+      var index = $(this).index();
+      $slider.slick('slickGoTo', index);
+    });
 
     
-  
+    $slider.on('afterChange', function (event, slick, currentSlide) {
+      $('.dot').removeClass('active');
+      $('.dot').eq(currentSlide).addClass('active');
+    });
+  });

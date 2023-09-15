@@ -5,11 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quality cleaning</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Raleway:wght@700&display=swap"
-    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -45,9 +42,9 @@
             <li class="menu__list-item">
               <a class="menu__list-exit" href="#!">Увійти</a>
             </li>
-            <a class="menu__btn" href="#">
-              <div class="menu__btn-text">Замовити</div>
-            </a>
+          <li>  <a class="menu__btn" href="#">
+              Замовити
+            </a></li>
           </ul>
         </nav>
       </div>
@@ -56,7 +53,7 @@
 
   <div class="wrapper">
     <main class="main">
-      
+
       <section class="top">
         <div class="container">
           <div class="top__inner">
@@ -68,7 +65,7 @@
             <div class="form">
               <form>
                 <label class="label" for="selector1">Обрати послугу</label>
-                <select  class="select" id="selector1">
+                <select class="select" id="selector1">
                   <option class="option" value="варіант1"></option>
                   <option class="option" value="варіант2">Варіант 2</option>
                   <option class="option" value="варіант3">Варіант 3</option>
@@ -297,9 +294,9 @@
                 <h3 class="title-medium">
                   Клінерська професія <br> з перспективами
                 </h3>
-                <div class="button-offer">
+                <a class="button-offer">
                   Приєднатись
-                </div>
+                </a>
               </div>
               <div class="job__left">
                 <p class="job__left-text">
@@ -354,20 +351,21 @@
           </div>
           <div class="blog-box__items">
             <div class="blog-box__item">
-              <a class="blog-box__img-link" href="#"><img src="images/blog/1.jpg" alt=""></a>
-              <a class="blog-box__link-title" href="">
+              <a class="blog-box__img-link" href="#"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
+              <div class="blog-box__link-title" href="">
                 <h5 class="blog-box__item-title">Як підтримувати чистоту вдома?</h5>
-              </a>
-              <div class="blog-box__links">
-                <span class="blog-box__date">Понеділок, 20 вересня, 2022</span>
+
+                <div class="blog-box__links">
+                  <span class="blog-box__date">Понеділок, 20 вересня, 2022</span>
+                </div>
+                <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
+                  стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
+                  тижня. Переконайтесь, що чистота в домі – це просто.</p>
+                <a href="#" class="blog-box__blocks">
+                  <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
+                  <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
+                </a>
               </div>
-              <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
-                стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
-                тижня. Переконайтесь, що чистота в домі – це просто.</p>
-              <a href="#" class="blog-box__blocks">
-                <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
-                <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
-              </a>
             </div>
             <div class="blog-box__item">
               <a class="blog-box__img-link" href="#"><img src="images/blog/1.jpg" alt=""></a>
@@ -413,25 +411,42 @@
               <div class="partners__blocks-text">Ми цінуємо, що нам довіряють так багато людей та компаній. Quality
                 Cleaning потурбується про чистоту вашої оселі.</div>
             </div>
-            <div class="carousel__container">
-              <div class="carousel__slide active slide1">
-                <div class="carousel__slide-flex">
-                  <img class="carousel__slide-img" src="images/home/partners1.png" alt="" class="carousel__slide-img">
-                  <img class="carousel__slide-img" src="images/home/partners2.png" alt="" class="carousel__slide-img">
-                  <img class="carousel__slide-img" src="images/home/partners3.png" alt="" class="carousel__slide-img">
-                  <img class="carousel__slide-img" src="images/home/partners4.png" alt="" class="carousel__slide-img">
+            <div class="carousel__inner">
+              <div class="slider-container">
+              <div class="carousel__item active slide1">
+                <img class="carousel__slide-img" src="images/home/partners1.png" alt="" class="carousel__slide-img">
+              </div>
+              <div class="slide">
+                <img class="carousel__slide-img" src="images/home/partners2.png" alt="" class="carousel__slide-img">
+              </div>
+              <div class="slide ">
+                <img class="carousel__slide-img" src="images/home/partners3.png" alt="" class="carousel__slide-img">
+              </div>
+              <div class="slide">
+                <img class="carousel__slide-img" src="images/home/partners4.png" alt="" class="carousel__slide-img">
+              </div>
+              <div class="slide">
                   <img class="carousel__slide-img" src="images/home/partners5.png" alt="" class="carousel__slide-img">
-                  <img class="carousel__slide-img" src="images/home/partners6.png" alt="" class="carousel__slide-img">
-                  <img class="carousel__slide-img" src="images/home/partners7.png" alt="" class="carousel__slide-img">
                 </div>
+              <div class="slide">
+                <img class="carousel__slide-img" src="images/home/partners6.png" alt="" class="carousel__slide-img">
               </div>
-              <div class="carousel__slide active slide1">
-                <div class="carousel__slide-flex">
-                  <img class="carousel__slide-img" src="images/home/partners1.png" alt="" class="carousel__slide-img">
-                  <img class="carousel__slide-img" src="images/home/partners2.png" alt="" class="carousel__slide-img">
-                  <img class="carousel__slide-img" src="images/home/partners2.png" alt="" class="carousel__slide-img">
+              <div class="slide">
+                <img class="carousel__slide-img" src="images/home/partners2.png" alt="" class="carousel__slide-img">
+              </div>
+              <div class="slide ">
+                <img class="carousel__slide-img" src="images/home/partners3.png" alt="" class="carousel__slide-img">
+              </div>
+              <div class="slide">
+                <img class="carousel__slide-img" src="images/home/partners4.png" alt="" class="carousel__slide-img">
+              </div>
+              <div class="slide">
+                  <img class="carousel__slide-img" src="images/home/partners5.png" alt="" class="carousel__slide-img">
                 </div>
+              <div class="slide">
+                <img class="carousel__slide-img" src="images/home/partners6.png" alt="" class="carousel__slide-img">
               </div>
+            </div>
 
               <div class="carousel-arrows">
                 <div class="carousel-arrow next ">
@@ -541,7 +556,8 @@
                 <img src="images/Home/arrow_tab.png" alt="" class="deploy__arrow">
               </summary>
               <div class="deploy__info">
-                <p>Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще прогулятися, поки в його квартирі працює клінінг. </p>
+                <p>Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще
+                  прогулятися, поки в його квартирі працює клінінг. </p>
               </div>
             </details>
             <details class="question__deploy" onclick="this.classList.toggle('active')">
@@ -550,7 +566,8 @@
                 <img src="images/Home/arrow_tab.png" alt="" class="deploy__arrow">
               </summary>
               <div class="deploy__info">
-                <p> Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще прогулятися, поки в його квартирі працює клінінг. </p>
+                <p> Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще
+                  прогулятися, поки в його квартирі працює клінінг. </p>
               </div>
             </details>
             <details class="question__deploy" onclick="this.classList.toggle('active')">
@@ -559,7 +576,8 @@
                 <img src="images/Home/arrow_tab.png" alt="" class="deploy__arrow">
               </summary>
               <div class="deploy__info">
-                <p> Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще прогулятися, поки в його квартирі працює клінінг. </p>
+                <p> Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще
+                  прогулятися, поки в його квартирі працює клінінг. </p>
               </div>
             </details>
             <details class="question__deploy" onclick="this.classList.toggle('active')">
@@ -568,7 +586,8 @@
                 <img src="images/Home/arrow_tab.png" alt="" class="deploy__arrow">
               </summary>
               <div class="deploy__info">
-                <p> Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще прогулятися, поки в його квартирі працює клінінг. </p>
+                <p> Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще
+                  прогулятися, поки в його квартирі працює клінінг. </p>
               </div>
             </details>
             <details class="question__deploy" onclick="this.classList.toggle('active')">
@@ -577,7 +596,8 @@
                 <img src="images/Home/arrow_tab.png" alt="" class="deploy__arrow">
               </summary>
               <div class="deploy__info">
-                <p> Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще прогулятися, поки в його квартирі працює клінінг. </p>
+                <p> Де вам хочеться: хтось з наших клієнтів вважає за краще залишитися вдома, хтось вважає за краще
+                  прогулятися, поки в його квартирі працює клінінг. </p>
               </div>
             </details>
           </div>
@@ -614,8 +634,8 @@
                 <li>
                   <h6 class="footer__social-title">Соціальні мережі</h6>
                 </li>
-                <li class="footer__social-item"><a href="" class="footer_social-link"></a>Instagram</li>
-                <li class="footer__social-item"><a href="" class="footer_social-link"></a>Facebook</li>
+                <li class="footer__social-item"><a href="" class="footer_social-link">Instagram</a></li>
+                <li class="footer__social-item"><a href="" class="footer_social-link">Facebook</a></li>
               </ul>
               <ul class="footer__list">
                 <li>
@@ -636,8 +656,8 @@
         <div class="footer__copyright">
           <div class="footer__copyright-copy">© 2023 Quality Cleaning. Всі права захищено</div>
           <div class="footer__copyright-link">
-            <a href="#!">Політика приватності</a>
-            <a href="#!">Договір публічної оферти</a>
+            <a class="footer__copyright-l" href="#!">Політика приватності</a>
+            <a class="footer__copyright-l" href="#!">Договір публічної оферти</a>
           </div>
         </div>
       </div>
@@ -645,8 +665,11 @@
   </div>
 
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-  <script src="js/main.min.js">
+  <script src="js/main.js"> </script>
+  <script>
 
   </script>
 </body>

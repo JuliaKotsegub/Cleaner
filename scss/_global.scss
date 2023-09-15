@@ -90,6 +90,8 @@ body {
    letter-spacing: -0.04px;
    }
 
+.collagge-arrow:hover,
+   li a.menu__btn:active,
    .reviews-arrow:active,
    .reviews-arrow:hover,
    .carousel-arrow:active,
@@ -97,11 +99,56 @@ body {
      color: $white;
      background-color: $color-orange;
    }
-   .menu__list-link:hover,
-   .menu__list-link:active{
-   transition: color 0.5s ease-in-out;
-  }
-   .menu__list-link:hover,
+
+   .footer__copyright-l:hover,
+   .footer_social-link:hover,
+   .footer__info-tel:hover,
+   .footer__info-email:hover,
+   .footer_social-link:hover,
+  .menu__list-exit:hover,
+  .menu__list-link:hover,
   nav button.active{
     color: $color-orange;
    }
+
+   .button-offer,
+ li a.menu__btn{
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+  
+  }
+  .blog-box__blocks-text,
+  .blog-box__top-text,
+.menu__list-exit,
+li a.menu__btn,
+.menu__list-link,
+.menu__list-link {
+  transition: color 0.3s ease;
+}
+
+a.button-offer:active,
+a.menu__btn:active,
+.reviews-arrow:active,
+.reviews-arrow:hover,
+.carousel-arrow:active,
+.carousel-arrow:hover{
+  color: $white;
+  background-color: $color-orange;
+}
+
+
+a.menu__btn:hover{
+  border: 1px solid #FF974E;
+  background-color:  #FF974E;
+  color: $white;
+}
+.button-offer:hover{
+  background-color:  #FF974E;
+  color: $white;
+}
+
+.blog-box__blocks-text:hover,
+.blog-box__top-text:hover{
+  color: #FF974E;
+  // color: black;
+}

@@ -35,14 +35,8 @@
     border-radius: 100px;
     border: 1px solid $color-orange;
   }
-  &__btn-text {
-    color: $color-orange;
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: -0.04px;
-  }
 }
-.menu__btn .menu__btn-text {
+a.menu__btn {
   color: $color-orange;
   text-align: center;
   font-weight: 700;
@@ -154,8 +148,7 @@ form {
   line-height: 20px;
 }
 
-
-.bg{
+.bg {
   margin: 0 auto;
   width: 100%;
 }
@@ -204,13 +197,13 @@ form {
 }
 .tab-content {
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   align-content: center;
 }
 
 .block.double-width {
-  grid-column: span 2; /* This will make the block take up 2 columns */
-  grid-row: span 2; /* This will make the block take up 2 rows */
+  grid-column: span 2;
+  grid-row: span 2;
 }
 .tab-pane.active {
   display: grid;
@@ -450,13 +443,20 @@ form {
     grid-gap: 30px;
   }
   &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 16px;
     border-radius: 12px;
     border: 1px solid $border-color;
     background: $white;
   }
   &__img-link {
-    border-radius: 12px 12px 0px 0px;
+  }
+  &__img {
+    border-radius: 12px;
+    max-height: 208px;
   }
   &__link-title {
     font-size: 20px;
@@ -510,14 +510,18 @@ form {
     margin: 20px 35px;
     width: 104px;
     height: 104px;
+    object-fit: cover;
   }
 }
 .carousel-container,
 .carousel__container {
   position: relative;
   width: 100%;
-  height: 226px;
+  height: 100%;
   overflow: hidden;
+}
+.carousel__inner{
+  position: relative;
 }
 
 .carousel-slide,
@@ -526,7 +530,7 @@ form {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   animation: fade 1s;
 }
@@ -541,8 +545,8 @@ form {
   right: 0;
 }
 .carousel-arrows {
-  padding-top: 191px;
 }
+.collagge-arrow ,
 .reviews-arrow,
 .carousel-arrow {
   width: 32px;
@@ -611,6 +615,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    cursor: pointer;
   }
   &__deploy-name {
     display: flex;
@@ -668,7 +673,7 @@ form {
   max-height: 604px;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%; 
+  width: 100%;
 }
 
 .why__img {
@@ -743,10 +748,10 @@ form {
 .founder {
   position: relative;
   margin: 0 auto;
-  
-  &__inner-left{
-     margin: 0 auto;
-     width: 100%;
+
+  &__inner-left {
+    margin: 0 auto;
+    width: 100%;
   }
   &__inner {
     display: flex;
@@ -756,7 +761,6 @@ form {
   &__inner-img {
     position: absolute;
     left: 0;
-    
   }
   &__inner-right {
     width: 592px;
@@ -897,20 +901,105 @@ form {
 
 //---PAGE SERVICES--
 
-
-.services-top__inner{
+.services-top__inner {
   padding: 72px 0 56px;
 }
 
-.slider{
+.slider {
   height: 551px;
   padding-top: 88px;
 }
-.job__left-width{
-width: 487px;
+.job__left-width {
+  width: 487px;
 }
 
-.profitably__text-items{
+.profitably__text-items {
   padding-top: 24px;
   color: #595959;
+}
+
+
+.collagge-container {
+  margin: 0 auto;
+
+}
+.collagge {
+    padding-bottom: 24px;
+  padding-top: 88px;
+  border-radius: 16px;
+  
+}
+
+.collagge-content {
+height: 488px;
+  border-radius: 16px;
+  background-color:  #EFF3F9;;
+}
+
+.collagge-slide{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
+.collagge-slide:hover {
+  transform: scale(1.1); 
+  transition: transform 0.4s ease-in-out; 
+}
+
+
+.collagge-arrows {
+  display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 23px;
+}
+
+button.dot  {
+    border: none;
+    background-color: #F97B22; /* Оранжевий колір за замовчуванням */
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    transition: background-color 0.3s ease;
+    opacity: 0.3;
+}
+
+.dot.active {
+  opacity: 1;
+}
+.carousel-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  margin: 0 24px;
+}
+.collagge-content-btn {
+  width: 64px;
+height: 64px;
+position: absolute;
+right: 47.5%;
+
+}
+
+.collagge-content-right {
+  display: block;
+  width: 606px;
+  height: 488px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0 16px  16px 0;
+
+}
+.collagge-content-left {
+  display: block;
+  width: 606px;
+  height: 488px;
+  background-size: contain;
+  background-repeat: no-repeat;
+border-radius: 16px 0 0 16px;
 }
