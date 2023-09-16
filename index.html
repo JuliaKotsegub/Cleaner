@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quality cleaning</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -64,23 +66,30 @@
               затишку. </p>
             <div class="form">
               <form>
-                <label class="label" for="selector1">Обрати послугу</label>
-                <select class="select" id="selector1">
-                  <option class="option" value="варіант1"></option>
+                <div class="select-wrapper">
+                <select class="js-example-basic-single" id="selector1" data-hide-disabled="true">
+                  <option class="option" value="" disabled selected>Оберіть послугу</option>
+                  <option class="option" value="Звичайне прибирання">Звичайне прибирання</option>
+                  <option class="option" value="Миття вікон">Миття вікон</option>
+                  <option class="option" value="Кухня">Кухня</option>
+                  <option class="option" value="Після ремонту">Після ремонту</option>
+                  <option class="option" value="Хімчистка">Хімчистка</option>
+                </select></div>
+                <div class="select-wrapper">
+                <select class="js-example-basic-single" id="selector2">
+                  <option class="option" value="" disabled selected>Додаткові послуги:</option>
+                  <option class="option" value="варіант1">Варіант 1</option>
                   <option class="option" value="варіант2">Варіант 2</option>
                   <option class="option" value="варіант3">Варіант 3</option>
                 </select>
-                <label for="selector2">Додаткові послуги:</label>
-                <select id="selector2">
-                  <option class="option" value="варіант1"></option>
-                  <option class="option" value="варіант2">Варіант 2</option>
-                  <option class="option" value="варіант3">Варіант 3</option>
-                </select>
-                <label for="dateSelector">Обрати дату</label>
-                <input type="date" id="dateSelector">
-                <button type="submit" class="form-btn">Відправити</button>
+              </div>
+              <div class="select-wrapper">
+                <input type="text" id="datePicker" placeholder="Обрати дату">
+                <div id="selectedDate"></div>
+              </div>
+                <button type="submit" class="form-btn" placeholder="d-mm-yyyy">Відправити</button>
               </form>
-            </div>
+             </div>
           </div>
         </div>
       </section>
@@ -414,10 +423,10 @@
             <div class="carousel__inner">
               <div class="slider-container">
               <div class="carousel__item active slide1">
-                <img class="carousel__slide-img" src="images/home/partners1.png" alt="" class="carousel__slide-img">
+                <img class="carousel__slide-img" src="./images/home/partners1.png" alt="" class="carousel__slide-img">
               </div>
               <div class="slide">
-                <img class="carousel__slide-img" src="images/home/partners2.png" alt="" class="carousel__slide-img">
+                <img class="carousel__slide-img" src="./images/home/partners2.png" alt="" class="carousel__slide-img">
               </div>
               <div class="slide ">
                 <img class="carousel__slide-img" src="images/home/partners3.png" alt="" class="carousel__slide-img">
@@ -664,13 +673,33 @@
     </footer>
   </div>
 
-
+  
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/main.js"> </script>
+  <script src="js/datepicker-uk.js"></script>
   <script>
+ $(document).ready(function() {
+      $('.js-example-basic-single').select2();
+    });
+     $(document).ready(function() {
+    $('.js-example-basic-single').select2({
+      minimumResultsForSearch: Infinity
+    });
+  });
+  </script>
+  <script>
+   $(document).ready(function() {
+            $.datepicker.setDefaults($.datepicker.regional["uk"]);
+            $("#datePicker").datepicker({
+    showOtherMonths: true, 
+    selectOtherMonths: true, 
+}); 
 
+          });
+        
   </script>
 </body>
 
