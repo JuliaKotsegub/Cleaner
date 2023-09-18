@@ -167,3 +167,75 @@ $(document).ready(function () {
       $('.dot').eq(currentSlide).addClass('active');
     });
   });
+
+
+  // Slider Before/After
+
+  $("#slider").on("input change", (e)=>{
+    const sliderPos = e.target.value;
+    $('.foreground-img').css('width', `${sliderPos}%`)
+    $('.slider-button').css('left', `calc(${sliderPos}% - 32px)`)
+  });
+
+  // Form
+
+  $(document).ready(function () {
+    $.datepicker.setDefaults($.datepicker.regional["uk"]);
+    $("#datePicker").datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true,
+    });
+  });
+
+  const button = document.querySelector('#button');
+const select = document.querySelector("#dropdown");
+const options = document.querySelectorAll(".option");
+const selectLabel = document.querySelector('#select-label');
+
+button.addEventListener("click", function (e) {
+e.preventDefault();
+toggleHidden();
+});
+
+function toggleHidden() {
+select.classList.toggle("hidden");
+}
+
+options.forEach(function(option) {
+option.addEventListener("click", function (e) {
+  setSelectTitle(e);
+});
+});
+
+function setSelectTitle(e) {
+const labelElement = document.querySelector(`label[for="${e.target.id}"]`).innerText;
+selectLabel.innerText = labelElement;
+toggleHidden();
+};
+
+
+const buttonSecond = document.querySelector('#button-second');
+const selectSecond = document.querySelector("#dropdown-second");
+const optionsSecond = document.querySelectorAll(".option-second");
+const selectLabelSecond = document.querySelector('#select-label-second');
+
+buttonSecond.addEventListener("click", function (e) {
+e.preventDefault();
+toggleHiddenSecond();
+});
+
+function toggleHiddenSecond() {
+selectSecond.classList.toggle("hidden");
+}
+
+optionsSecond.forEach(function(option) {
+option.addEventListener("click", function (e) {
+  setSelectTitleSecond(e);
+});
+});
+
+function setSelectTitleSecond(e) {
+const labelElement = document.querySelector(`label[for="${e.target.id}"]`).innerText;
+selectLabelSecond.innerText = labelElement;
+toggleHiddenSecond();
+};

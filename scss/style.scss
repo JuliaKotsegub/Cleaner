@@ -341,8 +341,8 @@ input[type="submit"],
 }
 
 .block.double-width {
-  grid-column: span 2;
-  grid-row: span 2;
+  grid-column: span 1;
+  grid-row: span 4;
 }
 .tab-pane.active {
   display: grid;
@@ -1100,8 +1100,70 @@ button.dot {
   margin: 0 24px;
 }
 
- .collagge-content{
-  max-width: 1216px;
-  max-height: 488px;
- }
 
+ @mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collagge-content {
+  position: relative;
+  width: 1216px;
+  height: 488px;
+  border-radius: 16px;
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 1216px 100%;
+    border-radius: 16px;
+  }
+  .foreground-img {
+    width: 50%;
+    border-right: 2px solid #eff3f9 ;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  
+  .slider {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(#f2f2f2, .3);
+    outline: none;
+    margin: 0;
+    transition: all .2s;
+    @include center;
+    
+    &:hover {
+      background: rgba(#f2f2f2, .1);
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 2px;
+      height: 600px;
+      background: #eff3f900;
+      cursor: pointer;
+    }
+    &::-moz-range-thumb {
+      height: 600px;
+    }
+  }
+  
+  .slider-button {
+    $size: 64px;
+    pointer-events: none;
+    position: absolute;
+    width: $size;
+    height: $size;
+    left: calc(50% - 32px);
+    top: calc(50% - 32px);
+    @include center;
+  }
+}

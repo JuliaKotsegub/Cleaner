@@ -46,9 +46,9 @@
             <li class="menu__list-item">
               <a class="menu__list-exit" href="#!">Увійти</a>
             </li>
-            <div class="menu__btn">
-              <a class="menu__btn-text" href="#">Замовити</a>
-            </div>
+            <li> <a class="menu__btn" href="#">
+                Замовити
+              </a></li>
           </ul>
         </nav>
       </div>
@@ -126,22 +126,23 @@
           <div class="collagge-container">
             <div class="collagge">
               <div class="collagge-content"  id="page">
+                <div class="collagge-slide">
+                  <div class="img background-img" style="background-image: url(images/services/sliderforegtaumd.png);"></div>
+                  <div class="img foreground-img" style="background-image: url(images/services/clean.png);"></div>
+                  <input type="range" min="1" max="100" value="50" class="slider" name="slider" id="slider">
+                  <div class="slider-button" style="background-image: url(images/new/slider-arr.png);"></div>
+                </div>
+              </div>
+              <!-- <div class="collagge-content"  id="page">
                 <div class="collagge-slide wrapper">
                   <div class="before "> <img src="images/services/clean.png" alt="" class="content-image" draggable="false"/> </div>
                   <div class="after"> <img src="images/services/clean.png" alt="" class="content-image" draggable="false"/>  </div>
                   <div class="scroller"><img src="images/new/slider-arr.png" alt="" > </div>
                 </div>
-              </div>
-              <div class="collagge-content"  id="page">
-                <div class="collagge-slide wrapper">
-                  <div class="before "> <img src="images/services/clean.png" alt="" class="content-image" draggable="false"/> </div>
-                  <div class="after"> <img src="images/services/clean.png" alt="" class="content-image" draggable="false"/>  </div>
-                  <div class="scroller"><img src="images/new/slider-arr.png" alt="" > </div>
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
-          <div class="collagge-arrows ">
+          <!-- <div class="collagge-arrows ">
             <div class="collagge-arrow prev">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -160,7 +161,7 @@
                   d="M10.1668 16.8334L19.4751 16.8334L15.4084 20.9001C15.0834 21.2251 15.0834 21.7584 15.4084 22.0834C15.7334 22.4084 16.2584 22.4084 16.5834 22.0834L22.0751 16.5917C22.4001 16.2667 22.4001 15.7417 22.0751 15.4167L16.5834 9.92506C16.2584 9.60006 15.7334 9.60006 15.4084 9.92506C15.0834 10.2501 15.0834 10.7751 15.4084 11.1001L19.4751 15.1667L10.1668 15.1667C9.70843 15.1667 9.33343 15.5417 9.33343 16.0001C9.33343 16.4584 9.70843 16.8334 10.1668 16.8334Z" />
               </svg>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -171,22 +172,57 @@
               <h3 class="title-medium">Вартість послуги </h3>
               <h3 class="title-medium about-form__title color-orange"> від 1549 грн</h3>
               <div class="form">
-                <form class="about-form__inner-title">
-                  <label class="label" for="selector1">Обрати послугу</label>
-                  <select class="select" id="selector1">
-                    <option class="option" value="варіант1"></option>
-                    <option class="option" value="варіант2">Варіант 2</option>
-                    <option class="option" value="варіант3">Варіант 3</option>
-                  </select>
-                  <label for="selector2">Додаткові послуги:</label>
-                  <select id="selector2">
-                    <option class="option" value="варіант1"></option>
-                    <option class="option" value="варіант2">Варіант 2</option>
-                    <option class="option" value="варіант3">Варіант 3</option>
-                  </select>
-                  <label for="dateSelector">Обрати дату</label>
-                  <input type="date" id="dateSelector">
-                  <button type="submit" class="form-btn">Відправити</button>
+                <form>
+                  <div class="select-group">
+                    <button id="button" class="button">
+                      <span id="select-label">Оберіть послугу</span>
+                      <div id="arrow" class="arrow"></div>
+                    </button>
+                    
+                    <div class="dropdown hidden" id="dropdown">
+                      <input type="radio" id="select-cleaning" name="where" value="internet" class="option">
+                      <label for="select-cleaning" class="select-item">Звичайне прибирання</label>
+              
+                      <input type="radio" id="select-window" name="where" value="family" class="option">
+                      <label for="select-window" class="select-item">Миття вікон</label>
+                
+                      <input type="radio" id="select-repair" name="where" value="existing" class="option">
+                      <label for="select-repair" class="select-item">Після ремонту</label>
+  
+                      <input type="radio" id="select-dry" name="where" value="existing" class="option">
+                      <label for="select-dry" class="select-item">Хімчистка</label>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="select-group">
+                    <button id="button-second" class="button">
+                      <span id="select-label-second">Оберіть послугу</span>
+                      <div id="arrow-second" class="arrow"></div>
+                    </button>
+                    
+                    <div class="dropdown hidden" id="dropdown-second">
+                      <input type="radio" id="select-internet" name="where" value="internet" class="option-second">
+                      <label for="select-internet" class="select-item">Додаткові послуги:</label>
+              
+                      <input type="radio" id="select-family" name="where" value="family" class="option-second">
+                      <label for="select-family" class="select-item">Миття вікон</label>
+                
+                      <input type="radio" id="select-existing" name="where" value="existing" class="option-second">
+                      <label for="select-existing" class="select-item">Після ремонту</label>
+  
+                      <input type="radio" id="clean" name="where" value="existing" class="option-second">
+                      <label for="select-existing" class="select-item">Хімчистка</label>
+                    </div>
+                    
+                  </div>
+  
+                  <div class="select-wrapper">
+                    <input type="text" id="datePicker" placeholder="Обрати дату">
+                    <div id="selectedDate"></div>
+                  </div>
+  
+                  <input class="form-btn"  type="submit" value="Замовити" >
                 </form>
               </div>
             </div>
