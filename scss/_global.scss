@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600&family=Poppins&family=Roboto:wght@400;500&family=Rubik:wght@400;500;600&display=swap");
+
 html,
 body {
   height: 100%;
@@ -110,7 +112,7 @@ body {
   nav button.active{
     color: $color-orange;
    }
-
+   input[type=submit],
    .button-offer,
  li a.menu__btn{
     transition: background-color 0.3s ease;
@@ -125,7 +127,7 @@ li a.menu__btn,
 .menu__list-link {
   transition: color 0.3s ease;
 }
-
+input[type=submit]:active,
 a.button-offer:active,
 a.menu__btn:active,
 .reviews-arrow:active,
@@ -142,6 +144,7 @@ a.menu__btn:hover{
   background-color:  #FF974E;
   color: $white;
 }
+input[type=submit]:hover,
 .button-offer:hover{
   background-color:  #FF974E;
   color: $white;
@@ -151,4 +154,9 @@ a.menu__btn:hover{
 .blog-box__top-text:hover{
   color: #FF974E;
   // color: black;
+}
+
+input[type="submit"]:active {
+  color: $white;
+  background-color: $color-orange;
 }
