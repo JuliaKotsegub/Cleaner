@@ -11,19 +11,19 @@ body {
   font-weight: 400;
   line-height: 24px;
 }
-.bg-about{
+.bg-about {
   background: url(../images/About\ bg.png);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-.bg-blog{
+.bg-blog {
   background: url(../images/Blog\ bg.png);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-.article-bg{
+.article-bg {
   background: url(../images/article/articlebg.png);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -77,82 +77,83 @@ body {
   color: $color-orange;
 }
 
-
 .button-offer {
-	display: flex;
-   padding: 12px 40px;
-   justify-content: center;
-   align-items: center;
-   gap: 10px;
-   border-radius: 100px;
-   background: rgba(249, 123, 34, 0.98);
-   color: $white;
-   font-size: 14px;
-   font-weight: 700;
-   letter-spacing: -0.04px;
-   }
+  display: flex;
+  padding: 12px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: rgba(249, 123, 34, 0.98);
+  color: $white;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.04px;
+}
 
 .collagge-arrow:hover,
-   li a.menu__btn:active,
-   .reviews-arrow:active,
-   .reviews-arrow:hover,
-   .carousel-arrow:active,
-   .carousel-arrow:hover{
-     color: $white;
-     background-color: $color-orange;
-   }
+li a.menu__btn:active,
+.reviews-arrow:active,
+.reviews-arrow:hover,
+.carousel-arrow:active,
+.carousel-arrow:hover {
+  color: $white;
+  background-color: $color-orange;
+}
 
-   .footer__copyright-l:hover,
-   .footer_social-link:hover,
-   .footer__info-tel:hover,
-   .footer__info-email:hover,
-   .footer_social-link:hover,
-  .menu__list-exit:hover,
-  .menu__list-link:hover,
-  nav button.active{
-    color: $color-orange;
-   }
-   input[type=submit],
-   .button-offer,
- li a.menu__btn{
-    transition: background-color 0.3s ease;
-    transition: color 0.3s ease;
-  
-  }
-  .blog-box__blocks-text,
-  .blog-box__top-text,
+.footer__copyright-l:hover,
+.footer_social-link:hover,
+.footer__info-tel:hover,
+.footer__info-email:hover,
+.footer_social-link:hover,
+.menu__list-exit:hover,
+.menu__list-link:hover,
+nav button.active {
+  color: $color-orange;
+}
+
+
+input[type="submit"],
+.button-offer,
+li a.menu__btn {
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.blog-box__blocks-text,
+.blog-box__top-text,
 .menu__list-exit,
 li a.menu__btn,
 .menu__list-link,
 .menu__list-link {
   transition: color 0.3s ease;
 }
-input[type=submit]:active,
+input[type="submit"]:active,
 a.button-offer:active,
 a.menu__btn:active,
 .reviews-arrow:active,
 .reviews-arrow:hover,
 .carousel-arrow:active,
-.carousel-arrow:hover{
+.carousel-arrow:hover {
   color: $white;
   background-color: $color-orange;
 }
 
-
-a.menu__btn:hover{
-  border: 1px solid #FF974E;
-  background-color:  #FF974E;
+a.menu__btn:hover {
+  border: 1px solid #ff974e;
+  background-color: #ff974e;
   color: $white;
 }
-input[type=submit]:hover,
-.button-offer:hover{
-  background-color:  #FF974E;
+.subwrap:hover .subsubtext,
+ .subwrap:hover,
+input[type="submit"]:hover,
+.button-offer:hover {
+  background-color: #ff974e;
   color: $white;
 }
 
 .blog-box__blocks-text:hover,
-.blog-box__top-text:hover{
-  color: #FF974E;
+.blog-box__top-text:hover {
+  color: #ff974e;
   // color: black;
 }
 

@@ -184,6 +184,7 @@ $(document).ready(function () {
     $("#datePicker").datepicker({
       showOtherMonths: true,
       selectOtherMonths: true,
+      minDate: 0 
     });
   });
 
