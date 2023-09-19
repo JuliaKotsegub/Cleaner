@@ -14,6 +14,13 @@
   .footer__social-item {
     width: 100%;
   }
+  .top__inner{
+    padding: 0 40px;
+    text-align: center;
+  }
+  form {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 790px) {
@@ -40,6 +47,15 @@
   .footer__social-title{
      font-size: 16px;
      padding-bottom: 10px;
+  }
+  .title-top{
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .top__inner-text{
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
   }
 }
 
@@ -128,4 +144,18 @@
     text-align: left;
     padding-bottom: 10px;
   }
+  .title-top{
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .top__inner-text{
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+  .top{
+    margin-top: -350px;
+  }
+ 
+  
 }
