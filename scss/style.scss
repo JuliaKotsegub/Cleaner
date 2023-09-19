@@ -11,6 +11,9 @@
     align-items: center;
     margin: 24px 0;
   }
+  &__btn-menu{
+    display: none;
+  }
 }
 .menu {
   &__list {
@@ -1431,3 +1434,6 @@ button.dot {
     @include center;
   }
 }
+
+@import 'media';
+
