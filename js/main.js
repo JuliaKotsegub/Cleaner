@@ -194,26 +194,32 @@ const options = document.querySelectorAll(".option");
 const selectLabel = document.querySelector('#select-label');
 
 button.addEventListener("click", function (e) {
-e.preventDefault();
-toggleHidden();
+  e.preventDefault();
+  toggleHidden(select);
 });
 
-function toggleHidden() {
-select.classList.toggle("hidden");
+options.forEach(function (option) {
+  option.addEventListener("click", function (e) {
+    setSelectTitle(e);
+    toggleHidden(select);
+  });
+});
+
+function toggleHidden(targetSelect) {
+  // Закрити всі селектори, крім вказаного в аргументі
+  const allSelects = document.querySelectorAll(".dropdown");
+  allSelects.forEach(function (select) {
+    if (select !== targetSelect) {
+      select.classList.add("hidden");
+    }
+  });
+  targetSelect.classList.toggle("hidden");
 }
 
-options.forEach(function(option) {
-option.addEventListener("click", function (e) {
-  setSelectTitle(e);
-});
-});
-
 function setSelectTitle(e) {
-const labelElement = document.querySelector(`label[for="${e.target.id}"]`).innerText;
-selectLabel.innerText = labelElement;
-toggleHidden();
-};
-
+  const labelElement = document.querySelector(`label[for="${e.target.id}"]`).innerText;
+  selectLabel.innerText = labelElement;
+}
 
 const buttonSecond = document.querySelector('#button-second');
 const selectSecond = document.querySelector("#dropdown-second");
@@ -221,22 +227,78 @@ const optionsSecond = document.querySelectorAll(".option-second");
 const selectLabelSecond = document.querySelector('#select-label-second');
 
 buttonSecond.addEventListener("click", function (e) {
-e.preventDefault();
-toggleHiddenSecond();
+  e.preventDefault();
+  toggleHidden(selectSecond);
 });
 
-function toggleHiddenSecond() {
-selectSecond.classList.toggle("hidden");
-}
-
-optionsSecond.forEach(function(option) {
-option.addEventListener("click", function (e) {
-  setSelectTitleSecond(e);
-});
+optionsSecond.forEach(function (option) {
+  option.addEventListener("click", function (e) {
+    setSelectTitleSecond(e);
+    toggleHidden(selectSecond);
+  });
 });
 
 function setSelectTitleSecond(e) {
-const labelElement = document.querySelector(`label[for="${e.target.id}"]`).innerText;
-selectLabelSecond.innerText = labelElement;
-toggleHiddenSecond();
-};
+  const labelElement = document.querySelector(`label[for="${e.target.id}"]`).innerText;
+  selectLabelSecond.innerText = labelElement;
+}
+
+
+// Menu dropdown 
+
+var a_parent = document.querySelectorAll(".a_parent");
+var dd_menu_a = document.querySelectorAll(".dd_menu_a");
+
+a_parent.forEach(function (aitem) {
+
+  aitem.addEventListener("click", function () {
+    a_parent.forEach(function (aitem) {
+      aitem.classList.remove("active");
+    })
+    dd_menu_a.forEach(function (dd_menu_item) {
+      dd_menu_item.classList.remove("active");
+    })
+    aitem.classList.add("active");
+  })
+})
+
+dd_menu_a.forEach(function (dd_menu_item) {
+
+  dd_menu_item.addEventListener("click", function () {
+    dd_menu_a.forEach(function (dd_menu_item) {
+      dd_menu_item.classList.remove("active");
+    })
+    dd_menu_item.classList.add("active");
+  })
+})
+const allLinks = document.querySelectorAll(".tabs a");
+const allTabs = document.querySelectorAll(".tab-content")
+const tabContentWrapper = document.querySelector(".tab-content-wrapper");
+
+const shiftTabs = (linkId) => {
+  allTabs.forEach((tab, i) => {
+
+    if (tab.id.includes(linkId)) {
+      allTabs.forEach((tabItem) => {
+        tabItem.style = `transform: translateY(-${i * 300}px);`;
+      });
+    }
+  });
+}
+
+allLinks.forEach((elem) => {
+  elem.addEventListener('click', function () {
+    const linkId = elem.id;
+    const hrefLinkClick = elem.href;
+
+    allLinks.forEach((link, i) => {
+      if (link.href == hrefLinkClick) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    shiftTabs(linkId);
+  });
+});

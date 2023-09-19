@@ -10,7 +10,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Raleway:wght@700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="bg-blog">
@@ -21,14 +25,123 @@
         <a href="#">
           <img class="logo" src="images/logo.png" alt="Logo">
         </a>
-        <nav class="menu">
+
+
+        <nav class="menu navbar">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a class="menu__list-link" href="index.html">Головна</a>
+              <a class="menu__list-link a_parent" href="index.html">
+                <span>Головна</span>
+              </a>
             </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="services.html">Послуги</a>
+            <li class="menu__list-item dd_menu-activ">
+              <a class="menu__list-link a_parent " href="#!">
+                <span>Послуги</span>
+                <span class="a_parent-arrow">
+                  <img src="images/new/arrow_drop_up.png" alt="">
+                </span>
+              </a>
+              <div class="dd_menu">
+                <div class="dd_menu-wrapper">
+                  <div class="content">
+                    <input type="radio" name="slider" checked id="home">
+                    <input type="radio" name="slider" id="blog">
+                    <div class="list">
+                      <label for="home" class="home">
+                        <span class="menu-title">Квартира</span>
+                        <span class="menu-text">Допоможемо підтримувати чистоту у квартирі або будинку, щоб ви не
+                          відчували зайвих клопіт, а насолоджувалимь чистим домом.</span>
+                      </label>
+                      <label for="blog" class="blog">
+                        <span class="menu-title">Офіс</span>
+                        <span class="menu-text">Послуги клінінгу – відмінний спосіб вирішити питання прибирання офісів
+                          та інших робочих приміщень раз і назавжди.</span>
+                      </label>
+                      <div class="slider"></div>
+                    </div>
+
+                    <div class="text-content">
+                      <div class="home text">
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu1.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Звичайне прибирання</span>
+                            <span class="menu-info-text">Підтримати загальний рівень комфорту</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu2.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Після ремонту</span>
+                            <span class="menu-info-text">Догляд за оновленим житлом</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu3.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Миття вікон</span>
+                            <span class="menu-info-text">Професійне миття вікон</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu4.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Хімчистка</span>
+                            <span class="menu-info-text">Допомога при забруженнях меблів</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img class="menu-img" src="images/services/submenu5.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Кухня</span>
+                            <span class="menu-info-text">Прибирання всієї  кухні</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="blog text">
+                        <a href="services.html" class="text-content-link">
+                          <img class="menu-img" src="images/services/submenu5.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Кухня</span>
+                            <span class="menu-info-text">Прибирання всієї  кухні</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu1.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Звичайне прибирання</span>
+                            <span class="menu-info-text">Підтримати загальний рівень комфорту</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu3.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Миття вікон</span>
+                            <span class="menu-info-text">Професійне миття вікон</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu4.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Хімчистка</span>
+                            <span class="menu-info-text">Допомога при забруженнях меблів</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu2.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title">Після ремонту</span>
+                            <span class="menu-info-text">Догляд за оновленим житлом</span>
+                          </div>
+                        </a>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
+
             <li class="menu__list-item">
               <a class="menu__list-link" href="about.html">Про нас</a>
             </li>
@@ -66,7 +179,7 @@
           <div class="blog-top-items">
             <div class="blog-box__items">
               <div class="blog-box__item">
-                <a class="blog-box__img-link" href="#"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
+                <a class="blog-box__img-link" href="article.html"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
                 <div class="blog-box__link-title" href="">
                   <h5 class="blog-box__item-title">Як підтримувати чистоту вдома?</h5>
   
@@ -76,14 +189,14 @@
                   <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
                     стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
-                  <a href="#" class="blog-box__blocks">
+                  <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
                     <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
               <div class="blog-box__item">
-                <a class="blog-box__img-link" href="#"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
+                <a class="blog-box__img-link" href="article.html"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
                 <div class="blog-box__link-title" href="">
                   <h5 class="blog-box__item-title">Як підтримувати чистоту вдома?</h5>
   
@@ -93,14 +206,14 @@
                   <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
                     стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
-                  <a href="#" class="blog-box__blocks">
+                  <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
                     <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
               <div class="blog-box__item">
-                <a class="blog-box__img-link" href="#"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
+                <a class="blog-box__img-link" href="article.html"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
                 <div class="blog-box__link-title" href="">
                   <h5 class="blog-box__item-title">Як підтримувати чистоту вдома?</h5>
   
@@ -110,14 +223,14 @@
                   <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
                     стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
-                  <a href="#" class="blog-box__blocks">
+                  <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
                     <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
               <div class="blog-box__item">
-                <a class="blog-box__img-link" href="#"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
+                <a class="blog-box__img-link" href="article.html"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
                 <div class="blog-box__link-title" href="">
                   <h5 class="blog-box__item-title">Як підтримувати чистоту вдома?</h5>
   
@@ -127,14 +240,14 @@
                   <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
                     стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
-                  <a href="#" class="blog-box__blocks">
+                  <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
                     <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
               <div class="blog-box__item">
-                <a class="blog-box__img-link" href="#"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
+                <a class="blog-box__img-link" href="article.html"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
                 <div class="blog-box__link-title" href="">
                   <h5 class="blog-box__item-title">Як підтримувати чистоту вдома?</h5>
   
@@ -144,14 +257,14 @@
                   <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
                     стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
-                  <a href="#" class="blog-box__blocks">
+                  <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
                     <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
               <div class="blog-box__item">
-                <a class="blog-box__img-link" href="#"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
+                <a class="blog-box__img-link" href="article.html"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
                 <div class="blog-box__link-title" href="">
                   <h5 class="blog-box__item-title">Як підтримувати чистоту вдома?</h5>
   
@@ -161,14 +274,14 @@
                   <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
                     стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
-                  <a href="#" class="blog-box__blocks">
+                  <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
                     <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
               <div class="blog-box__item">
-                <a class="blog-box__img-link" href="#"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
+                <a class="blog-box__img-link" href="article.html"><img class="blog-box__img" src="images/blog/1.jpg" alt=""></a>
                 <div class="blog-box__link-title" href="">
                   <h5 class="blog-box__item-title">Як підтримувати чистоту вдома?</h5>
   
@@ -178,7 +291,7 @@
                   <p class="blog-box__item-text">Якщо ви щодня виділятимете десять хвилин на прибирання, то чистота в домі
                     стане нормою. Тоді не потрібно буде докладати зайвих зусиль для генерального прибирання наприкінці
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
-                  <a href="#" class="blog-box__blocks">
+                  <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
                     <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
                   </a>
@@ -316,7 +429,11 @@
 
 
 
-  <script src="js/main.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/datepicker-uk.js"></script>
+  <script src="js/main.js"> </script>
 </body>
 
 </html>
