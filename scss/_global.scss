@@ -151,6 +151,7 @@ input[type="submit"]:hover,
   color: $white;
 }
 
+.menu__list-link:focus,
 .blog-box__blocks-text:hover,
 .blog-box__top-text:hover {
   color: #ff974e;

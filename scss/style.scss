@@ -21,6 +21,7 @@
   &__list-link {
     font-weight: 500;
     letter-spacing: -0.256px;
+    display: flex;
   }
   &__list-exit {
     font-size: 15px;
@@ -56,8 +57,23 @@ a.menu__btn {
   right: 720px;
 	display: none;
   z-index: 1;
- 
 }
+
+.navbar .a_parent.active span,
+.navbar .a_parent:hover span {
+    color: $color-orange; 
+}
+
+.navbar .a_parent .a_parent-arrow img {
+  display: none;
+}
+
+.navbar .a_parent:hover .a_parent-arrow img,
+.navbar .a_parent.active .a_parent-arrow img {
+  display: block;
+}
+
+
 .dd_menu-wrapper{
  width: 736px;
 height: 472px;
@@ -82,27 +98,15 @@ padding: 8px;
 	display: block;
 }
 
-
-// ::selection{
-//   background: rgba(187, 134, 252, 0.5);
-//   color: #FFF;
-// }
-
 .dd_menu-wrapper{
  max-width: 736px;
-height: 432px;
+height: 409px;
 border-radius: 4px;
 background: #EFF3F9;
 display: block;
 padding: 8px;
 }
 
-// .dd_menu-wrapper .topic{
-//   font-size: 30px;
-//   font-weight: 500;
-//   margin-bottom: 120px;
-//   color: #000;
-// }
 
 .content input{
   display: none;
