@@ -163,6 +163,29 @@
       max-width: 592px;
     }
   }
+  .question {
+    &__inner {
+      padding: 100px 0;
+    }
+
+    &__deploy[open] {
+      padding: 20px;
+    }
+    &__deploy:not([open]) {
+      padding: 20px;
+    }
+  }
+  .deploy__info-text {
+    font-size: 14px;
+    max-width: 80%;
+    line-height: 20px;
+  }
+  
+  .deploy__subtitle {
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 16px;
+  }
   
 }
 
@@ -490,6 +513,28 @@ padding-bottom: 10px;
   }
   .blog-box__items{
     grid-template-columns: repeat(1, 1fr);
+  }
+  .question {
+    &__inner {
+      padding: 60px 0;
+    }
+
+    &__deploy[open] {
+      padding: 10px;
+    }
+    &__deploy:not([open]) {
+      padding: 10px;
+    }
+  }
+  .deploy__info-text {
+    font-size: 12px;
+    max-width: 80%;
+    line-height: 20px;
+  }
+  
+  .deploy__subtitle {
+    line-height: 20px;
+    font-size: 14px;
   }
 }
 
