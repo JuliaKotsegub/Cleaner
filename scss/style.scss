@@ -529,7 +529,7 @@ input[type="submit"],
   width: 100%;
 }
 .bg__image {
-  min-height: 600px;
+  max-height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -548,9 +548,6 @@ input[type="submit"],
     align-items: flex-start;
     justify-content: space-between;
     gap: 73px;
-  }
-  &__left-item {
-    width: 135px;
   }
   &__left-number {
     font-size: 36px;
