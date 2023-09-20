@@ -20,21 +20,27 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
+<div class="header__inner-blocks">
         <a href="#">
           <img class="logo" src="images/logo.png" alt="Logo">
         </a>
-
+        <button class="header__btn-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+           </button>
+</div>
 
         <nav class="menu navbar">
           <ul class="menu__list">
             <li class="menu__list-item">
               <a class="menu__list-link a_parent" href="index.html">
-                <span>Головна</span>
+                <span class="menu__list-nav">Головна</span>
               </a>
             </li>
             <li class="menu__list-item dd_menu-activ">
               <a class="menu__list-link a_parent " href="#!">
-                <span>Послуги</span>
+                <span class="menu__list-nav">Послуги</span>
                 <span class="a_parent-arrow">
                   <img src="images/new/arrow_drop_up.png" alt="">
                 </span>
@@ -141,29 +147,38 @@
             </li>
 
             <li class="menu__list-item">
-              <a class="menu__list-link" href="about.html">Про нас</a>
+              <a class="menu__list-link" href="about.html">
+                <span class="menu__list-nav"> Про нас</span>
+              </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="blog.html">Блог</a>
+              <a class="menu__list-link" href="blog.html">
+                <span class="menu__list-nav"> Блог</span>
+              </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#!">Клінерам</a>
+              <a class="menu__list-link" href="#!">
+                <span class="menu__list-nav">Клінерам</span> 
+              </a>
             </li>
           </ul>
         </nav>
-    
-
+  
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__list-item">
               <a class="menu__list-exit" href="#!">Увійти</a>
             </li>
-            <li> <a class="menu__btn" href="#">
+            <li class="menu__list-btn">
+               <a class="menu__btn" href="#">
                 Замовити
-              </a></li>
+              </a>
+            </li>
           </ul>
         </nav>
+
       </div>
+     
     </div>
   </header>
 
@@ -174,7 +189,7 @@
         <div class="container">
           <div class="services-top__inner">
             <div class="job__inner-block">
-              <div>
+              <div class="job__inner-title">
                 <h3 class="title-medium color-orange">Квартира </h3>
                 <h3 class="title-medium"> Прибирання кухні</h3>
               </div>
@@ -193,7 +208,7 @@
 
       <section class="women-img">
         <div class="container">
-          <img src="images/services/clean.png" alt="">
+          <img class="women-img-bg" src="images/services/clean.png" alt="">
         </div>
       </section>
 
@@ -226,7 +241,7 @@
       <section class="colage-title">
         <div class="container inner">
           <div class="job__inner-block">
-            <div class="">
+            <div class="job__inner-title">
               <h3 class="title-medium"> Результати наших робіт </h3>
             </div>
             <div class="job__left">
@@ -351,9 +366,9 @@
 
       <section class="profitably">
         <div class="container">
-          <div class="job__inner-block">
-            <div>
-              <h3 class="title-medium ">Чому Клінінг Кухні Вигідний? </h3>
+           <h3 class="title-medium ">Чому Клінінг Кухні Вигідний? </h3>
+          <div class="profitably-items">
+            <div class="profitably-left">
               <div class="profitably__text-items">
                 <p class="profitably__text">Чистота кухні - це не тільки естетичний аспект, але й питання гігієни та
                   безпеки. Це насамперед, здоров'я і гігієна. Кухня - це місце, де готується їжа, ідеальне середовище
@@ -368,10 +383,8 @@
                   прибирання. Таким чином, прибирання кухні - це інвестиція в ваше здоров'я, комфорт та безпеку.</p>
               </div>
             </div>
-            <div class="job__left">
-              <p class="job__left-text">
-                <img src="images/services/kitchen 1.png" alt="">
-              </p>
+            <div class="profitably-img">
+                <img class="job__left" src="images/services/kitchen 1.png" alt="">
             </div>
           </div>
         </div>
@@ -441,6 +454,7 @@
       <div class="footer__content">
         <div class="container">
           <div class="footer__inner">
+            
             <div class="footer__info">
               <a href="#">
                 <img class="footer__logo" src="images/logo.png" alt="Logo">
@@ -448,7 +462,6 @@
               <a href="tel:+380994484498" class="footer__info-tel">+38 099 448 44 98</a>
               <a href="mailto:treef.td@gmail.com" class="footer__info-email">treef.td@gmail.com</a>
             </div>
-            <div class="footer__right">
               <nav class="footer__menu">
                 <ul class="footer__list">
                   <li>
@@ -465,8 +478,8 @@
                 <li>
                   <h6 class="footer__social-title">Соціальні мережі</h6>
                 </li>
-                <li class="footer__social-item"><a href="" class="footer_social-link"></a>Instagram</li>
-                <li class="footer__social-item"><a href="" class="footer_social-link"></a>Facebook</li>
+                <li class="footer__social-item"><a href="" class="footer_social-link">Instagram</a></li>
+                <li class="footer__social-item"><a href="" class="footer_social-link">Facebook</a></li>
               </ul>
               <ul class="footer__list">
                 <li>
@@ -482,13 +495,12 @@
             </div>
           </div>
         </div>
-      </div>
       <div class="container">
         <div class="footer__copyright">
           <div class="footer__copyright-copy">© 2023 Quality Cleaning. Всі права захищено</div>
           <div class="footer__copyright-link">
-            <a href="#!">Політика приватності</a>
-            <a href="#!">Договір публічної оферти</a>
+            <a class="footer__copyright-l" href="#!">Політика приватності</a>
+            <a class="footer__copyright-l" href="#!">Договір публічної оферти</a>
           </div>
         </div>
       </div>

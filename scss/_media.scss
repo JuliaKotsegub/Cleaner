@@ -190,6 +190,15 @@
     line-height: 30px;
     font-size: 16px;
   }
+  .job__inner-title{
+    padding-bottom: 30px;
+  }
+  .profitably-items{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 24px;
+  }
   
 }
 
@@ -200,8 +209,8 @@
 @media (max-width: 790px) {
   .menu__list-exit,
   .menu__list {
-    gap: 10px;
-    font-size: 14px;
+    gap: 8px;
+    font-size: 12px;
     padding-bottom: 10px;
   }
   .header__btn-menu {
@@ -363,6 +372,10 @@
   .carousel-slide{
     padding-bottom: 40px;
   }
+  .asset__items{
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 
@@ -463,8 +476,15 @@
     line-height: 16px;
     text-align: center;
   }
+
+  
+  .blog-top__inner{
+    margin-top: -420px;
+  }
+
+.services-top__inner,
   .top {
-    margin-top: -350px;
+    margin-top: -370px;
   }
   .inner {
     padding-top: 60px 10px;  
@@ -566,6 +586,9 @@ padding-bottom: 10px;
   }
   .partners__blocks-text {
     max-width: 380px;
+  }
+  .job__inner-title{
+    padding-bottom: 20px;
   }
 }
 
