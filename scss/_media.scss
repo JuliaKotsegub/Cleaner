@@ -15,12 +15,39 @@
     width: 100%;
   }
   .top__inner{
-    padding: 0 40px;
+    padding: 40px;
     text-align: center;
+  } 
+  .top__inner-text{
+    text-align: center;
+    padding: 20px 10px;
   }
-  form {
+   form {
+    margin-top: 40px;
     flex-wrap: wrap;
+    width: fit-content;
+
   }
+  .select-wrapper #datePicker{
+    padding-right: 22px;
+    border: 1px solid $border-color;
+  }
+  input[type="submit"],
+.form-btn {
+  justify-content: center;
+  align-items: center;
+  max-width: 31px;
+  text-align: center;
+  padding-left: 15px;
+  border: 1px solid $border-color;
+}
+.button,
+input[type="text"] {
+ gap: 20px;
+ max-width: 147px;
+ white-space: nowrap;
+}
+
 }
 
 @media (max-width: 790px) {
@@ -51,12 +78,34 @@
   .title-top{
     font-size: 40px;
     line-height: 40px;
+    padding: 30px 0;
   }
   .top__inner-text{
     font-size: 12px;
     line-height: 16px;
-    text-align: center;
+    padding: 10px;
   }
+  form {
+    display: block;
+    width: fit-content;
+    border: none;
+  }
+  input[type="submit"],
+.form-btn {
+  border-radius:8px;
+  max-width: 170px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.button,
+input[type="text"] {
+ gap: 20px;
+ max-width: 170px;
+ height: 100%;
+ white-space: nowrap;
+ border-right: none;
+
+}
 }
 
 @media (max-width: 610px) {
@@ -105,26 +154,25 @@
   .menu__list {
     display: block;
     padding-top: 10px;
-    align-items: center;
-    text-align: center;
   }
   .menu__list li,
-  .menu__list,
-  .menu__list-nav {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-  .menu__list-link {
-    padding: 10px 0;
+  .menu__list{
+  margin: 0 auto;
   }
   .menu__btn {
     text-align: center;
     width: 60px;
     margin: 20px auto;
   }
-  .menu__list-btn {
+  .a_parent {
     padding-bottom: 10px;
+  }
+  .menu__list-link{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: left; 
+    padding: 10px 0;
   }
 
   .footer__copyright-link{
@@ -147,6 +195,7 @@
   .title-top{
     font-size: 32px;
     line-height: 32px;
+  
   }
   .top__inner-text{
     font-size: 12px;
