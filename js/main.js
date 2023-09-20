@@ -286,23 +286,19 @@ const shiftTabs = (linkId) => {
   });
 }
 
-allLinks.forEach((elem) => {
-  elem.addEventListener('click', function () {
-    const linkId = elem.id;
-    const hrefLinkClick = elem.href;
+const ddMenuActivators = document.querySelectorAll(".menu__list-item.dd_menu-activ");
 
-    allLinks.forEach((link, i) => {
-      if (link.href == hrefLinkClick) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove('active');
-      }
-    });
+ddMenuActivators.forEach(function (activator) {
+  activator.addEventListener("mouseenter", function () {
+    const ddMenu = activator.querySelector(".dd_menu");
+    ddMenu.style.display = "block";
+  });
 
-    shiftTabs(linkId);
+  activator.addEventListener("mouseleave", function () {
+    const ddMenu = activator.querySelector(".dd_menu");
+    ddMenu.style.display = "none";
   });
 });
-
 
 // Media nav
 

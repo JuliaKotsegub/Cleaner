@@ -55,11 +55,12 @@ a.menu__btn {
 
 .navbar .dd_menu{
 	position: absolute;
-	top: 80px;
+	top: 60px;
 	left: 380px;
   right: 720px;
 	display: none;
   z-index: 1;
+  padding: 20px 0;
 }
 
 .navbar .a_parent.active span,
@@ -67,29 +68,43 @@ a.menu__btn {
     color: $color-orange; 
 }
 
-.navbar .a_parent .a_parent-arrow img {
+
+
+.navbar .menu__list-item.dd_menu-activ .a_parent .a_parent-arrow img {
+  transform: rotate(180deg);
+}
+
+.navbar .menu__list-item.dd_menu-activ:hover .a_parent .a_parent-arrow img {
+  transform: rotate(0deg);
+}
+
+.navbar .menu__list-item.dd_menu-activ .dd_menu {
   display: none;
 }
 
-.navbar .a_parent:hover .a_parent-arrow img,
-.navbar .a_parent.active .a_parent-arrow img {
+.navbar .menu__list-item.dd_menu-activ:hover .dd_menu {
   display: block;
+}
+.navbar .menu__list-item.dd_menu-activ:hover .menu__list-nav {
+  color:$color-orange; 
 }
 
 
+.navbar ul li:hover .dd_menu { 
+  display: block; 
+}
 .dd_menu-wrapper{
  width: 736px;
 height: 472px;
 border-radius: 4px;
 background: #EFF3F9;
-display: block;
 padding: 8px;
 }
 
 .navbar .dd_menu:before {
     content: "";
     position: absolute;
-    top: -30px;
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
