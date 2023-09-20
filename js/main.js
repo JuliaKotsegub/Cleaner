@@ -138,63 +138,60 @@ $(document).ready(function(){
         prevArrow: $('.carousel-arrow.next'), 
         nextArrow: $('.carousel-arrow.prev'), 
     });
-});
-$(document).ready(function(){
-  // Настройки для маленьких экранов (< 400px)
-  var smallScreenSettings = {
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      autoplay: true,
-      arrows: true,
-      prevArrow: $('.carousel-arrow.next'), 
-      nextArrow: $('.carousel-arrow.prev'), 
-  };
-
-  // Настройки для средних экранов (>= 400px и < 768px)
-  var mediumScreenSettings = {
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      arrows: true,
-      prevArrow: $('.carousel-arrow.next'), 
-      nextArrow: $('.carousel-arrow.prev'), 
-  };
-
-  // Настройки для больших экранов (>= 768px)
-  var largeScreenSettings = {
-      slidesToShow: 7,
-      slidesToScroll: 1,
-      autoplay: true,
-      arrows: true,
-      prevArrow: $('.carousel-arrow.next'), 
-      nextArrow: $('.carousel-arrow.prev'), 
-  };
-
-  // Функция для обновления слайдера в зависимости от размера экрана
-  function updateSlider() {
-      var windowWidth = $(window).width();
-      
-      if (windowWidth < 400) {
-          $('.slider-container').slick('unslick');
-          $('.slider-container').slick(smallScreenSettings);
-      } else if (windowWidth >= 400 && windowWidth < 790) {
-          $('.slider-container').slick('unslick');
-          $('.slider-container').slick(mediumScreenSettings);
-      } else {
-          $('.slider-container').slick('unslick');
-          $('.slider-container').slick(largeScreenSettings);
-      }
-  }
-
-  // Инициализация слайдера при загрузке страницы
-  updateSlider();
-
-  // Обновление слайдера при изменении размера окна
-  $(window).on('resize', function() {
-      updateSlider();
+    // Настройки для маленьких экранов (< 400px)
+    var smallScreenSettings = {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: true,
+        prevArrow: $('.carousel-arrow.next'), 
+        nextArrow: $('.carousel-arrow.prev'), 
+    };
+  
+    // Настройки для средних экранов (>= 400px и < 768px)
+    var mediumScreenSettings = {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: true,
+        prevArrow: $('.carousel-arrow.next'), 
+        nextArrow: $('.carousel-arrow.prev'), 
+    };
+  
+    // Настройки для больших экранов (>= 768px)
+    var largeScreenSettings = {
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: true,
+        prevArrow: $('.carousel-arrow.next'), 
+        nextArrow: $('.carousel-arrow.prev'), 
+    };
+  
+    // Функция для обновления слайдера в зависимости от размера экрана
+    function updateSlider() {
+        var windowWidth = $(window).width();
+        
+        if (windowWidth < 400) {
+            $('.slider-container').slick('unslick');
+            $('.slider-container').slick(smallScreenSettings);
+        } else if (windowWidth >= 400 && windowWidth < 790) {
+            $('.slider-container').slick('unslick');
+            $('.slider-container').slick(mediumScreenSettings);
+        } else {
+            $('.slider-container').slick('unslick');
+            $('.slider-container').slick(largeScreenSettings);
+        }
+    }
+  
+    // Инициализация слайдера при загрузке страницы
+    updateSlider();
+  
+    // Обновление слайдера при изменении размера окна
+    $(window).on('resize', function() {
+        updateSlider();
+    });
   });
-});
-
 
 
 // Slider 

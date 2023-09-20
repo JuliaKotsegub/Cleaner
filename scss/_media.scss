@@ -150,6 +150,19 @@
     font-weight: 700;
     line-height: 32px;
   }
+  .reviews {
+    &__inner-flex {
+      display: block;
+      margin-bottom: 60px;
+    }
+    &__title {
+      width: 100%;
+      padding: 0 50px 50px 0px;
+    }
+    &__inner {
+      max-width: 592px;
+    }
+  }
   
 }
 
@@ -186,6 +199,7 @@
     line-height: 40px;
     padding: 30px 0;
   }
+
 .partners__blocks-text,
   .top__inner-text {
     font-size: 14px;
@@ -394,6 +408,7 @@
     font-size: 28px;
     line-height: 32px;
   }
+ 
   .top__inner-text {
     font-size: 12px;
     line-height: 16px;
@@ -408,6 +423,12 @@
   .title-medium {
     font-size: 24px;
     line-height: 32px;
+  }
+  .reviews-block-text,
+  .reviews-block-name,
+  .partners__blocks-text{
+    max-width: 300px;
+    font-size: 12px;  
   }
   .blog-box__date,
   .blog-box__item-text,
