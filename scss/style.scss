@@ -743,7 +743,7 @@ input[type="submit"],
     flex-shrink: 0;
   }
   &__left-text {
-    width: 592px;
+    max-width: 592px;
   }
 }
 
@@ -757,35 +757,36 @@ input[type="submit"],
     row-gap: 32px;
     column-gap: 56px;
     height: 464px;
+    align-items: flex-end;
     overflow: hidden;
   }
   &__one {
     grid-row: span 2;
-    width: 328px;
-    height: 464px;
+    max-width: 328px;
+    max-height: 464px;
   }
   &__two-top {
-    padding-top: 40px;
-    width: 392px;
-    height: 264px;
+    padding-top: 140px;
+    max-width: 392px;
+    max-height: 264px;
   }
   &__three {
-    width: 360px;
-    height: 384px;
+    max-width: 360px;
+    max-height: 384px;
     grid-row: span 2;
     padding-top: 80px;
   }
   &__four {
     grid-row: span 2;
-    width: 193px;
+    max-width: 193px;
   }
   &__four-top {
-    height: 240px;
+    max-height: 240px;
     padding-bottom: 32px;
   }
   &__four-bottom {
-    width: 193px;
-    height: 192px;
+    max-width: 193px;
+    max-height: 192px;
   }
 }
 
