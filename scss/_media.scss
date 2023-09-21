@@ -183,7 +183,7 @@
       padding: 0 50px 50px 0px;
     }
     &__inner {
-      width: 100%;
+      max-width: 100%;
     }
   }
   .reviews-slide-stars {
@@ -245,6 +245,9 @@
       padding: 4px 0 18px;
     }
   }
+  .reviews__title {
+      max-width: 80%;
+    }
 }
 
 // ---790------------------------------
@@ -412,7 +415,7 @@
     max-width: 790px;
   }
   .partners__blocks-text {
-    max-width: 500px;
+    max-width: 100%;
   }
   .reviews-block-text,
   .reviews-block-name,
@@ -689,7 +692,7 @@
     font-size: 14px;
   }
   .reviews__inner {
-    max-width: 600px;
+    max-width: 400px;
   }
   .partners__blocks-text {
     max-width: 380px;
@@ -842,7 +845,7 @@
     max-width: 38%;
   }
   .reviews__inner {
-    max-width: 400px;
+    max-width: 250px;
   }
   .partners__blocks-text {
     max-width: 230px;

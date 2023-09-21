@@ -900,7 +900,7 @@ input[type="submit"],
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 50%;
+  // max-width: 50%;
   animation: fade 1s;
 }
 .carousel-slide.active,
@@ -935,10 +935,10 @@ input[type="submit"],
     padding-bottom: 40px;
   }
   &__title {
-    width: 42%;
+    max-width: 42%;
   }
   &__inner {
-    width: 592px;
+    width: 100%;
   }
 }
 
@@ -972,7 +972,7 @@ input[type="submit"],
 }
 
 .partners__blocks-text {
-  width: 592px;
+  max-width: 100%;
 }
 
 .question {
