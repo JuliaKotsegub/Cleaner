@@ -24,9 +24,9 @@
     grid-template-rows: repeat(3, 1fr);
     gap: 24px;
   }
-  #progress-bar-container #line {
-    // left:-80px;
-  }
+  // #progress-bar-container #line {
+  //   // left:-80px;
+  // }
 }
 @media (max-width: 992px) {
   .container {
@@ -240,9 +240,9 @@
   }
 }
 
-#progress-bar-container #line {
-  left: -66px;
-}
+// #progress-bar-container #line {
+//   left: -66px;
+// }
 #progress-bar-container li .step-inner {
   width: 300px;
 }
@@ -270,6 +270,7 @@
   #progress-bar-container {
     top: -10%;
     padding-bottom: 450px;
+    top: 25%;
   }
   #progress-bar-container li .step-inner h3 {
     font-size: 14px;
@@ -880,12 +881,12 @@
   .content {
     display: none;
   }
-  #progress-bar-container #line {
-    left: 10%;
-    height: 220px;
-    top: 50px;
-    margin: 0;
-  }
+  // #progress-bar-container #line {
+  //   left: 10%;
+  //   height: 220px;
+  //   top: 50px;
+  //   margin: 0;
+  // }
   #progress-bar-container {
     max-width: 600px;
     margin: 0;
