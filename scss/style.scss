@@ -1455,47 +1455,49 @@ button.dot {
 //  Animation
 
 .process-wrapper {
-	margin:auto;
-  max-width: 1216px;
+	max-width: 1216px;
 	display: flex;
-	justify-content: space-between;
-	gap: 136px;
-	align-items: center;
-
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 136px;
 }
 
 #progress-bar-container {
-	position:relative;
-  width: 50%;
-	margin:auto;
+  position: relative;
+	width: 588px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: sticky;
+    top: -10%;
+    padding-bottom: 680px;
+    padding-right: 100px;
 }
 
 #progress-bar-container ul{
 	padding:0;
 	margin:0;
-	padding-top:15px;
-	z-index:99;
 	position:absolute;
 	width:100%;
-	top: -300px;
+	z-index:99;
 }
 
 #progress-bar-container li:before {
 	content:"";
 	display:block;
 	margin: auto;
-	width: 32px;
-height: 32px;
+	width:32px;
+	height:32px;
 	border-radius:50%;
 	border:solid 1px #E8E4E4;;
 	transition:all ease 0.3s;
 	background-color: white;
-	z-index: 65;
+	z-index: 8;
 }
 
 
 #progress-bar-container li.active:before {
-  animation: animationCombined 3s ease forwards;
+  animation: animationCombined 2.5s ease forwards;
 }
 
 @keyframes animationCombined {
@@ -1507,32 +1509,34 @@ height: 32px;
     background: white;
   }
   25% {
-    border-top-color: $color-orange;
+    border-top-color: orange;
     border-right-color: white;
     border-bottom-color: white;
     border-left-color: white;
     background: white;
   }
   50% {
-    border-top-color: $color-orange;
-    border-right-color: $color-orange;
+    border-top-color: orange;
+    border-right-color: orange;
     border-bottom-color: white;
     border-left-color: white;
     background: white;
   }
   75% {
-    border-top-color: $color-orange;
-    border-right-color: $color-orange;
-    border-bottom-color: $color-orange;
+    border-top-color: orange;
+    border-right-color: orange;
+    border-bottom-color: orange;
     border-left-color: white;
     background: white;
+    z-index: 7;
   }
   100% {
-    border-top-color: $color-orange;
-    border-right-color: $color-orange;
-    border-bottom-color: $color-orange;
-    border-left-color: $color-orange;
+    border-top-color: orange;
+    border-right-color: orange;
+    border-bottom-color: orange;
+    border-left-color: orange;
     background: url("../images/Home/process-arr.png");
+  z-index: 9;
   }
 }
 
@@ -1540,7 +1544,7 @@ height: 32px;
 	width:20%;
 	transition:all ease 0.2s;
 	vertical-align:bottom;
-	height: 90px;
+	height: 134px;
 	position:relative;
 	display: flex; 
   flex-direction: column; 
@@ -1550,8 +1554,8 @@ height: 32px;
 #progress-bar-container li .step-inner {
 	position:absolute;
 	width:384px;
-	top:50px;
-	left: 120px;
+	top:110px;
+	left: 90px;
 	display: flex;
 	flex-direction: column;
 }
@@ -1560,8 +1564,7 @@ height: 32px;
 font-size: 20px;
 font-weight: 600;
 line-height: 32px; 
-padding-bottom: 10px;
-padding-top: 20px;
+padding-bottom: 14px;
 margin: 0;
 }
 #progress-bar-container li .step-inner p{
@@ -1570,8 +1573,8 @@ font-size: 14px;
 margin: 0;
 }
 .step-number{
-z-index: 999;
-margin-top: -90px;
+z-index: 8;
+margin-top: -134px;
 color:  #475467;
 text-align: center;
 font-family: Manrope;
@@ -1580,22 +1583,18 @@ font-weight: 600;
 
 }
 
-#progress-bar-container li.active .step-number{
-opacity: 0;
-}
-
 #progress-bar-container #line {
 	display: flex;
 	width: 2px;
-height: 352px;
+height: 420px;
 	margin:auto;
 	border-radius: 100px;
 background: #E7E4E4;
 	position:absolute;
-	left:10%;
-	top: -200px;
+	left:-14%;
+top: 120px;
 	z-index:1;
-	transition:all ease 0.9s;
+	transition:all ease 0.5s;
 }
 
 #progress-bar-container #line-progress {
@@ -1605,40 +1604,29 @@ background: #E7E4E4;
 	background: orange;	 
 	background: linear-gradient(to bottom, orange,orange 100%); 
 	position:absolute;
-	z-index:2;
+	z-index:5;
 	border-radius:50px;
-	transition:all ease 3.5s;
+	transition:all ease 2.5s;
 }
 
 #progress-content-section {
-	max-width: 592px;
-max-height: 448px;
-	border-radius: 4px;
+	width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 
 #progress-content-section .section-content {
-	display:none;
-	animation: FadeInUp 700ms ease 1;
-	animation-fill-mode:forwards;
-	transform:translateY(15px);
-	opacity:0;
-}
+	position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 40px;
 
-#progress-content-section .section-content.active {
-	display:block;
-}
-
-@keyframes FadeInUp {
-	0% {
-		transform:translateY(15px);
-		opacity:0;
-	}
-	
-	100% {
-		transform:translateY(0px);
-		opacity:1;
-	}
 }
 
 @import "media";

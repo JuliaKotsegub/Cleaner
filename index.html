@@ -396,62 +396,40 @@
 
       <section class="process">
         <div class="container inner">
+          
           <div class="process-wrapper">
             <div id="progress-content-section">
-              <div class="section-content discovery active">
-              <img src="images/Home/process1.png" alt="">
-              </div>
-
-              <div class="section-content strategy">
+              
+              <div class="section-content discovery active " data-step="2">
                 <img src="images/Home/process1.png" alt="">
               </div>
-
-              <div class="section-content creative">
+              
+              <div class="section-content strategy" data-step="3">
                 <img src="images/Home/process1.png" alt="">
               </div>
-
-              <div class="section-content production">
+              
+              <div class="section-content creative" data-step="4">
                 <img src="images/Home/process1.png" alt="">
               </div>
-
-            </div>
-            <div id="progress-bar-container">
-              <ul>
-                <li class="step step01 active">
-                  <div class="step-number"> 1 </div>
-                  <div class="step-inner">
-                    <h3>Заповнення форми</h3>
-                    <p>Заповнюєте форму на сайті, обираєте всі потрібні послуги та переходите до наступного етапу.</p>
-                  </div>
-                </li>
-                <li class="step step02">
-                  <div class="step-number"> 2 </div>
-                  <div class="step-inner">
-                    <h3>Вибір клінера</h3>
-                    <p>Ми пропонуємо вам клінерів поблизу, ви обираєте та переходите до наступного етапу.</p>
-                  </div>
-                </li>
-                <li class="step step03">
-                  <div class="step-number"> 3 </div>
-                  <div class="step-inner">
-                    <h3>Оплата замовлення</h3>
-                    <p>Після вказаних вами даних та вибору клінера, ви оплачуєте 100% вартості послуги.</p>
-                  </div>
-                </li>
-                <li class="step step04">
-                  <div class="step-number"> 4 </div>
-                  <div class="step-inner">
-                    <h3>Здача виконаної роботи</h3>
-                    <p>Здача виконаної роботи. Ви оцінюєте роботу та якість, за бажанням залишаєте відгук.</p>
-                  </div>
-                </li>
-              </ul>
-
-              <div id="line">
-                <div id="line-progress"></div>
+              
+              <div class="section-content production" data-step="5">
+                <img src="images/Home/process1.png" alt="">
+              </div>
+              
+              </div>
+              <div id="progress-bar-container">
+                <ul>
+                  <li class="step step01 active" data-step="1"><div class="step-number"> 1 </div><div class="step-inner"><h3>Заповнення форми</h3><p>Заповнюєте форму на сайті, обираєте всі потрібні послуги та переходите до наступного етапу.</p></div></li>
+                  <li class="step step02" data-step="2"><div class="step-number"> 2 </div><div class="step-inner"><h3>Вибір клінера</h3><p>Ми пропонуємо вам клінерів поблизу, ви обираєте та переходите до наступного етапу.</p></div></li>
+                  <li class="step step03" data-step="3"><div class="step-number"> 3 </div><div class="step-inner"><h3>Оплата замовлення</h3><p>Після вказаних вами даних та вибору клінера, ви оплачуєте 100% вартості послуги.</p></div></li>
+                  <li class="step step04" data-step="4"><div class="step-number"> 4 </div><div class="step-inner"><h3>Здача виконаної роботи</h3><p>Здача виконаної роботи. Ви оцінюєте роботу та якість, за бажанням залишаєте відгук.</p></div></li>
+                </ul>
+                
+                <div id="line">
+                  <div id="line-progress"></div>
+                </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -857,30 +835,61 @@
   <script src="js/datepicker-uk.js"></script>
   <script src="js/main.js"> </script>
 <script>  
-  $(".step").click( function() {
-$(this).addClass("active").prevAll().addClass("active");
-$(this).nextAll().removeClass("active");
+$(document).ready(function() {
+  var activeSteps = [];
+  var containerHeight = $("#progress-content-section").height(); // Отримуємо висоту контенту
+
+  // Функція для оновлення активних кроків при скролі
+  function updateActiveSteps() {
+    var scrollTop = $(window).scrollTop();
+    $(".section-content").each(function() {
+      var contentTop = $(this).offset().top;
+      var contentStep = $(this).data("step");
+      if (scrollTop >= contentTop && !activeSteps.includes(contentStep)) {
+        setActiveStep(contentStep);
+        animateBorder(scrollTop, containerHeight);
+      }
+    });
+  }
+
+  // Функція для встановлення активного кроку
+  function setActiveStep(stepNumber) {
+    activeSteps.push(stepNumber);
+    activeSteps.sort(function(a, b) {
+      return a - b;
+    });
+
+    // Додаємо клас "active" всім активним крокам
+    for (var i = 0; i < activeSteps.length; i++) {
+      $(".step[data-step='" + activeSteps[i] + "']").addClass("active");
+      updateLineProgress(activeSteps[i]);
+    }
+  }
+
+  // Функція для оновлення #line-progress
+  function updateLineProgress(stepNumber) {
+    var progressHeight = stepNumber * 25 + "%";
+    $("#line-progress").css("height", progressHeight);
+  }
+
+  // Функція для анімації бордера
+  function animateBorder(scrollTop, containerHeight) {
+    var scrollPercentage = (scrollTop / containerHeight) * 100;
+    if (scrollPercentage <= 100) {
+      $("#progress-bar-container #line-progress").css("height", scrollPercentage + "%");
+    }
+  }
+
+  // Оновлюємо активні кроки при завантаженні сторінки
+  updateActiveSteps();
+
+  // Оновлюємо активні кроки при прокрутці
+  $(window).scroll(function() {
+    updateActiveSteps();
+  });
 });
 
-$(".step01").click( function() {
-$("#line-progress").css("height", "25%");
-$(".discovery").addClass("active").siblings().removeClass("active");
-});
 
-$(".step02").click( function() {
-$("#line-progress").css("height", "50%");
-$(".strategy").addClass("active").siblings().removeClass("active");
-});
-
-$(".step03").click( function() {
-$("#line-progress").css("height", "75%");
-$(".creative").addClass("active").siblings().removeClass("active");
-});
-
-$(".step04").click( function() {
-$("#line-progress").css("height", "100%");
-$(".production").addClass("active").siblings().removeClass("active");
-});
 </script>
 </body>
 
