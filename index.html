@@ -400,19 +400,19 @@
           <div class="process-wrapper">
             <div id="progress-content-section">
 
-              <div class="section-content discovery active " data-step="2">
+              <div class="section-content discovery active " data-step="1">
                 <img src="images/Home/process1.png" alt="">
               </div>
 
-              <div class="section-content strategy" data-step="3">
+              <div class="section-content strategy" data-step="2">
                 <img src="images/Home/process1.png" alt="">
               </div>
 
-              <div class="section-content creative" data-step="4">
+              <div class="section-content creative" data-step="3">
                 <img src="images/Home/process1.png" alt="">
               </div>
 
-              <div class="section-content production" data-step="5">
+              <div class="section-content production" data-step="4">
                 <img src="images/Home/process1.png" alt="">
               </div>
 
@@ -451,8 +451,6 @@
                   </div>
                 </li>
               </ul>
-
-
             </div>
           </div>
         </div>
@@ -860,61 +858,67 @@
   <script src="js/datepicker-uk.js"></script>
   <script src="js/main.js"> </script>
   <script>
-    $(document).ready(function () {
-      var activeSteps = [];
-      var containerHeight = $("#progress-content-section").height(); // Отримуємо висоту контенту
+$(document).ready(function() {
+  var activeStep = 0; // Початковий активний крок (0 означає, що немає активного кроку)
 
-      // Функція для оновлення активних кроків при скролі
-      function updateActiveSteps() {
-        var scrollTop = $(window).scrollTop();
-        $(".section-content").each(function () {
-          var contentTop = $(this).offset().top;
-          var contentStep = $(this).data("step");
-          if (scrollTop >= contentTop && !activeSteps.includes(contentStep)) {
-            setActiveStep(contentStep);
-            animateBorder(scrollTop, containerHeight);
-          }
-        });
+  // Функція для оновлення активного кроку при скролі
+  function updateActiveStep() {
+    var scrollTop = $(window).scrollTop();
+    $(".section-content").each(function() {
+      var contentTop = $(this).offset().top;
+      var contentBottom = contentTop + $(this).outerHeight();
+      var contentStep = $(this).data("step");
+
+      // Перевіряємо, чи скролите в верхній частині контенту
+      if (scrollTop >= contentTop && scrollTop < contentBottom) {
+        setActiveStep(contentStep);
       }
+    });
+  }
 
-      // Функція для встановлення активного кроку
-      function setActiveStep(stepNumber) {
-        activeSteps.push(stepNumber);
-        activeSteps.sort(function (a, b) {
-          return a - b;
-        });
-
-        // Додаємо клас "active" всім активним крокам
-        for (var i = 0; i < activeSteps.length; i++) {
-          $(".step[data-step='" + activeSteps[i] + "']").addClass("active");
-          updateLineProgress(activeSteps[i]);
-        }
+  // Функція для встановлення активного кроку
+  function setActiveStep(stepNumber) {
+    // Якщо новий крок відрізняється від поточного, виконуємо анімацію
+    if (stepNumber !== activeStep) {
+      activeStep = stepNumber;
+      $(".step").removeClass("active");
+      
+      // Додаємо клас "active" всім крокам від першого до активного
+      for (var i = 1; i <= activeStep; i++) {
+        $(".step[data-step='" + i + "']").addClass("active");
       }
+      
+      animateBorderAndLine(activeStep);
+    }
+  }
 
-      // Функція для оновлення #line-progress
-      function updateLineProgress(stepNumber) {
-        var progressHeight = stepNumber * 25 + "%";
-        $("#line-progress").css("height", progressHeight);
-      }
+  // Функція для анімації бордера і лінії
+  function animateBorderAndLine(stepNumber) {
+    var animationDuration = 2200;
+    var progressHeight = stepNumber * 32 + "%";
 
-      // Функція для анімації бордера
-      function animateBorder(scrollTop, containerHeight) {
-        var scrollPercentage = (scrollTop / containerHeight) * 100;
-        if (scrollPercentage <= 100) {
-          $("#progress-bar-container #line-progress").css("height", scrollPercentage + "%");
-        }
-      }
-
-      // Оновлюємо активні кроки при завантаженні сторінки
-      updateActiveSteps();
-
-      // Оновлюємо активні кроки при прокрутці
-      $(window).scroll(function () {
-        updateActiveSteps();
-      });
+    // Анімація лінії
+    $("#line-progress").css({
+      height: progressHeight,
+      transition:  animationDuration + "ms"
     });
 
+    // Реалізуйте анімацію бордера для відповідного номеру кроку
+    // Наприклад, для бордера:
+    // $("#progress-bar-container #line-progress").css({
+    //   height: progressHeight,
+    //   transition: "height " + animationDuration + "ms ease"
+    // });
+  }
 
+  // Оновлюємо активний крок при завантаженні сторінки
+  updateActiveStep();
+
+  // Оновлюємо активний крок при прокрутці
+  $(window).scroll(function() {
+    updateActiveStep();
+  });
+});
   </script>
 </body>
 
