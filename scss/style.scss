@@ -4,6 +4,12 @@
 @import "libs";
 @import "global";
 
+.logo{
+  background: url("../images/logo.png");
+  width: 48px;
+height: 37.333px;
+background-size: contain;
+}
 .header {
   &__inner {
     display: flex;
@@ -46,7 +52,9 @@ a.menu__btn {
   font-weight: 700;
   letter-spacing: -0.04px;
 }
-
+.menu__list-arrow{
+  display: none;
+}
 .navbar ul li .dd_menu-activ {
   position: relative;
 }
@@ -1562,7 +1570,6 @@ button.dot {
   line-height: 32px;
   padding-bottom: 14px;
   margin: 0;
-
 }
 #progress-bar-container li .step-inner p {
   color: #475467;

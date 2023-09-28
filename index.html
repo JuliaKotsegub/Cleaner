@@ -18,12 +18,12 @@
       <div class="header__inner">
         <div class="header__inner-blocks">
           <a href="#">
-            <img class="logo" src="images/logo.png" alt="Logo">
+            <div class="logo" alt="Logo"> </div>
           </a>
           <button class="header__btn-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="header__btn-menu-span"></span>
+           <span class="header__btn-menu-span"></span>
+           <span class="header__btn-menu-span"></span>
           </button>
         </div>
 
@@ -32,6 +32,7 @@
             <li class="menu__list-item">
               <a class="menu__list-link a_parent" href="index.html">
                 <span class="menu__list-nav">Головна</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item dd_menu-activ">
@@ -39,10 +40,12 @@
                 <span class="menu__list-nav">Послуги</span>
                 <span class="a_parent-arrow">
                   <img src="images/new/arrow_drop_up.png" alt="">
+                  <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
                 </span>
               </a>
               <a class="menu__list-link " href="services.html">
                 <span class="menu__list-nav menu__list-second">Послуги</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
               <div class="dd_menu">
                 <div class="dd_menu-wrapper">
@@ -148,23 +151,26 @@
             <li class="menu__list-item">
               <a class="menu__list-link" href="about.html">
                 <span class="menu__list-nav"> Про нас</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
               <a class="menu__list-link" href="blog.html">
                 <span class="menu__list-nav"> Блог</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
               <a class="menu__list-link" href="#!">
                 <span class="menu__list-nav">Клінерам</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
           </ul>
         </nav>
 
         <nav class="menu">
-          <ul class="menu__list">
+          <ul class="menu__list menu__list-flex">
             <li class="menu__list-item">
               <a class="menu__list-exit" href="#!">Увійти</a>
             </li>
@@ -919,6 +925,8 @@ $(document).ready(function() {
     updateActiveStep();
   });
 });
+
+
   </script>
 </body>
 
