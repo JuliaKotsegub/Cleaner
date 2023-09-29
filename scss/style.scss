@@ -752,6 +752,12 @@ input[type="submit"],
 .collage {
   margin: 0 auto;
   max-width: 100%;
+  &__inner {
+      max-width: 100%;
+      max-height: 464px;
+      overflow: hidden;
+    
+  }
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -760,7 +766,9 @@ input[type="submit"],
     column-gap: 56px;
     max-height: 464px;
     align-items: flex-end;
-    overflow: hidden;
+    margin-right: -130px;
+    margin-left: -20px;
+     overflow: hidden!important;
   }
   &__one {
     grid-row: span 2;
@@ -768,7 +776,7 @@ input[type="submit"],
     max-height: 464px;
   }
   &__two-top {
-    padding-top: 140px;
+    padding-top: 80px;
     max-width: 392px;
     max-height: 264px;
   }
@@ -867,6 +875,7 @@ input[type="submit"],
     align-items: center;
     justify-content: space-between;
     padding-bottom: 64px;
+    gap: 32px;
   }
   &__blocks-text {
     color: #5a5a5a;
@@ -976,7 +985,7 @@ input[type="submit"],
 }
 
 .partners__blocks-text {
-  max-width: 100%;
+  max-width: 592px;
 }
 
 .question {
@@ -1101,7 +1110,7 @@ input[type="submit"],
 .photo {
   &__inner {
     margin: 88px auto 144px;
-    max-width: 1440px;
+   max-width: 1440px;
     align-items: end;
   }
   &__items {
@@ -1112,19 +1121,22 @@ input[type="submit"],
     column-gap: 56px;
     overflow: hidden;
     max-height: 464px;
-    align-items: center;
+    align-items:center;
+    margin-right: -50px;
   }
 }
 .photo__two,
 .photo__three {
   grid-row: span 2;
 }
+.photo-first{
+
+}
 .photo-first-top {
   //  max-height: 264px;
   //  max-width: 324px;
 }
 .photo-first-bottom {
-  //  max-height: 128px;
   //  max-width: 324px;
 }
 .photo__two {
@@ -1151,7 +1163,7 @@ input[type="submit"],
     top: 0;
     max-width: 592px;
     max-height: 428px;
-    margin-left: -100px;
+    margin-left: -40px;
   }
   &__inner {
     display: flex;
@@ -1200,6 +1212,11 @@ input[type="submit"],
   &__title {
     padding-bottom: 48px;
   }
+  &__form {
+      display: flex;
+      justify-content: left;
+    }
+  
 }
 
 // ---PAGE BLOG---
