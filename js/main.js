@@ -353,22 +353,4 @@ ddMenuActivators.forEach(function (activator) {
   });
 });
 
-// Media nav
-
-
-$(function() {
-  $('.header__btn-menu').on('click', function() {
-    $('.menu').toggleClass('menu--open');
-     
-    if ($('.menu').hasClass('menu--open')) {
-      $('.header__btn-menu').addClass('menu-open-style');
-      $('.header__btn-menu-span').addClass('menu-open-styl');
-      $('.logo').addClass('menu-open-logo');
-    } else {
-      $('.header__btn-menu').removeClass('menu-open-style');
-      $('.header__btn-menu-span').removeClass('menu-open-styl');
-      $('.logo').removeClass('menu-open-logo');
-    }
-  });
-});
 

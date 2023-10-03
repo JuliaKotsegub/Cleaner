@@ -107,8 +107,8 @@ body {
 .footer__info-tel:hover,
 .footer__info-email:hover,
 .footer_social-link:hover,
-// .menu__list-exit:hover,
-// .menu__list-link:hover,
+.menu__list-exit:hover,
+.menu__list-item:hover .menu__list-nav,
 nav button.active {
   color: $color-orange;
 }
@@ -119,7 +119,8 @@ input[type="submit"],
 li a.menu__btn,
 .blog-box__blocks-text,
 .blog-box__top-text,
-.menu__list-exit,
+.menu__list-exit:hover,
+.menu__list-item:hover .menu__list-nav,
 li a.menu__btn,
 .menu__list-link,
 .menu__list-link {

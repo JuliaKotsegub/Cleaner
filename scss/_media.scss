@@ -546,6 +546,11 @@
 // -----------------600-------------------------------
 
 @media (max-width: 610px) {
+  
+  .logo{
+    width: 48px;
+  height: 37.333px;
+  }
   .collage {
     &__four-bottom {
       display: none;
@@ -595,15 +600,16 @@
     width: 24px;
     height: 24px;
   }
-  .menu-open-styl {
-    position: absolute;
-    top: 0;
-  }
   .menu-open-logo {
     background: url("../images/Home/logo-orange.png");
     width: 48px;
     height: 37.333px;
     background-size: contain;
+  }
+
+ .header__btn-menu .menu-open-styl{
+   position: absolute;
+   top: 0;
   }
   .menu__list-arrow {
     display: block;
@@ -623,13 +629,13 @@
     position: relative;
     z-index: 11;
     text-align: center;
-    transform: translateY(-440px);
+    transform: translateY(-810px);
     transition: all 0.8s;
   }
   .menu--open {
     transform: translateX(0px);
     max-width: 610px;
-    height: 360px;
+    height: 650px;
     padding: 0 8px 32px;
   }
   .menu__list {
@@ -660,8 +666,8 @@
   .menu__list-flex {
     display: flex;
     flex-direction: column-reverse;
+    align-items: flex-end;
   }
-
 
   .footer__copyright-link {
     display: flex;
@@ -904,16 +910,127 @@
     display: block;
     align-items: center;
   }
+  .navbar .menu__list-item.dd_menu-activ .a_parent .a_parent-arrow .menu__list-drop {
+  display: none;
+  }
+  .navbar .menu__list-item.dd_menu-activ .a_parent .a_parent-arrow .menu__list-arrow {
+    transform: rotate(0deg);
+  }
+  .navbar .menu__list-item.dd_menu-activ:hover .a_parent .a_parent-arrow .menu__list-arrow {
+    transform: rotate(90deg);
+  }
+  // .navbar .menu__list-item.dd_menu-activ .dd_menu {
+  //   display: block!important;
+  // }
+
+  .dd_menu-wrapper {
+    max-width: 550px;
+    height: 424px;
+    background: white;
+    padding: 2px;
+    padding-top: 16px;
+    margin-top: 5px;
+  }
+  .navbar .menu__list-item.dd_menu-activ:hover{
+    margin-bottom: 454px; 
+  }
+  
+  .content{
+    padding: 0;
+  }
+  .navbar .dd_menu:before {
+   display: none;
+  }
+  .content {
+    display: block;
+  }
+  .content .slider,
+  .content .slider:before,
+  .menu-text{
+    display: none;
+  }
+.menu-title{
+  color: #595959;
+font-size: 12px;
+font-weight: 600;
+line-height: 16px; /* 133.333% */
+text-transform: uppercase;
+}
+.content .list {
+  margin-right: 0px;
+}
+.content .text-content {
+  display: flex;
+  max-width: 100%;
+  padding: 0;
+  height: 100%;
+  background-color: inherit;
+}
+.content .list label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  display: flex;
+  padding: 8px 0px;
+}
+
+.content .text-content-link {
+ max-width: 400px;
+}
+
+/* Initially, set the color of .menu-title inside .home to orange */
+ input[type="radio"]:checked + .list label.home .menu-title {
+  color: initial;
+}
+
+/* Reset the color when .home input is not checked */
+ input[type="radio"]:not(:checked) + .list label.home .menu-title {
+  color: orange;
+}
+input[type="radio"]:checked + .list label.blog .menu-title {
+  color: orange;
+}
+
+/* Reset the color when .home input is not checked */
+ input[type="radio"]:not(:checked) + .list label.blog .menu-title {
+  color: initial;
+ 
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.blog.text {
+  order: 1; /* Set the default order to 2 for both elements */
+  display: none;
+}
+
+#home:checked ~ .list .home.text {
+  order: 1; /* Change the order to 1 when #home is checked */
+  display: block;
+}
+
+#blog:checked ~ .list .blog.text {
+  order: 2; /* Change the order to 1 when #blog is checked */
+  display: block;
+}
   .menu__list-first,
   .navbar .dd_menu:before,
   .dd_menu,
   .menu__list-first,
   .dd_menu-wrapper,
   .content {
-    display: none;
+    // display: none;
   }
-
-
 
   // #progress-bar-container #line {
   //   left: 10%;
@@ -946,39 +1063,45 @@
   #progress-content-section .section-content {
     max-width: 40%;
   }
+  .menu__list-item:hover .menu__list-nav,
   .navbar .menu__list-item.dd_menu-activ:hover .menu__list-nav,
   .navbar .a_parent.active span,
-.navbar .a_parent:hover span,
-  .menu__list-item:hover,
-  .menu__list-exit:hover,
-.menu__list-nav .menu__list-link:hover {
-  color: #060606;
-}
-a.menu__btn:hover,
-a.menu__btn:hover .menu__btn,
-li a.menu__btn:active .menu__btn{
-  background-color: rgba(249, 123, 34, 0.98);
-  border: 1px solid rgba(249, 123, 34, 0.98);
-}
-.menu__list-btn{
-  display: flex;
-  justify-content: center;;
-align-items: center;
-border-radius: 100px;
-background-color: rgba(249, 123, 34, 0.98);
-width: 100%;
-margin: 0;
-padding: 0;
-}
-.menu__list-btn .menu__btn{
-  color: $white;
-font-size: 16px;
-font-weight: 700;
-padding: 12px 40px;
-margin: 0;
+  .navbar .a_parent:hover span,
+  // .menu__list-item:hover,
+  // .menu__list-exit:hover,
+  .menu__list-nav .menu__list-link:hover {
+    color: #060606;
+  }
+  a.menu__btn:hover,
+  a.menu__btn:hover .menu__btn,
+  li a.menu__btn:active .menu__btn {
+    background-color: rgba(249, 123, 34, 0.98);
+    border: 1px solid rgba(249, 123, 34, 0.98);
+  }
+  .menu__list-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: rgba(249, 123, 34, 0.98);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .menu__list-btn .menu__btn {
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 40px;
+    margin: 0;
+  }
+  // .menu__list-exit {
+  //   font-size: 14px;
+  //   font-weight: 600;
+  // }
 }
 
-}
+
 // ---400--------------------------------------
 
 @media (max-width: 400px) {

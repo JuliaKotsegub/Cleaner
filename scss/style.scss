@@ -4,11 +4,11 @@
 @import "libs";
 @import "global";
 
-.logo{
+.logo {
   background: url("../images/logo.png");
-  width: 48px;
-height: 37.333px;
-background-size: contain;
+  width: 72px;
+  height: 56px;
+  background-size: contain;
 }
 .header {
   &__inner {
@@ -52,7 +52,7 @@ a.menu__btn {
   font-weight: 700;
   letter-spacing: -0.04px;
 }
-.menu__list-arrow{
+.menu__list-arrow {
   display: none;
 }
 .navbar ul li .dd_menu-activ {
@@ -69,10 +69,10 @@ a.menu__btn {
   padding: 20px 0;
 }
 
-.navbar .a_parent.active span,
-.navbar .a_parent:hover span {
-  color: $color-orange;
-}
+// .navbar .a_parent.active span,
+// .navbar .a_parent:hover span {
+//   color: $color-orange;
+// }
 
 .navbar .menu__list-item.dd_menu-activ .a_parent .a_parent-arrow img {
   transform: rotate(180deg);
@@ -163,7 +163,7 @@ a.menu__btn {
   left: 0;
   top: 0;
   height: 40px;
-  width: 210px;
+  width: 80px;
   border-radius: 12px;
   transition: all 0.5s ease;
   border-radius: 4px;
@@ -218,7 +218,7 @@ a.menu__btn {
 
 .content .text-content-link {
   display: flex;
-  width: 432px;
+ width: 432px;
   padding: 12px 16px;
   align-items: center;
   gap: 12px;
@@ -240,7 +240,7 @@ a.menu__btn {
   width: 48px;
   height: 48px;
 }
-
+.menu-title-sub,
 .menu-title {
   font-size: 14px;
   font-weight: 600;
@@ -544,13 +544,13 @@ input[type="submit"],
 .quality {
   &__block {
     display: flex;
-    align-items: flex-end;
+    justify-content: space-between;
     gap: 73px;
     padding-top: 56px;
   }
   &__left {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
     gap: 73px;
   }
@@ -565,7 +565,8 @@ input[type="submit"],
     line-height: 32px;
   }
   &__right {
-    width: 592px;
+    font-size: 16px;
+    max-width: 610px;
     line-height: 24px;
   }
 }
@@ -753,10 +754,9 @@ input[type="submit"],
   margin: 0 auto;
   max-width: 100%;
   &__inner {
-      max-width: 100%;
-      max-height: 464px;
-      overflow: hidden;
-    
+    max-width: 100%;
+    max-height: 464px;
+    overflow: hidden;
   }
   &__grid {
     display: grid;
@@ -768,7 +768,7 @@ input[type="submit"],
     align-items: flex-end;
     margin-right: -130px;
     margin-left: -20px;
-     overflow: hidden!important;
+    overflow: hidden !important;
   }
   &__one {
     grid-row: span 2;
@@ -1110,7 +1110,7 @@ input[type="submit"],
 .photo {
   &__inner {
     margin: 88px auto 144px;
-   max-width: 1440px;
+    max-width: 1440px;
     align-items: end;
   }
   &__items {
@@ -1121,7 +1121,7 @@ input[type="submit"],
     column-gap: 56px;
     overflow: hidden;
     max-height: 464px;
-    align-items:center;
+    align-items: center;
     margin-right: -50px;
   }
 }
@@ -1129,8 +1129,7 @@ input[type="submit"],
 .photo__three {
   grid-row: span 2;
 }
-.photo-first{
-
+.photo-first {
 }
 .photo-first-top {
   //  max-height: 264px;
@@ -1213,10 +1212,9 @@ input[type="submit"],
     padding-bottom: 48px;
   }
   &__form {
-      display: flex;
-      justify-content: left;
-    }
-  
+    display: flex;
+    justify-content: left;
+  }
 }
 
 // ---PAGE BLOG---
@@ -1334,7 +1332,9 @@ input[type="submit"],
 .services-top__inner {
   padding: 72px 0 56px;
 }
-
+.women-img-bg {
+  width: 100%;
+}
 .slider {
   max-height: 551px;
   padding-top: 88px;
@@ -1627,7 +1627,7 @@ button.dot {
   position: absolute;
   z-index: 5;
   border-radius: 50px;
-  transition: all 2.0s ease; 
+  transition: all 2s ease;
 }
 
 #progress-content-section {

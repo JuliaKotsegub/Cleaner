@@ -35,17 +35,14 @@
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
+
             <li class="menu__list-item dd_menu-activ">
               <a class="menu__list-link a_parent menu__list-first" href="#!">
                 <span class="menu__list-nav">Послуги</span>
                 <span class="a_parent-arrow">
-                  <img src="images/new/arrow_drop_up.png" alt="">
+                  <img class="menu__list-drop" src="images/new/arrow_drop_up.png" alt="">
                   <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
                 </span>
-              </a>
-              <a class="menu__list-link " href="services.html">
-                <span class="menu__list-nav menu__list-second">Послуги</span>
-                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
               <div class="dd_menu">
                 <div class="dd_menu-wrapper">
@@ -71,35 +68,35 @@
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu1.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Звичайне прибирання</span>
+                            <span class="menu-title-sub">Звичайне прибирання</span>
                             <span class="menu-info-text">Підтримати загальний рівень комфорту</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu2.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Після ремонту</span>
+                            <span class="menu-title-sub">Після ремонту</span>
                             <span class="menu-info-text">Догляд за оновленим житлом</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu3.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Миття вікон</span>
+                            <span class="menu-title-sub">Миття вікон</span>
                             <span class="menu-info-text">Професійне миття вікон</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu4.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Хімчистка</span>
+                            <span class="menu-title-sub">Хімчистка</span>
                             <span class="menu-info-text">Допомога при забруженнях меблів</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img class="menu-img" src="images/services/submenu5.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Кухня</span>
+                            <span class="menu-title-sub">Кухня</span>
                             <span class="menu-info-text">Прибирання всієї кухні</span>
                           </div>
                         </a>
@@ -108,39 +105,17 @@
                         <a href="services.html" class="text-content-link">
                           <img class="menu-img" src="images/services/submenu5.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Кухня</span>
-                            <span class="menu-info-text">Прибирання всієї кухні</span>
+                            <span class="menu-title-sub">Разове прибирання</span>
+                            <span class="menu-info-text">Замовляєте одноразово</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu1.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Звичайне прибирання</span>
-                            <span class="menu-info-text">Підтримати загальний рівень комфорту</span>
+                            <span class="menu-title-sub">Регулярне прибирання</span>
+                            <span class="menu-info-text">Складаємо графік на місяць</span>
                           </div>
                         </a>
-                        <a href="services.html" class="text-content-link">
-                          <img src="images/services/submenu3.png" alt="">
-                          <div class="text-content-wrapper">
-                            <span class="menu-title">Миття вікон</span>
-                            <span class="menu-info-text">Професійне миття вікон</span>
-                          </div>
-                        </a>
-                        <a href="services.html" class="text-content-link">
-                          <img src="images/services/submenu4.png" alt="">
-                          <div class="text-content-wrapper">
-                            <span class="menu-title">Хімчистка</span>
-                            <span class="menu-info-text">Допомога при забруженнях меблів</span>
-                          </div>
-                        </a>
-                        <a href="services.html" class="text-content-link">
-                          <img src="images/services/submenu2.png" alt="">
-                          <div class="text-content-wrapper">
-                            <span class="menu-title">Після ремонту</span>
-                            <span class="menu-info-text">Догляд за оновленим житлом</span>
-                          </div>
-                        </a>
-
                       </div>
                     </div>
                   </div>
@@ -864,6 +839,25 @@
   <script src="js/datepicker-uk.js"></script>
   <script src="js/main.js"> </script>
   <script>
+    // Media nav
+
+$(function() {
+  $('.header__btn-menu').on('click', function() {
+    $('.menu').toggleClass('menu--open');
+     
+    if ($('.menu').hasClass('menu--open')) {
+      $('.header__btn-menu').addClass('menu-open-style');
+      $('.header__btn-menu-span').addClass('menu-open-styl');
+      $('.logo').addClass('menu-open-logo');
+    } else {
+      $('.header__btn-menu').removeClass('menu-open-style');
+      $('.header__btn-menu-span').removeClass('menu-open-styl');
+      $('.logo').removeClass('menu-open-logo');
+    }
+  });
+});
+
+
 $(document).ready(function() {
   var activeStep = 0; // Початковий активний крок (0 означає, що немає активного кроку)
 
@@ -908,13 +902,6 @@ $(document).ready(function() {
       height: progressHeight,
       transition:  animationDuration + "ms"
     });
-
-    // Реалізуйте анімацію бордера для відповідного номеру кроку
-    // Наприклад, для бордера:
-    // $("#progress-bar-container #line-progress").css({
-    //   height: progressHeight,
-    //   transition: "height " + animationDuration + "ms ease"
-    // });
   }
 
   // Оновлюємо активний крок при завантаженні сторінки
@@ -925,6 +912,40 @@ $(document).ready(function() {
     updateActiveStep();
   });
 });
+
+
+
+// $(function() {
+//   $('.header__btn-menu').on('click', function() {
+//     $('.menu').toggleClass('menu--open');
+     
+//     if ($('.menu').hasClass('menu--open')) {
+//       $('.header__btn-menu').addClass('menu-open-style');
+//       $('.header__btn-menu-span').addClass('menu-open-styl');
+//       $('.logo').addClass('menu-open-logo');
+//     } else {
+//       $('.header__btn-menu').removeClass('menu-open-style');
+//       $('.header__btn-menu-span').removeClass('menu-open-styl');
+//       $('.logo').removeClass('menu-open-logo');
+//     }
+//   });
+// });
+
+// $(function() {
+//   // Відстежуємо подію "click" на .menu__list-link
+//   $('.menu__list-link').on('click', function() {
+//     // Знаходимо .dd_menu, який відповідає даному .menu__list-link
+//     var ddMenu = $(this).siblings('.dd_menu');
+    
+//     // Перевіряємо, чи .dd_menu відображається, і змінюємо її видимість
+//     if (ddMenu.is(':visible')) {
+//       ddMenu.hide();
+//     } else {
+//       ddMenu.show();
+//     }
+//   });
+// });
+// Отримуємо елементи, які потрібно перемістити
 
 
   </script>
