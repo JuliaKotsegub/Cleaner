@@ -86,16 +86,17 @@ a.menu__btn {
   display: none;
 }
 
-.navbar .menu__list-item.dd_menu-activ:hover .dd_menu {
+.navbar .menu__list-item.dd_menu-activ.active .dd_menu {
   display: block;
 }
 .navbar .menu__list-item.dd_menu-activ:hover .menu__list-nav {
   color: $color-orange;
 }
 
-.navbar ul li:hover .dd_menu {
-  display: block;
-}
+// .navbar ul li:hover .dd_menu {
+//   display: block;
+// }
+
 .dd_menu-wrapper {
   width: 736px;
   height: 472px;
@@ -1477,175 +1478,195 @@ button.dot {
 //  Animation
 
 .process-wrapper {
+	margin:auto;
   max-width: 1216px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 136px;
+	display: flex;
+	justify-content: space-between;
+	gap: 86px;
+	align-items: center;
+padding-bottom: 80px;
 }
 
 #progress-bar-container {
-  position: relative;
-  width: 588px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: sticky;
-  top: -10%;
-  padding-bottom: 680px;
-  padding-right: 100px;
+	position:relative;
+  width: 50%;
+	margin:auto;
 }
 
-#progress-bar-container ul {
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  width: 100%;
-  z-index: 99;
+#progress-bar-container ul{
+	padding:0;
+	margin:0;
+	padding-top:15px;
+	z-index:99;
+	position:absolute;
+	width:100%;
+	top: -300px;
 }
 
-#progress-bar-container li:before {
+#progress-bar-container li::before {
   content: "";
   display: block;
   margin: auto;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: solid 1px #e8e4e4;
-  transition: all ease 0.3s;
+  box-shadow:
+  0 0 0 1px #E8E4E4, /* Внешний белый бордер */
+  0 0 0 5px white;   /* Внутренний чёрный бордер */
+  border: 1px solid #E8E4E4; /* Внешний белый бордер */
   background-color: white;
-  z-index: 8;
+  z-index: 7;
+  position: relative;
 }
 
+
 #progress-bar-container li.active:before {
-  animation: animationCombined 1.5s ease forwards;
+  animation: animationCombined 5s ease forwards;
+ background: white;
 }
 
 @keyframes animationCombined {
-  0% {
-    border-top-color: white;
-    border-right-color: white;
-    border-bottom-color: white;
-    border-left-color: white;
-    background: white;
-  }
+ 
   25% {
-    border-top-color: orange;
+    border-top-color: #F97B22;
     border-right-color: white;
     border-bottom-color: white;
     border-left-color: white;
     background: white;
   }
   50% {
-    border-top-color: orange;
-    border-right-color: orange;
+    border-top-color: #F97B22;
+    border-right-color: #F97B22;
     border-bottom-color: white;
     border-left-color: white;
     background: white;
   }
   75% {
-    border-top-color: orange;
-    border-right-color: orange;
-    border-bottom-color: orange;
+    border-top-color: #F97B22;
+    border-right-color: #F97B22;
+    border-bottom-color: #F97B22;
     border-left-color: white;
     background: white;
     z-index: 7;
   }
   100% {
-    border-top-color: orange;
-    border-right-color: orange;
-    border-bottom-color: orange;
-    border-left-color: orange;
+    border-top-color: #F97B22;
+    border-right-color: #F97B22;
+    border-bottom-color: #F97B22;
+    border-left-color: #F97B22;
     background: url("../images/Home/process-arr.png");
-    z-index: 9;
+  z-index: 9;
   }
 }
 
 #progress-bar-container li {
-  width: 20%;
-  transition: all ease 0.2s;
-  vertical-align: bottom;
-  height: 134px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	width:20%;
+	transition:all ease 0.2s;
+	vertical-align:bottom;
+	height: 125px;
+	position:relative;
+	display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  
 }
 
 #progress-bar-container li .step-inner {
-  position: absolute;
-  width: 500px;
-  top: 110px;
-  left: 90px;
-  display: flex;
-  flex-direction: column;
+	position:absolute;
+	max-width: 384px;
+	top:100px;
+	left: 120px;
+	display: flex;
+	flex-direction: column;
 }
-#progress-bar-container li .step-inner h3 {
-  color: #101828;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 32px;
-  padding-bottom: 14px;
-  margin: 0;
+#progress-bar-container li .step-inner h3{
+	color:  #101828;
+font-size: 20px;
+font-weight: 600;
+line-height: 32px; 
+padding-bottom: 10px;
+padding-top: 20px;
+margin: 0;
 }
-#progress-bar-container li .step-inner p {
-  color: #475467;
-  font-size: 14px;
-  margin: 0;
-  width: 400px;
+#progress-bar-container li .step-inner p{
+	color:  #475467;
+font-size: 14px;
+width: 384px;
+margin: 0;
 }
-.step-number {
-  z-index: 8;
-  margin-top: -134px;
-  color: #475467;
-  text-align: center;
-  font-family: Manrope;
-  font-size: 14px;
-  font-weight: 600;
+.step-number{
+z-index: 8;
+margin-top: -125px;
+color:  #475467;
+text-align: center;
+font-family: Manrope;
 }
 
 #progress-bar-container #line {
-  display: flex;
-  width: 2px;
-  height: 420px;
-  margin: auto;
-  border-radius: 100px;
-  background: #e7e4e4;
-  position: absolute;
-  left: -60px;
-  top: 120px;
-  z-index: 1;
-  transition: all ease 0.5s;
+	display: flex;
+	width: 2px;
+height: 500px;
+	margin:auto;
+	border-radius: 100px;
+background: #E7E4E4;
+	position:absolute;
+	left:10%;
+	top: -185px;
+	z-index:1;
+	transition:all ease 0.9s;
 }
 
 #progress-bar-container #line-progress {
-  content: " ";
-  width: 100%;
-  height: 33%;
-  background: orange;
-  background: linear-gradient(to bottom, orange, orange 100%);
-  position: absolute;
-  z-index: 5;
-  border-radius: 50px;
-  transition: all 2s ease;
+	content:" ";
+	width:100%;
+	height:0%;
+	background: #F97B22;	 
+	background: linear-gradient(to bottom, #F97B22,#F97B22 100%); 
+	position:absolute;
+	z-index:5;
+	border-radius:50px;
+	transition:all ease 6s;
 }
 
+.video,
 #progress-content-section {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
+	max-width: 592px;
+max-height: 448px;
+	border-radius: 4px;
 }
+
 
 #progress-content-section .section-content {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-bottom: 40px;
+  width: 592px;
+  height: 448px;
+	display:none;
+	animation: FadeInUp 700ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
+ padding: 60px 0;
+ background-size: contain;
 }
+
+#progress-content-section .section-content.active {
+	display:block;
+  width: 542px;
+height: 448px;
+}
+
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+}
+
 
 @import "media";

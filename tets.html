@@ -1,200 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <title>Slick Slider</title>
     <style>
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-h1{
-    text-align: center;
-    margin-top: 125px;
-}
-/* .container {
+.process {
+  &__inner {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100vh;
-} */
+  display: none;
+}
+}
+
 .process-wrapper {
-    margin: auto;
-    max-width: 1080px;
+	margin:auto;
+  max-width: 1216px;
+	display: flex;
+	justify-content: space-between;
+	gap: 136px;
+	align-items: center;
+
 }
+
 #progress-bar-container {
-    position: relative;
-    width: 90%;
-    margin: auto;
-    height: 100px;
-    margin-top: 59px;
+	position:relative;
+  width: 50%;
+	margin:auto;
 }
+
 #progress-bar-container ul{
-     padding: 0;
-     margin: 0;
-     padding-top: 15px;
-     z-index: 9999;
-     position: absolute;
-     width: 100%;
-     margin-top: -40px;
-}
-#progress-bar-container li::before{
-    content: "";
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: 2px solid red;
-    transition: all ease;
-}
-#progress-bar-container li.active::before,
-#progress-bar-container li:hover::before{
-    background: deepskyblue;
-}
-#progress-bar-container li{
-    list-style: none;
-    float: left;
-    width: 20%;
-    text-align: center;
-    color: #aaa;
-    transition: all ease 0.2s;
-    vertical-align: bottom;
-    height: 59px;
-    position: relative;
-}
-#progress-bar-container li .step-innner {
-    position: absolute;
-    width: 100%;
-    bottom: 0;   
-}
-#progress-bar-container li.active,
-#progress-bar-container li:hover{
-    color: deepskyblue;
+	padding:0;
+	margin:0;
+	padding-top:15px;
+	z-index:99;
+	position:absolute;
+	width:100%;
+	top: -300px;
 }
 
-#progress-bar-container li::after{
-    content: "";
-    display: block;
-    width: 5px;
-    height: 5px;
-    background: #777;
-    margin: auto;
-    border: solid 7px white;
-    border-radius: 50%;
-    margin-top: 40px;
-    box-shadow: 0 2px 13px -1px rgba(0,0,0,0.3);
-    transition: all ease 0.2s;
-}
-#progress-bar-container li:hover:after{
-    background: deepskyblue;
-}
-#progress-bar-container li.active:after{
-    background: deepskyblue;
-}
-#progress-bar-container #line{
-    width: 80%;
-    margin: auto;
-    background:red;
-    height: 5px;
-    /* position: absolute; */
-    left: 10%;
-    top: 57px;
-    z-index: 1;
-    border-radius: 50px;
-    transition: all ease;
-}
-#progress-bar-container #line-process{
-    content: "";
-    width: 3%;
-    height: 100%;
-    background: deepskyblue;
-    background: linear-gradient(to right, deepskyblue 0%, #2ea3b7 100%);
-    /* position: absolute; */
-    z-index: 2;
-    border-radius: 50px;
-    transition: all ease 0.9s;
-}
-#process-content-section{
-    width: 90%;
-    margin: auto;
-    background: #f3f3f3;
-    border-radius: 4px;
-}
-#progress-content-section .section-content{
-    padding: 30px 40px;
-    text-align: center;
+#progress-bar-container li:before {
+	content:"";
+	display:block;
+	margin: auto;
+	width: 32px;
+height: 32px;
+	border-radius:50%;
+	border:solid 1px #E8E4E4;;
+	transition:all ease 0.3s;
+	background-color: white;
+	z-index: 65;
 }
 
+
+#progress-bar-container li.active:before {
+  animation: animationCombined 3s ease forwards;
+}
+
+@keyframes animationCombined {
+  0% {
+    border-top-color: white;
+    border-right-color: white;
+    border-bottom-color: white;
+    border-left-color: white;
+    background: white;
+  }
+  25% {
+    border-top-color: orange;
+    border-right-color: white;
+    border-bottom-color: white;
+    border-left-color: white;
+    background: white;
+  }
+  50% {
+    border-top-color: orange;
+    border-right-color: orange;
+    border-bottom-color: white;
+    border-left-color: white;
+    background: white;
+  }
+  75% {
+    border-top-color: orange;
+    border-right-color: orange;
+    border-bottom-color: orange;
+    border-left-color: white;
+    background: white;
+  }
+  100% {
+    border-top-color: orange;
+    border-right-color: orange;
+    border-bottom-color: orange;
+    border-left-color: orange;
+    background: url("../images/Home/process-arr.png");
+  }
+}
+
+#progress-bar-container li {
+	width:20%;
+	transition:all ease 0.2s;
+	vertical-align:bottom;
+	height: 90px;
+	position:relative;
+	display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+#progress-bar-container li .step-inner {
+	position:absolute;
+	width:384px;
+	top:50px;
+	left: 120px;
+	display: flex;
+	flex-direction: column;
+}
+#progress-bar-container li .step-inner h3{
+	color:  #101828;
+font-size: 20px;
+font-weight: 600;
+line-height: 32px; 
+padding-bottom: 10px;
+padding-top: 20px;
+margin: 0;
+}
+#progress-bar-container li .step-inner p{
+	color:  #475467;
+font-size: 14px;
+margin: 0;
+}
+.step-number{
+z-index: 999;
+margin-top: -90px;
+color:  #475467;
+text-align: center;
+font-family: Manrope;
+font-size: 14px;
+font-weight: 600;
+
+}
+
+#progress-bar-container li.active .step-number{
+opacity: 0;
+}
+
+#progress-bar-container #line {
+	display: flex;
+	width: 2px;
+height: 352px;
+	margin:auto;
+	border-radius: 100px;
+background: #E7E4E4;
+	position:absolute;
+	left:10%;
+	top: -200px;
+	z-index:1;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line-progress {
+	content:" ";
+	width:100%;
+	height:25%;
+	background: orange;	 
+	background: linear-gradient(to bottom, orange,orange 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 3.5s;
+}
+
+#progress-content-section {
+	max-width: 592px;
+max-height: 448px;
+	border-radius: 4px;
+}
+
+
+#progress-content-section .section-content {
+	display:none;
+	animation: FadeInUp 700ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
+}
+
+#progress-content-section .section-content.active {
+	display:block;
+}
+
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+}
     </style>
 </head>
-<body>
 
-  <div class="process-wrapper">
-    <div id="progress-bar-container">
-        <ul>
-            <li class="step step01 active">
-                <div class="step-innner">Step 1</div>
-            </li>
-            <li class="step step02">
-<div class="step-innner">Step 2</div>
-            </li>
-            <li class="step step03">
-                <div class="step-innner">Step 3</div>
-            </li>
-        </ul>
-        <div  id="line">
-            <div id="line-process"></div>
+<body>
+    <section class="process">
+        <div class="container inner">
+          <div class="process-wrapper">
+            <div id="progress-content-section">
+              <div class="section-content discovery active">
+              <img src="images/Home/process1.png" alt="">
+              </div>
+
+              <div class="section-content strategy">
+                <img src="images/Home/process1.png" alt="">
+              </div>
+
+              <div class="section-content creative">
+                <img src="images/Home/process1.png" alt="">
+              </div>
+
+              <div class="section-content production">
+                <img src="images/Home/process1.png" alt="">
+              </div>
+
+            </div>
+            <div id="progress-bar-container">
+              <ul>
+                <li class="step step01 active">
+                  <div class="step-number"> 1 </div>
+                  <div class="step-inner">
+                    <h3>Заповнення форми</h3>
+                    <p>Заповнюєте форму на сайті, обираєте всі потрібні послуги та переходите до наступного етапу.</p>
+                  </div>
+                </li>
+                <li class="step step02">
+                  <div class="step-number"> 2 </div>
+                  <div class="step-inner">
+                    <h3>Вибір клінера</h3>
+                    <p>Ми пропонуємо вам клінерів поблизу, ви обираєте та переходите до наступного етапу.</p>
+                  </div>
+                </li>
+                <li class="step step03">
+                  <div class="step-number"> 3 </div>
+                  <div class="step-inner">
+                    <h3>Оплата замовлення</h3>
+                    <p>Після вказаних вами даних та вибору клінера, ви оплачуєте 100% вартості послуги.</p>
+                  </div>
+                </li>
+                <li class="step step04">
+                  <div class="step-number"> 4 </div>
+                  <div class="step-inner">
+                    <h3>Здача виконаної роботи</h3>
+                    <p>Здача виконаної роботи. Ви оцінюєте роботу та якість, за бажанням залишаєте відгук.</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div id="line">
+                <div id="line-progress"></div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div id="process-content-section">
-        <div class="section-content discovery active">
-            <h2>one</h2>
-        </div>
-   
-        <div class="section-content strategy active">
-            <h2>two</h2>
-        </div>
-        
-        <div class="section-content production active">
-            <h2>three</h2>
-        </div>
-  </div> 
- </div>
-    <script>
-    $(".step").click( function() {
-	$(this).addClass("active").prevAll().addClass("active");
-	$(this).nextAll().removeClass("active");
+    </section>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/datepicker-uk.js"></script>
+  <script src="js/main.js"> </script>
+<script>  
+  $(".step").click( function() {
+$(this).addClass("active").prevAll().addClass("active");
+$(this).nextAll().removeClass("active");
 });
 
 $(".step01").click( function() {
-	$("#line-progress").css("width", "3%");
-	$(".discovery").addClass("active").siblings().removeClass("active");
+$("#line-progress").css("height", "25%");
+$(".discovery").addClass("active").siblings().removeClass("active");
 });
 
 $(".step02").click( function() {
-	$("#line-progress").css("width", "25%");
-	$(".strategy").addClass("active").siblings().removeClass("active");
+$("#line-progress").css("height", "50%");
+$(".strategy").addClass("active").siblings().removeClass("active");
 });
 
 $(".step03").click( function() {
-	$("#line-progress").css("width", "50%");
-	$(".creative").addClass("active").siblings().removeClass("active");
+$("#line-progress").css("height", "75%");
+$(".creative").addClass("active").siblings().removeClass("active");
 });
 
 $(".step04").click( function() {
-	$("#line-progress").css("width", "75%");
-	$(".production").addClass("active").siblings().removeClass("active");
+$("#line-progress").css("height", "100%");
+$(".production").addClass("active").siblings().removeClass("active");
 });
-
-$(".step05").click( function() {
-	$("#line-progress").css("width", "100%");
-	$(".analysis").addClass("active").siblings().removeClass("active");
-});
-    </script>
+</script>
 </body>
+
 </html>

@@ -299,31 +299,31 @@ function setSelectTitleSecond(e) {
 
 // Menu dropdown 
 
-var a_parent = document.querySelectorAll(".a_parent");
-var dd_menu_a = document.querySelectorAll(".dd_menu_a");
+// var a_parent = document.querySelectorAll(".a_parent");
+// var dd_menu_a = document.querySelectorAll(".dd_menu_a");
 
-a_parent.forEach(function (aitem) {
+// a_parent.forEach(function (aitem) {
 
-  aitem.addEventListener("click", function () {
-    a_parent.forEach(function (aitem) {
-      aitem.classList.remove("active");
-    })
-    dd_menu_a.forEach(function (dd_menu_item) {
-      dd_menu_item.classList.remove("active");
-    })
-    aitem.classList.add("active");
-  })
-})
+//   aitem.addEventListener("click", function () {
+//     a_parent.forEach(function (aitem) {
+//       aitem.classList.remove("active");
+//     })
+//     dd_menu_a.forEach(function (dd_menu_item) {
+//       dd_menu_item.classList.remove("active");
+//     })
+//     aitem.classList.add("active");
+//   })
+// })
 
-dd_menu_a.forEach(function (dd_menu_item) {
+// dd_menu_a.forEach(function (dd_menu_item) {
 
-  dd_menu_item.addEventListener("click", function () {
-    dd_menu_a.forEach(function (dd_menu_item) {
-      dd_menu_item.classList.remove("active");
-    })
-    dd_menu_item.classList.add("active");
-  })
-})
+//   dd_menu_item.addEventListener("click", function () {
+//     dd_menu_a.forEach(function (dd_menu_item) {
+//       dd_menu_item.classList.remove("active");
+//     })
+//     dd_menu_item.classList.add("active");
+//   })
+// })
 const allLinks = document.querySelectorAll(".tabs a");
 const allTabs = document.querySelectorAll(".tab-content")
 const tabContentWrapper = document.querySelector(".tab-content-wrapper");
@@ -353,4 +353,108 @@ ddMenuActivators.forEach(function (activator) {
   });
 });
 
+// Media nav
 
+// $(function() {
+// $('.header__btn-menu').on('click', function() {
+// $('.menu').toggleClass('menu--open');
+ 
+// if ($('.menu').hasClass('menu--open')) {
+//   $('.header__btn-menu').addClass('menu-open-style');
+//   $('.header__btn-menu-span').addClass('menu-open-styl');
+//   $('.logo').addClass('menu-open-logo');
+// } else {
+//   $('.header__btn-menu').removeClass('menu-open-style');
+//   $('.header__btn-menu-span').removeClass('menu-open-styl');
+//   $('.logo').removeClass('menu-open-logo');
+// }
+// });
+// }); 
+// $(document).ready(function() {
+//   var activeStep = 0; // Початковий активний крок (0 означає, що немає активного кроку)
+
+//   // Функція для оновлення активного кроку при скролі
+//   function updateActiveStep() {
+//     var scrollTop = $(window).scrollTop();
+//     $(".section-content").each(function() {
+//       var contentTop = $(this).offset().top;
+//       var contentBottom = contentTop + $(this).outerHeight();
+//       var contentStep = $(this).data("step");
+
+//       // Перевіряємо, чи скролите в верхній частині контенту
+//       if (scrollTop >= contentTop && scrollTop < contentBottom) {
+//         setActiveStep(contentStep);
+//       }
+//     });
+//   }
+
+//   // Функція для встановлення активного кроку
+//   function setActiveStep(stepNumber) {
+//     // Якщо новий крок відрізняється від поточного, виконуємо анімацію
+//     if (stepNumber !== activeStep) {
+//       activeStep = stepNumber;
+//       $(".step").removeClass("active");
+      
+//       // Додаємо клас "active" всім крокам від першого до активного
+//       for (var i = 1; i <= activeStep; i++) {
+//         $(".step[data-step='" + i + "']").addClass("active");
+//       }
+      
+//       animateBorderAndLine(activeStep);
+//     }
+//   }
+
+//   // Функція для анімації бордера і лінії
+//   function animateBorderAndLine(stepNumber) {
+//     var animationDuration = 2200;
+//     var progressHeight = stepNumber * 32 + "%";
+
+//     // Анімація лінії
+//     $("#line-progress").css({
+//       height: progressHeight,
+//       transition:  animationDuration + "ms"
+//     });
+//   }
+
+//   // Оновлюємо активний крок при завантаженні сторінки
+//   updateActiveStep();
+
+//   // Оновлюємо активний крок при прокрутці
+//   $(window).scroll(function() {
+//     updateActiveStep();
+//   });
+// });
+
+
+
+// $(function() {
+//   $('.header__btn-menu').on('click', function() {
+//     $('.menu').toggleClass('menu--open');
+     
+//     if ($('.menu').hasClass('menu--open')) {
+//       $('.header__btn-menu').addClass('menu-open-style');
+//       $('.header__btn-menu-span').addClass('menu-open-styl');
+//       $('.logo').addClass('menu-open-logo');
+//     } else {
+//       $('.header__btn-menu').removeClass('menu-open-style');
+//       $('.header__btn-menu-span').removeClass('menu-open-styl');
+//       $('.logo').removeClass('menu-open-logo');
+//     }
+//   });
+// });
+
+// $(function() {
+//   // Відстежуємо подію "click" на .menu__list-link
+//   $('.menu__list-link').on('click', function() {
+//     // Знаходимо .dd_menu, який відповідає даному .menu__list-link
+//     var ddMenu = $(this).siblings('.dd_menu');
+    
+//     // Перевіряємо, чи .dd_menu відображається, і змінюємо її видимість
+//     if (ddMenu.is(':visible')) {
+//       ddMenu.hide();
+//     } else {
+//       ddMenu.show();
+//     }
+//   });
+// });
+// Отримуємо елементи, які потрібно перемістити
