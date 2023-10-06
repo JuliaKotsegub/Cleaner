@@ -1511,7 +1511,7 @@ padding-bottom: 80px;
   height: 32px;
   border-radius: 50%;
   box-shadow:
-  0 0 0 1px #E8E4E4, /* Внешний белый бордер */
+  0 0 0 0px #E8E4E4, /* Внешний белый бордер */
   0 0 0 5px white;   /* Внутренний чёрный бордер */
   border: 1px solid #E8E4E4; /* Внешний белый бордер */
   background-color: white;
@@ -1521,41 +1521,43 @@ padding-bottom: 80px;
 
 
 #progress-bar-container li.active:before {
-  animation: animationCombined 5s ease forwards;
+  animation: animationCombined 5s ease-in forwards;
  background: white;
 }
 
 @keyframes animationCombined {
  
   25% {
-    border-top-color: #F97B22;
+    border-top-color: #FF8038;
     border-right-color: white;
     border-bottom-color: white;
     border-left-color: white;
     background: white;
   }
   50% {
-    border-top-color: #F97B22;
-    border-right-color: #F97B22;
+    border-top-color: #FF8038;
+    border-right-color: #FF8038;
     border-bottom-color: white;
     border-left-color: white;
     background: white;
   }
   75% {
     border-top-color: #F97B22;
-    border-right-color: #F97B22;
+    border-right-color: #FF8038;
     border-bottom-color: #F97B22;
     border-left-color: white;
     background: white;
     z-index: 7;
   }
   100% {
-    border-top-color: #F97B22;
-    border-right-color: #F97B22;
-    border-bottom-color: #F97B22;
-    border-left-color: #F97B22;
+    border-top-color: #FF8038;
+    border-right-color: #FF8038;
+    border-bottom-color: #FF8038;
+    border-left-color: #FF8038;
     background: url("../images/Home/process-arr.png");
   z-index: 9;
+  width: 32px;
+  height: 32px;
   }
 }
 
@@ -1563,18 +1565,17 @@ padding-bottom: 80px;
 	width:20%;
 	transition:all ease 0.2s;
 	vertical-align:bottom;
-	height: 125px;
+	height: 117px;
 	position:relative;
 	display: flex; 
   flex-direction: column; 
-  justify-content: center; 
-  
+  justify-content: center;  
 }
 
 #progress-bar-container li .step-inner {
 	position:absolute;
 	max-width: 384px;
-	top:100px;
+	top:80px;
 	left: 120px;
 	display: flex;
 	flex-direction: column;
@@ -1596,7 +1597,7 @@ margin: 0;
 }
 .step-number{
 z-index: 8;
-margin-top: -125px;
+margin-top: -115px;
 color:  #475467;
 text-align: center;
 font-family: Manrope;
@@ -1605,7 +1606,7 @@ font-family: Manrope;
 #progress-bar-container #line {
 	display: flex;
 	width: 2px;
-height: 500px;
+height: 460px;
 	margin:auto;
 	border-radius: 100px;
 background: #E7E4E4;
@@ -1639,14 +1640,12 @@ max-height: 448px;
 
 
 #progress-content-section .section-content {
-  width: 592px;
-  height: 448px;
 	display:none;
 	animation: FadeInUp 700ms ease 1;
 	animation-fill-mode:forwards;
 	transform:translateY(15px);
 	opacity:0;
- padding: 60px 0;
+  margin-top: 90px;
  background-size: contain;
 }
 
@@ -1654,6 +1653,7 @@ max-height: 448px;
 	display:block;
   width: 542px;
 height: 448px;
+background-size: contain;
 }
 
 @keyframes FadeInUp {
