@@ -635,7 +635,6 @@
   .menu--open {
     transform: translateX(0px);
     max-width: 610px;
-    height: 650px;
     padding: 0 8px 32px;
   }
   .menu__list {
@@ -649,6 +648,7 @@
   }
   .menu__list-exit {
     font-size: 16px;
+
   }
   .a_parent {
     padding-bottom: 10px;
@@ -667,6 +667,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
+    padding-top: 100px;
   }
 
   .footer__copyright-link {

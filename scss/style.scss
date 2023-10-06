@@ -1505,6 +1505,8 @@ padding-bottom: 80px;
 
 #progress-bar-container li::before {
   content: "";
+  top: 2px;
+  left: 0;
   display: block;
   margin: auto;
   width: 32px;
@@ -1523,6 +1525,7 @@ padding-bottom: 80px;
 #progress-bar-container li.active:before {
   animation: animationCombined 5s ease-in forwards;
  background: white;
+ transition: border-top-color 1.5s linear, border-right-color 1.5s linear 1s, border-bottom-color 1.5s linear 1s, border-left-color 1.5s linear 1s;
 }
 
 @keyframes animationCombined {
@@ -1533,6 +1536,7 @@ padding-bottom: 80px;
     border-bottom-color: white;
     border-left-color: white;
     background: white;
+
   }
   50% {
     border-top-color: #FF8038;
@@ -1548,18 +1552,72 @@ padding-bottom: 80px;
     border-left-color: white;
     background: white;
     z-index: 7;
+
   }
   100% {
-    border-top-color: #FF8038;
+    border-top-color: #F97B22;
     border-right-color: #FF8038;
-    border-bottom-color: #FF8038;
-    border-left-color: #FF8038;
-    background: url("../images/Home/process-arr.png");
-  z-index: 9;
-  width: 32px;
-  height: 32px;
+    border-bottom-color: #F97B22;
+    border-left-color: #F97B22;
+    z-index: 10;
+    background-color: #F97B22;
+    background-image: url('../images/Home/process-arr.png');
+    
   }
 }
+
+.step-number button {
+  border: 0;
+  position: relative;
+}
+
+
+.step-number button::before,
+.step-number button::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.spin {
+  height: 33px;
+  width: 33px;
+  background-color: none;
+}
+.spin::before,
+.spin::after {
+  top: 0;
+  left: 0;
+}
+
+.spin::before {
+  border: 1px solid transparent;
+}
+
+#progress-bar-container li.active .spin:after {
+  border: 0px solid transparent;
+}
+
+#progress-bar-container li.active .spin:after {
+  border-top: 1px solid #F97B22;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  transform: rotate(270deg);
+  transition: transform 8s linear 5s, border-left-width 5s linear 8.5s, -webkit-transform 5s linear 0s;
+}
+.circle {
+  border-radius: 100%;
+  box-shadow: none;
+}
+
+.circle::before,
+.circle::after {
+  border-radius: 100%;
+}
+
 
 #progress-bar-container li {
 	width:20%;
