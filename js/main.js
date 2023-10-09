@@ -324,34 +324,145 @@ function setSelectTitleSecond(e) {
 //     dd_menu_item.classList.add("active");
 //   })
 // })
-const allLinks = document.querySelectorAll(".tabs a");
-const allTabs = document.querySelectorAll(".tab-content")
-const tabContentWrapper = document.querySelector(".tab-content-wrapper");
+// const allLinks = document.querySelectorAll(".tabs a");
+// const allTabs = document.querySelectorAll(".tab-content")
+// const tabContentWrapper = document.querySelector(".tab-content-wrapper");
 
-const shiftTabs = (linkId) => {
-  allTabs.forEach((tab, i) => {
+// const shiftTabs = (linkId) => {
+//   allTabs.forEach((tab, i) => {
 
-    if (tab.id.includes(linkId)) {
-      allTabs.forEach((tabItem) => {
-        tabItem.style = `transform: translateY(-${i * 300}px);`;
-      });
-    }
-  });
-}
+//     if (tab.id.includes(linkId)) {
+//       allTabs.forEach((tabItem) => {
+//         tabItem.style = `transform: translateY(-${i * 300}px);`;
+//       });
+//     }
+//   });
+// }
+
+// const ddMenuActivators = document.querySelectorAll(".menu__list-item.dd_menu-activ");
+
+// ddMenuActivators.forEach(function (activator) {
+//   activator.addEventListener("mouseenter", function () {
+//     const ddMenu = activator.querySelector(".dd_menu");
+//     ddMenu.style.display = "block";
+//   });
+
+//   activator.addEventListener("mouseleave", function () {
+//     const ddMenu = activator.querySelector(".dd_menu");
+//     ddMenu.style.display = "none";
+//   });
+// });
 
 const ddMenuActivators = document.querySelectorAll(".menu__list-item.dd_menu-activ");
+const screenWidth = window.innerWidth;
+
+function toggleMenu() {
+  const ddMenu = this.querySelector(".dd_menu");
+  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
+    // Якщо ширина екрану більша або дорівнює 610px, використовуйте наведення
+    ddMenu.style.display = "block";
+  } else {
+    // В іншому випадку, використовуйте клік
+    ddMenu.style.display = (ddMenu.style.display === "block") ? "none" : "block";
+  }
+}
 
 ddMenuActivators.forEach(function (activator) {
-  activator.addEventListener("mouseenter", function () {
-    const ddMenu = activator.querySelector(".dd_menu");
-    ddMenu.style.display = "block";
-  });
-
-  activator.addEventListener("mouseleave", function () {
-    const ddMenu = activator.querySelector(".dd_menu");
-    ddMenu.style.display = "none";
-  });
+  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
+    activator.addEventListener("mouseenter", toggleMenu);
+    activator.addEventListener("mouseleave", toggleMenu);
+  } else {
+    activator.addEventListener("click", toggleMenu);
+  }
 });
+
+
+
+// Animation
+
+$(document).ready(function () {
+  let currentStep = 0;
+  let animationStarted = false;
+  let allStepsCompleted = false;
+
+  // Функція для обновлення кроку і анімації
+  function updateStep() {
+    
+      if (allStepsCompleted) {
+          currentStep = 0;
+      } else {
+          currentStep++;
+          if (currentStep > 4) {
+              currentStep = 4;
+              allStepsCompleted = true;
+          }
+      }
+
+      // Додаємо клас active до поточного кроку
+      $(".step.step0" + currentStep).addClass("active");
+
+      // Оновлюємо контент на основі поточного кроку
+      switch (currentStep) {
+          case 1:
+              $(".discovery").addClass("active").siblings().removeClass("active");
+              break;
+          case 2:
+              $(".strategy").addClass("active").siblings().removeClass("active");
+              break;
+          case 3:
+              $(".creative").addClass("active").siblings().removeClass("active");
+              break;
+          case 4:
+              $(".production").addClass("active").siblings().removeClass("active");
+              break;
+      }
+
+      // Запускаємо анімацію step
+      let progressBar = $(".step.active:before");
+      progressBar.css("animation", "none");
+      void progressBar.offsetWidth; // Trigger a reflow
+      progressBar.css("animation", "animationCombined 5s ease forwards");
+
+      // Змінюємо background елемента #line-progress відповідно до кроку
+      let lineProgress = $("#line-progress");
+      switch (currentStep) {
+          case 1:
+              lineProgress.css("height", "25%");
+              break;
+          case 2:
+              lineProgress.css("height", "50%");
+              break;
+          case 3:
+              lineProgress.css("height", "75%");
+              break;
+          case 4:
+              lineProgress.css("height", "100%");
+              break;
+      }
+  }
+
+  // Функція для перевірки, чи користувач дійшов до секції "process"
+  function checkVisibility() {
+      let processSection = $(".process");
+      let windowHeight = $(window).height();
+      let scrollTop = $(window).scrollTop();
+      let processOffset = processSection.offset().top;
+
+      if (!animationStarted && scrollTop + windowHeight >= processOffset) {
+          animationStarted = true;
+
+          // Викликаємо функцію оновлення кроку та анімацію без затримки
+          updateStep();
+
+          // Починаємо викликати оновлення кроку та анімацію кожні 5 секунд
+          setInterval(updateStep, 5000);
+      }
+  }
+
+  // Викликаємо функцію checkVisibility при прокрутці сторінки
+  $(window).scroll(checkVisibility);
+});
+
 
 // Media nav
 
@@ -371,78 +482,7 @@ if ($('.menu').hasClass('menu--open')) {
 });
 }); 
 
-// $(document).ready(function() {
-//   var activeStep = 0; // Початковий активний крок (0 означає, що немає активного кроку)
 
-//   // Функція для оновлення активного кроку при скролі
-//   function updateActiveStep() {
-//     var scrollTop = $(window).scrollTop();
-//     $(".section-content").each(function() {
-//       var contentTop = $(this).offset().top;
-//       var contentBottom = contentTop + $(this).outerHeight();
-//       var contentStep = $(this).data("step");
-
-//       // Перевіряємо, чи скролите в верхній частині контенту
-//       if (scrollTop >= contentTop && scrollTop < contentBottom) {
-//         setActiveStep(contentStep);
-//       }
-//     });
-//   }
-
-//   // Функція для встановлення активного кроку
-//   function setActiveStep(stepNumber) {
-//     // Якщо новий крок відрізняється від поточного, виконуємо анімацію
-//     if (stepNumber !== activeStep) {
-//       activeStep = stepNumber;
-//       $(".step").removeClass("active");
-      
-//       // Додаємо клас "active" всім крокам від першого до активного
-//       for (var i = 1; i <= activeStep; i++) {
-//         $(".step[data-step='" + i + "']").addClass("active");
-//       }
-      
-//       animateBorderAndLine(activeStep);
-//     }
-//   }
-
-//   // Функція для анімації бордера і лінії
-//   function animateBorderAndLine(stepNumber) {
-//     var animationDuration = 2200;
-//     var progressHeight = stepNumber * 32 + "%";
-
-//     // Анімація лінії
-//     $("#line-progress").css({
-//       height: progressHeight,
-//       transition:  animationDuration + "ms"
-//     });
-//   }
-
-//   // Оновлюємо активний крок при завантаженні сторінки
-//   updateActiveStep();
-
-//   // Оновлюємо активний крок при прокрутці
-//   $(window).scroll(function() {
-//     updateActiveStep();
-//   });
-// });
-
-
-
-// $(function() {
-//   $('.header__btn-menu').on('click', function() {
-//     $('.menu').toggleClass('menu--open');
-     
-//     if ($('.menu').hasClass('menu--open')) {
-//       $('.header__btn-menu').addClass('menu-open-style');
-//       $('.header__btn-menu-span').addClass('menu-open-styl');
-//       $('.logo').addClass('menu-open-logo');
-//     } else {
-//       $('.header__btn-menu').removeClass('menu-open-style');
-//       $('.header__btn-menu-span').removeClass('menu-open-styl');
-//       $('.logo').removeClass('menu-open-logo');
-//     }
-//   });
-// });
 
 // $(function() {
 //   // Відстежуємо подію "click" на .menu__list-link
@@ -458,4 +498,3 @@ if ($('.menu').hasClass('menu--open')) {
 //     }
 //   });
 // });
-// Отримуємо елементи, які потрібно перемістити

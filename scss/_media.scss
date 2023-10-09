@@ -546,6 +546,9 @@
 // -----------------610-------------------------------
 
 @media (max-width: 610px) {
+  .menu__list-item-down{
+    display: none;
+  }
   .logo {
     width: 48px;
     height: 37.333px;
@@ -661,6 +664,11 @@
     font-weight: 600;
     line-height: 24px;
   }
+
+  .navbar ul li a.a_parent.active .dd_menu{
+    padding-bottom: 580px;
+  }
+
   .menu__list-flex {
     display: flex;
     flex-direction: column-reverse;
@@ -928,9 +936,6 @@
     .menu__list-arrow {
     transform: rotate(90deg);
   }
-  // .navbar .menu__list-item.dd_menu-activ .dd_menu {
-  //   display: block!important;
-  // }
 
   .dd_menu-wrapper {
     max-width: 550px;
@@ -939,9 +944,6 @@
     padding: 2px;
     padding-top: 16px;
     margin-top: 5px;
-  }
-  .navbar .menu__list-item.dd_menu-activ:hover {
-    margin-bottom: 454px;
   }
 
   .content {
@@ -952,6 +954,7 @@
   }
   .content {
     display: block;
+    max-width: 500px;
   }
   .content .slider,
   .content .slider:before,
@@ -968,7 +971,7 @@
   .content .list {
     margin-right: 0px;
   }
-  .content .text-content {
+.content .text-content {
     display: flex;
     max-width: 100%;
     padding: 0;
@@ -988,23 +991,23 @@
     max-width: 400px;
   }
 
-  /* Initially, set the color of .menu-title inside .home to orange */
-  input[type="radio"]:checked + .list label.home .menu-title {
-    color: initial;
-  }
+  // /* Initially, set the color of .menu-title inside .home to orange */
+  // input[type="radio"]:checked + .list label.home .menu-title {
+  //   color: initial;
+  // }
 
-  /* Reset the color when .home input is not checked */
-  input[type="radio"]:not(:checked) + .list label.home .menu-title {
-    color: orange;
-  }
-  input[type="radio"]:checked + .list label.blog .menu-title {
-    color: orange;
-  }
+  // /* Reset the color when .home input is not checked */
+  // input[type="radio"]:not(:checked) + .list label.home .menu-title {
+  //   color: orange;
+  // }
+  // input[type="radio"]:checked + .list label.blog .menu-title {
+  //   color: orange;
+  // }
 
-  /* Reset the color when .home input is not checked */
-  input[type="radio"]:not(:checked) + .list label.blog .menu-title {
-    color: initial;
-  }
+  // /* Reset the color when .home input is not checked */
+  // input[type="radio"]:not(:checked) + .list label.blog .menu-title {
+  //   color: initial;
+  // }
 
   .content {
     display: flex;
@@ -1045,31 +1048,31 @@
   //   top: 50px;
   //   margin: 0;
   // }
-  #progress-bar-container {
-    max-width: 600px;
-    margin: 0;
-    align-items: center;
-    padding-right: 0;
-  }
-  #progress-bar-container li .step-inner {
-    line-height: 10px;
-  }
-  .process-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 30px;
-  }
-  #progress-content-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  #progress-content-section .section-content {
-    max-width: 40%;
-  }
+  // #progress-bar-container {
+  //   max-width: 600px;
+  //   margin: 0;
+  //   align-items: center;
+  //   padding-right: 0;
+  // }
+  // #progress-bar-container li .step-inner {
+  //   line-height: 10px;
+  // }
+  // .process-wrapper {
+  //   display: flex;
+  //   flex-direction: row-reverse;
+  //   flex-wrap: wrap;
+  //   align-items: flex-start;
+  //   gap: 30px;
+  // }
+  // #progress-content-section {
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  //   align-items: flex-start;
+  // }
+  // #progress-content-section .section-content {
+  //   max-width: 40%;
+  // }
   .menu__list-item:hover .menu__list-nav,
   .navbar .menu__list-item.dd_menu-activ:hover .menu__list-nav,
   .navbar .a_parent.active span,
@@ -1106,6 +1109,7 @@
   //   font-size: 14px;
   //   font-weight: 600;
   // }
+  
 }
 
 // ---400--------------------------------------

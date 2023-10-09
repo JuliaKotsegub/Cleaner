@@ -1482,128 +1482,164 @@ button.dot {
   max-width: 1216px;
 	display: flex;
 	justify-content: space-between;
-	gap: 86px;
+	gap: 130px;
 	align-items: center;
-padding-bottom: 80px;
+padding-bottom: 16px;
 }
 
 #progress-bar-container {
 	position:relative;
   width: 50%;
 	margin:auto;
+  max-height: 536px;
 }
 
 #progress-bar-container ul{
-	padding:0;
-	margin:0;
 	padding-top:15px;
 	z-index:99;
-	position:absolute;
 	width:100%;
-	top: -300px;
 }
 
-#progress-bar-container li::before {
-  content: "";
-  top: 2px;
-  left: 0;
-  display: block;
-  margin: auto;
+// #progress-bar-container li::before {
+//   content: "";
+//   top: 2px;
+//   left: 0;
+//   display: block;
+//   margin: auto;
+// }
 
-  position: relative;
-}
-#progress-bar-container li .spin{
-  width: 32px;
+
+.circular{
   height: 32px;
-  border-radius: 100%;
-  box-shadow:
-  0 0 0 0px #e8e4e400, 
-  0 0 0 5px white;   
-  background-color: white;
-  z-index: 7;
-  align-items: center;
-}
+  width: 32px;
+  position: relative;
+  
+    box-shadow:
+    0 0 0 0px #e8e4e400, 
+    0 0 0 5px white;   
+    background-color: white;
+    z-index: 7;
 
-#progress-bar-container li.active .spin:before {
-  top: 0;
-  left: 0;
-  align-items: center;
-border-radius: 100%;
+  }
+.circular .iner, .circular .outer, .circular .circle{
+  position: absolute;
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+.circular .iner{
+  top: 0%;
+  left: 0%;
+  height: 28px;
+  width: 28px;
+  margin: 2px 0 0 2px;
+  background-color: white;
+  border-radius: 100%;
+z-index: 10;
+}
+.step.active .circular .iner{
   animation: animationCombined 0.1s forwards;
   animation-delay: 5s;
- border-top-color: #FF8038;
-  border-right-color: #FF8038;
-  border-bottom-color: #FF8038;
-  border-left-color: #FF8038;
-z-index: 10;
-transition: border-top-color 2s linear 0s, border-right-color 1.5s linear 1s, border-bottom-color 2s linear 1.5s, border-left-color 5.0s linear 2.0s;
-background-position: center;
-
 }
-
-@keyframes animationCombined {
+.circular .circle{
+  z-index: 1;
+  box-shadow: none;
+}
+.circular .numb{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color:  #475467;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%; 
+}
+.circular .bar{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #E8E4E4;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 32px, 32px, 16px);
+}
+.circle .bar .progress{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 16px, 32px, 0px);
+}
+.circle .bar .progress, .dot span{
+  background: $color-orange;
+}
+.step.active .circle .left .progress{
+  z-index: 1;
+  animation: left 2.5s linear both;
+}
+@keyframes left {
+  100%{
+    transform: rotate(180deg);
+  }
+}
+.circle .right{
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.step.active .circle .right .progress{
+  animation: right 2.5s linear both;
+  animation-delay: 2.5s;
+}
+@keyframes right {
+  100%{
+    transform: rotate(180deg);
+  }
+}
+.circle .dot{
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  margin-top: -0px;
+  animation: dot 5s linear both;
+  transform-origin: 0% 50%;
+}
+.circle .dot span {
+  position: absolute;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-radius: 100%;
+}
+@keyframes dot{
+  0% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+    z-index: 4;
+  }
   100% {
-    background-color: #F97B22;
-    background-image: url('../images/Home/check.svg');
-    background-repeat: no-repeat;
-    align-items: center;
-    background-position: center;
-  z-index: 9;
+    transform: rotate(270deg);
+    z-index: 4;
   }
 }
 
-.step-number button {
-  border: 0;
-  position: relative;
-}
-
-
-.step-number button::before,
-.step-number button::after {
-  box-sizing: inherit;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.spin {
-  height: 33px;
-  width: 33px;
-  background-color: none;
-}
-.spin::before,
-.spin::after {
-  top: 0;
-  left: 0;
-}
-
-.spin::before {
-  border: 1px solid #E8E4E4;
-}
-
-#progress-bar-container li.active .spin:after {
-  border: 0px solid transparent;
-}
-
-#progress-bar-container li.active .spin:after {
-  border-top: 1px solid #F97B22;
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  transform: rotate(270deg);
-  transition: transform 4s linear 0s, border-left-width 2s linear 2.0s, -webkit-transform 3.8s linear 0s;
-}
-.circle {
-  border-radius: 50%;
-  box-shadow: none;
-}
-
-.circle::before,
-.circle::after {
-  border-radius: 50%;
-}
-
+    @keyframes animationCombined {
+    100% {
+      background-color: #F97B22;
+      background-image: url('../images/Home/check.svg');
+      background-repeat: no-repeat;
+      align-items: center;
+      background-position: center;
+    z-index: 11;
+    }
+  }
 
 #progress-bar-container li {
 	width:20%;
@@ -1619,8 +1655,8 @@ background-position: center;
 #progress-bar-container li .step-inner {
 	position:absolute;
 	max-width: 384px;
-	top:80px;
-	left: 120px;
+	top: -18px;
+	left: 80%;
 	display: flex;
 	flex-direction: column;
 }
@@ -1655,8 +1691,8 @@ height: 460px;
 	border-radius: 100px;
 background: #E7E4E4;
 	position:absolute;
-	left:10%;
-	top: -185px;
+	left:15px;
+	top: 0;
 	z-index:1;
 	transition:all ease 0.9s;
 }
