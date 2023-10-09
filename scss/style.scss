@@ -1536,7 +1536,7 @@ border-radius: 100%;
   border-bottom-color: #FF8038;
   border-left-color: #FF8038;
 z-index: 10;
-transition: border-top-color 2s linear 0s, border-right-color 2s linear 1s, border-bottom-color 4s linear 1.5s, border-left-color 5.0s linear 2.0s;
+transition: border-top-color 2s linear 0s, border-right-color 1.5s linear 1s, border-bottom-color 2s linear 1.5s, border-left-color 5.0s linear 2.0s;
 background-position: center;
 
 }
@@ -1581,13 +1581,6 @@ background-position: center;
 .spin::before {
   border: 1px solid #E8E4E4;
 }
-
-// .spin::before {
-//   border-top-color: #FF8038;
-//   border-right-color: #FF8038;
-//   border-bottom-color: #FF8038;
-//   transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.10s, border-bottom-color 0.15s linear 0.20s;
-// }
 
 #progress-bar-container li.active .spin:after {
   border: 0px solid transparent;
