@@ -46,6 +46,12 @@
     border: 1px solid $color-orange;
   }
 }
+.menu__list-item-drop{
+  display: none;
+}
+.menu__list-item-down{
+  display: block;
+}
 a.menu__btn {
   color: $color-orange;
   text-align: center;
@@ -1480,6 +1486,9 @@ button.dot {
 }
 
 //  Animation
+ section{
+  overflow: hidden;
+}
 
 .process-wrapper {
 	margin:auto;
@@ -1496,6 +1505,7 @@ padding-bottom: 16px;
   width: 50%;
 	margin:auto;
   max-height: 536px;
+  
 }
 
 #progress-bar-container ul{
@@ -1503,16 +1513,6 @@ padding-bottom: 16px;
 	z-index:99;
 	width:100%;
 }
-
-// #progress-bar-container li::before {
-//   content: "";
-//   top: 2px;
-//   left: 0;
-//   display: block;
-//   margin: auto;
-// }
-
-
 .circular{
   height: 32px;
   width: 32px;
@@ -1729,7 +1729,7 @@ max-height: 448px;
 	animation-fill-mode:forwards;
 	transform:translateY(15px);
 	opacity:0;
-  margin-top: 90px;
+  margin-top: 40px;
  background-size: contain;
 }
 
@@ -1751,6 +1751,8 @@ background-size: contain;
 		opacity:1;
 	}
 }
+
+
 
 
 @import "media";

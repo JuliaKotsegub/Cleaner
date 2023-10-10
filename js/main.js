@@ -150,7 +150,7 @@ $(document).ready(function(){
   
     // Настройки для средних экранов (>= 400px и < 768px)
     var mediumScreenSettings = {
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         arrows: true,
@@ -297,105 +297,6 @@ function setSelectTitleSecond(e) {
 }
 
 
-// Menu dropdown 
-
-// var a_parent = document.querySelectorAll(".a_parent");
-// var dd_menu_a = document.querySelectorAll(".dd_menu_a");
-
-// a_parent.forEach(function (aitem) {
-
-//   aitem.addEventListener("click", function () {
-//     a_parent.forEach(function (aitem) {
-//       aitem.classList.remove("active");
-//     })
-//     dd_menu_a.forEach(function (dd_menu_item) {
-//       dd_menu_item.classList.remove("active");
-//     })
-//     aitem.classList.add("active");
-//   })
-// })
-
-// dd_menu_a.forEach(function (dd_menu_item) {
-
-//   dd_menu_item.addEventListener("click", function () {
-//     dd_menu_a.forEach(function (dd_menu_item) {
-//       dd_menu_item.classList.remove("active");
-//     })
-//     dd_menu_item.classList.add("active");
-//   })
-// })
-// const allLinks = document.querySelectorAll(".tabs a");
-// const allTabs = document.querySelectorAll(".tab-content")
-// const tabContentWrapper = document.querySelector(".tab-content-wrapper");
-
-// const shiftTabs = (linkId) => {
-//   allTabs.forEach((tab, i) => {
-
-//     if (tab.id.includes(linkId)) {
-//       allTabs.forEach((tabItem) => {
-//         tabItem.style = `transform: translateY(-${i * 300}px);`;
-//       });
-//     }
-//   });
-// }
-
-// const ddMenuActivators = document.querySelectorAll(".menu__list-item.dd_menu-activ");
-
-// ddMenuActivators.forEach(function (activator) {
-//   activator.addEventListener("mouseenter", function () {
-//     const ddMenu = activator.querySelector(".dd_menu");
-//     ddMenu.style.display = "block";
-//   });
-
-//   activator.addEventListener("mouseleave", function () {
-//     const ddMenu = activator.querySelector(".dd_menu");
-//     ddMenu.style.display = "none";
-//   });
-// });
-
-const ddMenuActivators = document.querySelectorAll(".menu__list-item.dd_menu-activ");
-const screenWidth = window.innerWidth;
-
-function toggleMenu() {
-  const ddMenu = this.querySelector(".dd_menu");
-  
-  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
-    // Якщо ширина екрану більша або дорівнює 610px, використовуйте наведення
-    ddMenu.style.display = "block";
-  } else {
-    // В іншому випадку, використовуйте клік
-    ddMenu.style.display = (ddMenu.style.display === "block") ? "none" : "block";
-    
-    // Збільште падінг вниз до 50px
-    if (ddMenu.style.display === "block") {
-      this.style.paddingBottom = "600px";
-
-      const arrowImage = this.querySelector(".a_parent-arrow img");
-      arrowImage.style.transform = "rotate(90deg)";
-    } else {
-      this.style.paddingBottom = "0";
-      
-      // Отримайте зображення стрілки і поверніть його в початковий стан
-      const arrowImage = this.querySelector(".a_parent-arrow img");
-      arrowImage.style.transform = "rotate(0deg)";
-    }
-  }
-}
-
-
-ddMenuActivators.forEach(function (activator) {
-  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
-    activator.addEventListener("mouseenter", toggleMenu);
-    activator.addEventListener("mouseleave", toggleMenu);
-  } else {
-    activator.addEventListener("click", toggleMenu);
-  }
-});
-
-// Падінг вниз 
-
-
-
 // Animation
 
 $(document).ready(function () {
@@ -484,35 +385,95 @@ $(document).ready(function () {
 
 // Media nav
 
-$(function() {
-$('.header__btn-menu').on('click', function() {
-$('.menu').toggleClass('menu--open');
- 
-if ($('.menu').hasClass('menu--open')) {
-  $('.header__btn-menu').addClass('menu-open-style');
-  $('.header__btn-menu-span').addClass('menu-open-styl');
-  $('.logo').addClass('menu-open-logo');
-} else {
-  $('.header__btn-menu').removeClass('menu-open-style');
-  $('.header__btn-menu-span').removeClass('menu-open-styl');
-  $('.logo').removeClass('menu-open-logo');
-}
-});
-}); 
-
-
-
 // $(function() {
-//   // Відстежуємо подію "click" на .menu__list-link
-//   $('.menu__list-link').on('click', function() {
-//     // Знаходимо .dd_menu, який відповідає даному .menu__list-link
-//     var ddMenu = $(this).siblings('.dd_menu');
-    
-//     // Перевіряємо, чи .dd_menu відображається, і змінюємо її видимість
-//     if (ddMenu.is(':visible')) {
-//       ddMenu.hide();
-//     } else {
-//       ddMenu.show();
-//     }
-//   });
+// $('.header__btn-menu').on('click', function() {
+// $('.menu').toggleClass('menu--open');
+ 
+// if ($('.menu').hasClass('menu--open')) {
+//   $('.header__btn-menu').addClass('menu-open-style');
+//   $('.header__btn-menu-span').addClass('menu-open-styl');
+//   $('.logo').addClass('menu-open-logo');
+// } else {
+//   $('.header__btn-menu').removeClass('menu-open-style');
+//   $('.header__btn-menu-span').removeClass('menu-open-styl');
+//   $('.logo').removeClass('menu-open-logo');
+// }
 // });
+// }); 
+
+// Menu dropdown 
+
+
+const ddMenuActivators = document.querySelectorAll(".menu__list-item.dd_menu-activ");
+const screenWidth = window.innerWidth;
+
+function toggleMenu() {
+  const ddMenu = this.querySelector(".dd_menu");
+  
+  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
+    // Якщо ширина екрану більша або дорівнює 610px, використовуйте наведення
+    ddMenu.style.display = "block";
+  } else {
+    // В іншому випадку, використовуйте клік
+    ddMenu.style.display = (ddMenu.style.display === "block") ? "none" : "block";
+    
+    // Збільште падінг вниз до 50px
+    if (ddMenu.style.display === "block") {
+      this.style.paddingBottom = "50px";
+
+      const arrowImage = this.querySelector(".a_parent-arrow img");
+      arrowImage.style.transform = "rotate(90deg)";
+    } else {
+      this.style.paddingBottom = "0";
+      
+      // Отримайте зображення стрілки і поверніть його в початковий стан
+      const arrowImage = this.querySelector(".a_parent-arrow img");
+      arrowImage.style.transform = "rotate(0deg)";
+    }
+  }
+}
+
+
+ddMenuActivators.forEach(function (activator) {
+  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
+    activator.addEventListener("mouseenter", toggleMenu);
+    activator.addEventListener("mouseleave", function () {
+      // Додайте код для закриття меню при виході курсора за межі меню
+      const ddMenu = activator.querySelector(".dd_menu");
+      ddMenu.style.display = "none";
+    });
+  } else {
+    activator.addEventListener("click", toggleMenu);
+  }
+});
+
+
+
+
+$(function() {
+  let ddMenuOpen = false; // Змінна, щоб відстежувати відкриття "dd-menu"
+
+  $('.header__btn-menu').on('click', function() {
+    if (ddMenuOpen) {
+      $('.dd_menu').css('display', 'none'); // Закриваємо "dd-menu" при закритті "open--menu"
+      $('.menu__list-item.dd_menu-activ').css('padding-bottom', '0'); // Встановлюємо падінг вниз на 0 при закритті "dd-menu"
+      
+      // Повертаємо стрілку в початкове положення
+      $('.a_parent-arrow img').css('transform', 'rotate(0deg)');
+    }
+    
+    $('.menu').toggleClass('menu--open');
+    ddMenuOpen = !ddMenuOpen; // Змінюємо стан "ddMenuOpen" на протилежний
+
+    if ($('.menu').hasClass('menu--open')) {
+      $('.header__btn-menu').addClass('menu-open-style');
+      $('.header__btn-menu-span').addClass('menu-open-styl');
+      $('.logo').addClass('menu-open-logo');
+    } else {
+      $('.header__btn-menu').removeClass('menu-open-style');
+      $('.header__btn-menu-span').removeClass('menu-open-styl');
+      $('.logo').removeClass('menu-open-logo');
+    }
+  });
+});
+
