@@ -1486,9 +1486,6 @@ button.dot {
 }
 
 //  Animation
- section{
-  overflow: hidden;
-}
 
 .process-wrapper {
 	margin:auto;
@@ -1498,6 +1495,7 @@ button.dot {
 	gap: 130px;
 	align-items: center;
 padding-bottom: 16px;
+overflow: hidden;
 }
 
 #progress-bar-container {
@@ -1516,6 +1514,10 @@ padding-bottom: 16px;
 .step-process-flex{
  display: none;
 }
+#about .menu__list-item.dd_menu-activ {
+  padding-bottom: 0;
+}
+
 .circular{
   height: 32px;
   width: 32px;

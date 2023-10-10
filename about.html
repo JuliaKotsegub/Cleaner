@@ -22,33 +22,33 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-<div class="header__inner-blocks">
-        <a href="#">
-          <img class="logo" src="images/logo.png" alt="Logo">
-        </a>
-        <button class="header__btn-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-           </button>
-</div>
+        <div class="header__inner-blocks">
+          <a href="#">
+            <div class="logo" alt="Logo"> </div>
+          </a>
+          <button class="header__btn-menu">
+            <span class="header__btn-menu-span"></span>
+            <span class="header__btn-menu-span"></span>
+            <span class="header__btn-menu-span"></span>
+          </button>
+        </div>
 
         <nav class="menu navbar">
           <ul class="menu__list">
             <li class="menu__list-item">
               <a class="menu__list-link a_parent" href="index.html">
                 <span class="menu__list-nav">Головна</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
-            <li class="menu__list-item dd_menu-activ">
+
+            <li class="menu__list-item dd_menu-activ menu__list-item-down">
               <a class="menu__list-link a_parent menu__list-first" href="#!">
                 <span class="menu__list-nav">Послуги</span>
                 <span class="a_parent-arrow">
-                  <img src="images/new/arrow_drop_up.png" alt="">
+                  <img class="menu__list-drop" src="images/new/arrow_drop_up.png" alt="">
+                  <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
                 </span>
-              </a>
-              <a class="menu__list-link " href="services.html">
-                <span class="menu__list-nav menu__list-second">Послуги</span>
               </a>
               <div class="dd_menu">
                 <div class="dd_menu-wrapper">
@@ -74,36 +74,36 @@
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu1.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Звичайне прибирання</span>
+                            <span class="menu-title-sub">Звичайне прибирання</span>
                             <span class="menu-info-text">Підтримати загальний рівень комфорту</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu2.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Після ремонту</span>
+                            <span class="menu-title-sub">Після ремонту</span>
                             <span class="menu-info-text">Догляд за оновленим житлом</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu3.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Миття вікон</span>
+                            <span class="menu-title-sub">Миття вікон</span>
                             <span class="menu-info-text">Професійне миття вікон</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu4.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Хімчистка</span>
+                            <span class="menu-title-sub">Хімчистка</span>
                             <span class="menu-info-text">Допомога при забруженнях меблів</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img class="menu-img" src="images/services/submenu5.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Кухня</span>
-                            <span class="menu-info-text">Прибирання всієї  кухні</span>
+                            <span class="menu-title-sub">Кухня</span>
+                            <span class="menu-info-text">Прибирання всієї кухні</span>
                           </div>
                         </a>
                       </div>
@@ -111,39 +111,91 @@
                         <a href="services.html" class="text-content-link">
                           <img class="menu-img" src="images/services/submenu5.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Кухня</span>
-                            <span class="menu-info-text">Прибирання всієї  кухні</span>
+                            <span class="menu-title-sub">Разове прибирання</span>
+                            <span class="menu-info-text">Замовляєте одноразово</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu1.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Звичайне прибирання</span>
+                            <span class="menu-title-sub">Регулярне прибирання</span>
+                            <span class="menu-info-text">Складаємо графік на місяць</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="menu__list-item dd_menu-activ menu__list-item-drop">
+              <a class="menu__list-link a_parent menu__list-first" href="#!">
+                <span class="menu__list-nav" id="services-link">Послуги</span>
+                <span class="a_parent-arrow">
+                  <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
+                </span>
+              </a>
+              <div class="dd_menu">
+                <div class="dd_menu-wrapper">
+                  <div class="content">
+                    <div class="text-content">
+                      <span class="menu-title menu-title-content">Квартира</span>
+                      <div class="home text">
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu1.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title-sub">Звичайне прибирання</span>
                             <span class="menu-info-text">Підтримати загальний рівень комфорту</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu2.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title-sub">Після ремонту</span>
+                            <span class="menu-info-text">Догляд за оновленим житлом</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu3.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Миття вікон</span>
+                            <span class="menu-title-sub">Миття вікон</span>
                             <span class="menu-info-text">Професійне миття вікон</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
                           <img src="images/services/submenu4.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Хімчистка</span>
+                            <span class="menu-title-sub">Хімчистка</span>
                             <span class="menu-info-text">Допомога при забруженнях меблів</span>
                           </div>
                         </a>
                         <a href="services.html" class="text-content-link">
-                          <img src="images/services/submenu2.png" alt="">
+                          <img class="menu-img" src="images/services/submenu5.png" alt="">
                           <div class="text-content-wrapper">
-                            <span class="menu-title">Після ремонту</span>
-                            <span class="menu-info-text">Догляд за оновленим житлом</span>
+                            <span class="menu-title-sub">Кухня</span>
+                            <span class="menu-info-text">Прибирання всієї кухні</span>
                           </div>
                         </a>
-                       
+                      </div>
+                      <div>
+                        <span class="menu-title">Офіс</span>
+                      </div>
+                      <div class="blog text">
+                        <a href="services.html" class="text-content-link">
+                          <img class="menu-img" src="images/services/submenu5.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title-sub">Разове прибирання</span>
+                            <span class="menu-info-text">Замовляєте одноразово</span>
+                          </div>
+                        </a>
+                        <a href="services.html" class="text-content-link">
+                          <img src="images/services/submenu1.png" alt="">
+                          <div class="text-content-wrapper">
+                            <span class="menu-title-sub">Регулярне прибирання</span>
+                            <span class="menu-info-text">Складаємо графік на місяць</span>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -153,29 +205,32 @@
 
             <li class="menu__list-item">
               <a class="menu__list-link" href="about.html">
-                <span class="menu__list-nav"> Про нас</span>
+                <span class="menu__list-nav menu__list-nav-li"> Про нас</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
               <a class="menu__list-link" href="blog.html">
                 <span class="menu__list-nav"> Блог</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
               <a class="menu__list-link" href="#!">
-                <span class="menu__list-nav">Клінерам</span> 
+                <span class="menu__list-nav">Клінерам</span>
+                <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
           </ul>
         </nav>
-  
+
         <nav class="menu">
-          <ul class="menu__list">
+          <ul class="menu__list menu__list-flex">
             <li class="menu__list-item">
               <a class="menu__list-exit" href="#!">Увійти</a>
             </li>
             <li class="menu__list-btn">
-               <a class="menu__btn" href="#">
+              <a class="menu__btn" href="#">
                 Замовити
               </a>
             </li>
@@ -183,7 +238,7 @@
         </nav>
 
       </div>
-     
+
     </div>
   </header>
   
