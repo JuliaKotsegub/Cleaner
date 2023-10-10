@@ -150,7 +150,7 @@ $(document).ready(function(){
   
     // Настройки для средних экранов (>= 400px и < 768px)
     var mediumScreenSettings = {
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         arrows: true,
@@ -358,14 +358,30 @@ const screenWidth = window.innerWidth;
 
 function toggleMenu() {
   const ddMenu = this.querySelector(".dd_menu");
+  
   if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
     // Якщо ширина екрану більша або дорівнює 610px, використовуйте наведення
     ddMenu.style.display = "block";
   } else {
     // В іншому випадку, використовуйте клік
     ddMenu.style.display = (ddMenu.style.display === "block") ? "none" : "block";
+    
+    // Збільште падінг вниз до 50px
+    if (ddMenu.style.display === "block") {
+      this.style.paddingBottom = "600px";
+
+      const arrowImage = this.querySelector(".a_parent-arrow img");
+      arrowImage.style.transform = "rotate(90deg)";
+    } else {
+      this.style.paddingBottom = "0";
+      
+      // Отримайте зображення стрілки і поверніть його в початковий стан
+      const arrowImage = this.querySelector(".a_parent-arrow img");
+      arrowImage.style.transform = "rotate(0deg)";
+    }
   }
 }
+
 
 ddMenuActivators.forEach(function (activator) {
   if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
@@ -375,6 +391,8 @@ ddMenuActivators.forEach(function (activator) {
     activator.addEventListener("click", toggleMenu);
   }
 });
+
+// Падінг вниз 
 
 
 
