@@ -302,6 +302,9 @@
 // ---790------------------------------
 
 @media (max-width: 790px) {
+  .step-process-flex{
+    display: block;
+  }
   #progress-bar-container #line {
     display: none;
   }
@@ -326,9 +329,8 @@
   }
 
   .step-process-inner{
-    border-radius: 12px;
-    // border: 1px solid $border-color;
-    // background: url(../images/Home/bg-tab-block.png);
+    border-radius: 4px;
+    border-top: 1px solid $color-orange;
     background-size: cover;
     padding: 14px 8px;
     position: relative;

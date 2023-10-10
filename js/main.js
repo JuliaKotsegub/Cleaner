@@ -385,71 +385,6 @@ $(document).ready(function () {
 
 // Media nav
 
-// $(function() {
-// $('.header__btn-menu').on('click', function() {
-// $('.menu').toggleClass('menu--open');
- 
-// if ($('.menu').hasClass('menu--open')) {
-//   $('.header__btn-menu').addClass('menu-open-style');
-//   $('.header__btn-menu-span').addClass('menu-open-styl');
-//   $('.logo').addClass('menu-open-logo');
-// } else {
-//   $('.header__btn-menu').removeClass('menu-open-style');
-//   $('.header__btn-menu-span').removeClass('menu-open-styl');
-//   $('.logo').removeClass('menu-open-logo');
-// }
-// });
-// }); 
-
-// Menu dropdown 
-
-
-const ddMenuActivators = document.querySelectorAll(".menu__list-item.dd_menu-activ");
-const screenWidth = window.innerWidth;
-
-function toggleMenu() {
-  const ddMenu = this.querySelector(".dd_menu");
-  
-  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
-    // Якщо ширина екрану більша або дорівнює 610px, використовуйте наведення
-    ddMenu.style.display = "block";
-  } else {
-    // В іншому випадку, використовуйте клік
-    ddMenu.style.display = (ddMenu.style.display === "block") ? "none" : "block";
-    
-    // Збільште падінг вниз до 50px
-    if (ddMenu.style.display === "block") {
-      this.style.paddingBottom = "50px";
-
-      const arrowImage = this.querySelector(".a_parent-arrow img");
-      arrowImage.style.transform = "rotate(90deg)";
-    } else {
-      this.style.paddingBottom = "0";
-      
-      // Отримайте зображення стрілки і поверніть його в початковий стан
-      const arrowImage = this.querySelector(".a_parent-arrow img");
-      arrowImage.style.transform = "rotate(0deg)";
-    }
-  }
-}
-
-
-ddMenuActivators.forEach(function (activator) {
-  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
-    activator.addEventListener("mouseenter", toggleMenu);
-    activator.addEventListener("mouseleave", function () {
-      // Додайте код для закриття меню при виході курсора за межі меню
-      const ddMenu = activator.querySelector(".dd_menu");
-      ddMenu.style.display = "none";
-    });
-  } else {
-    activator.addEventListener("click", toggleMenu);
-  }
-});
-
-
-
-
 $(function() {
   let ddMenuOpen = false; // Змінна, щоб відстежувати відкриття "dd-menu"
 
@@ -476,4 +411,47 @@ $(function() {
     }
   });
 });
+
+const ddMenuActivators = document.querySelectorAll(".menu__list-item.dd_menu-activ");
+const screenWidth = window.innerWidth;
+
+function toggleMenu() {
+  const ddMenu = this.querySelector(".dd_menu");
+  
+  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
+    // Якщо ширина екрану більша або дорівнює 610px, використовуйте наведення
+    ddMenu.style.display = "block";
+    ddMenu.style.paddingBottom = "610px"; // Додавання падіння на dd-menu
+  } else {
+    // В іншому випадку, використовуйте клік
+    ddMenu.style.display = (ddMenu.style.display === "block") ? "none" : "block";
+    
+    // Збільште падінг вниз до 50px
+    if (ddMenu.style.display === "block") {
+      this.style.paddingBottom = "610px"; // Прибрати цей рядок
+      const arrowImage = this.querySelector(".a_parent-arrow img");
+      arrowImage.style.transform = "rotate(90deg)";
+    } else {
+      this.style.paddingBottom = "0"; // Прибрати цей рядок
+      // Отримайте зображення стрілки і поверніть його в початковий стан
+      const arrowImage = this.querySelector(".a_parent-arrow img");
+      arrowImage.style.transform = "rotate(0deg)";
+    }
+  }
+}
+
+ddMenuActivators.forEach(function (activator) {
+  if (screenWidth >= 610 || window.matchMedia("(min-width: 610px)").matches) {
+    activator.addEventListener("mouseenter", toggleMenu);
+    activator.addEventListener("mouseleave", function () {
+      // Додайте код для закриття меню при виході курсора за межі меню
+      const ddMenu = activator.querySelector(".dd_menu");
+      ddMenu.style.display = "none";
+    });
+  } else {
+    activator.addEventListener("click", toggleMenu);
+  }
+});
+
+
 
