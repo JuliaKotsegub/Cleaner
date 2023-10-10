@@ -27,8 +27,14 @@
   // #progress-bar-container #line {
   //   // left:-80px;
   // }
+  .quote {
+    &__title {
+      padding: 0 70px;
+    }
+  }
 }
 @media (max-width: 992px) {
+ 
   .container {
     padding: 0 15px;
   }
@@ -117,6 +123,7 @@
     &__title {
       font-size: 56px;
       line-height: 64px;
+      padding: 0 50px;
     }
   }
   .collage {
@@ -789,10 +796,11 @@ background: rgba(249, 123, 34, 0.98);
     gap: 10px;
   }
   .quote {
-    margin: 60px 0;
+    margin: 0px 0 80px;
     &__title {
       font-size: 28px;
       line-height: 32px;
+      padding: 0 20px;
     }
   }
   .blog-box__item-title {
