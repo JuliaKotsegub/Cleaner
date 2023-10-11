@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quality cleaning</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Raleway:wght@700&display=swap"
+  rel="stylesheet">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -236,77 +240,26 @@
     </div>
   </header>
 
+
+
   <div class="wrapper">
     <main class="main">
 
       <section class="top">
         <div class="container">
           <div class="top__inner">
-            <h2 class="title-top"> Насолоджуйтесь чистотою разом з нами</h2>
+            <h2 class="title-top">Замовити клінера поряд з вами</h2>
             <p class="top__inner-text">Наша місія - забезпечити ваш дім найвищим стандартом чистоти, дозволяючи вам
               насолоджуватися повноцінним відпочинком. Завдяки нашій команді професіоналів, ви можете забути про щоденні
               господарські клопоти. Ми віддаємо перевагу кожній деталі, створюючи навколо вас атмосферу чистоти та
               затишку. </p>
             <div class="form">
-              <form>
-                <div class="select-group select-group-adaptive">
-                  <button id="button" class="button">
-                    <span id="select-label">Оберіть послугу</span>
-                    <div id="arrow" class="arrow"></div>
-                  </button>
-
-                  <div class="dropdown hidden" id="dropdown">
-                    <input type="radio" id="select-cleaning" name="where" value="internet" class="option">
-                    <label for="select-cleaning" class="select-item">Звичайне прибирання</label>
-
-                    <input type="radio" id="select-window" name="where" value="family" class="option">
-                    <label for="select-window" class="select-item">Миття вікон</label>
-
-                    <input type="radio" id="select-kitchen" name="where" value="family" class="option">
-                    <label for="select-window" class="select-item">Кухня</label>
-
-                    <input type="radio" id="select-repair" name="where" value="existing" class="option">
-                    <label for="select-repair" class="select-item">Після ремонту</label>
-
-                    <input type="radio" id="select-dry" name="where" value="existing" class="option">
-                    <label for="select-dry" class="select-item">Хімчистка</label>
-                  </div>
-
-                </div>
-
-                <div class="select-group select-group-adaptive">
-                  <button id="button-second" class="button">
-                    <span id="select-label-second">Додаткові послуги</span>
-                    <div id="arrow-second" class="arrow"></div>
-                  </button>
-
-                  <div class="dropdown hidden" id="dropdown-second">
-
-                    <input type="radio" id="select-clean" name="where" value="internet" class="option-second">
-                    <label for="select-clean" class="select-item">Звичайне прибирання</label>
-
-                    <input type="radio" id="select-family" name="where" value="family" class="option-second">
-                    <label for="select-family" class="select-item">Миття вікон</label>
-
-                    <input type="radio" id="select-windo" name="where" value="family" class="option-second">
-                    <label for="select-windo" class="select-item">Кухня</label>
-
-                    <input type="radio" id="select-existing" name="where" value="existing" class="option-second">
-                    <label for="select-existing" class="select-item">Після ремонту</label>
-
-                    <input type="radio" id="clean" name="where" value="existing" class="option-second">
-                    <label for="select-existing" class="select-item">Хімчистка</label>
-                  </div>
-
-                </div>
-
-                <div class="select-wrapper select-wrapper-adaptive">
-                  <input type="text" id="datePicker" placeholder="Обрати дату">
-                  <div id="selectedDate"></div>
-                </div>
-
-                <input class="form-btn-adaptive" type="submit" value="Замовити">
-              </form>
+              <a class="button-offer">
+                Замовити  клінера
+              </a>
+              <a class="button-offer form__btn">
+                Стати клінером
+              </a>
             </div>
           </div>
         </div>
@@ -314,6 +267,132 @@
 
       <section class="bg">
         <img src="./images/bg-img.png" alt="" class="bg__image">
+      </section>
+
+      <section class="price">
+        <div class="container">
+          <div class="inner">
+            <div class="job__inner-block">
+              <div class="job__right">
+                <h3 class="title-medium">
+                  Оберіть пакет або <br> сформуйте свій власний
+                </h3>
+                <a class="button-offer">
+                  Замовити клінера
+                </a>
+              </div>
+              <div class="job__left">
+                <p class="job__left-text">
+                  Quality Cleaning пропонує чотири готові пакети послуг, спеціально складені для різних типів об'єктів. Це зробить ваш вибір ще зручнішим та ефективнішим.
+                </p>
+                <br>
+                <p class="job__left-text">
+                  Якщо ж жоден із готових пакетів не відповідає вашим потребам, у вас є можливість створити власний, унікальний кастомний пакет послуг, обравши тільки те, що вам потрібно. Таким чином, ви контролюєте обсяг та спектр робіт, які будуть проведені, та ефективно використовуєте наші послуги. Ваш комфорт та задоволення - наш пріоритет, і ми завжди готові йти на зустріч вашим побажанням.
+                </p>
+              </div>
+            </div>
+
+            <div class="price__inner">
+              <div class="price__inner-item">
+                <h4 class="price__item-title color-orange">All Inclueted 1-кімнатна</h4>
+                <div class="price__item-price">Від ₴999</div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Від 20 м2 до 35 м2 </div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо та дизенфікуємо ванну кімнуту та туалет</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо підлогу</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо вікна з внутрішньої сторони.</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо витяжку на кухні</div>
+                </div>
+              </div>
+              <div class="price__inner-item">
+                <h4 class="price__item-title color-orange"> All Inclueted 2-кімнатна </h4>
+                <div class="price__item-price">Від ₴1400</div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Від 36 м2 до 55 м2 </div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо та дизенфікуємо ванну кімнуту та туалет</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо підлогу</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо вікна з внутрішньої сторони.</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо витяжку на кухні</div>
+                </div>
+              </div>
+              <div class="price__inner-item">
+                <h4 class="price__item-title color-orange"> All Inclueted 3-кімнатна</h4>
+                <div class="price__item-price">Від ₴1800 </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Від 56 м2 до 75 м2 </div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо та дизенфікуємо ванну кімнуту та туалет</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо підлогу</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо вікна з внутрішньої сторони.</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо витяжку на кухні</div>
+                </div>
+              </div>
+              <div class="price__inner-item">
+                <h4 class="price__item-title color-orange">Офіси, Будинки</h4>
+                <div class="price__item-price">Від ₴2200 </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Від 76 м2 </div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо та дизенфікуємо ванну кімнуту та туалет</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо підлогу</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо вікна з внутрішньої сторони.</div>
+                </div>
+                <div class="price__item-do">
+                  <img class="price__item-img" src="images/Home/Check icon.png" alt="">
+                  <div class="price__item-text">Миємо витяжку на кухні</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </section>
 
       <section class="quality">
@@ -998,17 +1077,11 @@
     </footer>
   </div>
 
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/datepicker-uk.js"></script>
   <script src="js/main.js"> </script>
-
-  <script>
-
-
-  </script>
 
 </body>
 

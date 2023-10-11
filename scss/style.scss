@@ -75,10 +75,6 @@ a.menu__btn {
   padding: 20px 0;
 }
 
-// .navbar .a_parent.active span,
-// .navbar .a_parent:hover span {
-//   color: $color-orange;
-// }
 
 .navbar .menu__list-item.dd_menu-activ .a_parent .a_parent-arrow img {
   transform: rotate(180deg);
@@ -98,10 +94,6 @@ a.menu__btn {
 .navbar .menu__list-item.dd_menu-activ:hover .menu__list-nav {
   color: $color-orange;
 }
-
-// .navbar ul li:hover .dd_menu {
-//   display: block;
-// }
 
 .dd_menu-wrapper {
   width: 736px;
@@ -361,184 +353,21 @@ a.menu__btn {
 .form {
   display: flex;
   justify-content: center;
-  align-items: center;
+align-items: flex-start;
+gap: 16px;
 }
-form {
-  display: flex;
-  border-radius: 8px;
-  border: 1px solid $border-color;
-  background: $white;
-  align-items: center;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  width: 880px;
-}
-
-.select-group {
-  position: relative;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-right: 1px solid var(--borders-light, #e7e8e9);
-  padding: 14px 16px;
-  justify-content: space-between;
-  position: relative;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  width: 200px;
-}
-
-label {
-  font-weight: 400;
-}
-
-.arrow {
-  border: solid #323232ee;
-  border-width: 0 2px 2px 0;
-  padding: 2.5px;
-  transform: rotate(45deg);
-}
-
-.dropdown {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 4px;
-  border: 1px solid $border-color;
-  background: #fff;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-}
-.option-second,
-.option {
-  display: none;
-}
-
-.select-item {
-  display: block;
-  display: flex;
-  height: 40px;
-  padding: 10px 16px;
-  align-items: center;
-  gap: 8px;
-  background-color: $white;
-  position: relative;
-  z-index: 11;
-}
-
-.select-item:hover {
-  border-radius: 4px;
-  background: #eff3f9;
-}
-
-.hidden {
-  display: none;
-}
-
-input[type="text"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: flex;
-  color: #060606;
-  padding: 14px 16px;
-  justify-content: space-between;
-  align-items: center;
-  border-right: 1px solid $border-color;
-  width: 200px;
-}
-input[type="text"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-.ui-datepicker .ui-state-hover,
-.ui-datepicker-calendar .ui-state-active {
-  display: flex;
-  justify-content: center;
-  background-color: #f97b22 !important;
-  color: $white;
-  border-radius: 50%;
-}
-
-#datePicker::placeholder {
-  color: #060606;
-  font-family: Manrope;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-}
-.ui-datepicker {
-  color: #060606;
-  text-align: center;
-  font-family: Manrope;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  background-color: $white;
-  padding: 20px 24px;
-  width: 328px;
-  align-items: center;
-  text-align: center;
-}
-.ui-datepicker .ui-state-default,
-.ui-datepicker .ui-datepicker-header {
-  border: none;
-  background-color: transparent;
-  padding: 10px 9px;
-  align-items: center;
-  text-align: center;
-}
-.ui-datepicker .ui-datepicker-year,
-.ui-datepicker .ui-datepicker-month {
+.top__inner .form .button-offer {
   font-size: 16px;
-  font-weight: 500 !important;
-  line-height: 24px;
 }
 
-.ui-datepicker-header .ui-datepicker-prev:hover,
-.ui-datepicker-header .ui-datepicker-next:hover {
-  background: none !important;
-  border: none;
+.form__btn {
+  font-size: 16px;
+font-weight: 700;
+color: $color-orange;
+border: 1px solid #F97B22;
+background-color: $white;
 }
 
-input[type="submit"],
-.form-btn {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  background: $color-orange;
-  letter-spacing: -0.04px;
-  color: $white;
-  border-radius: 0px 8px 8px 0px;
-  font-weight: 600;
-  padding: 16px 54px;
-  width: 100%;
-}
-.select-wrapper {
-  position: relative;
-}
-.select-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
-
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/Home/expand_more.png");
-  pointer-events: none;
-}
 
 .bg {
   margin: 0 auto;
@@ -551,6 +380,52 @@ input[type="submit"],
   margin: 0 auto;
   width: 100%;
 }
+
+.price__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+align-items: center;
+gap: 32px;
+padding-top: 64px;
+}
+.price__inner-item {
+  display: flex;
+padding: 24px 8px;
+flex-direction: column;
+gap: 8px;
+border-radius: 16px;
+border: 1px solid #D9DBDD;
+background: $white;
+max-width: 280px;
+}
+.price__item-title {
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+}
+
+.price__item-price {
+  color: #3E3E3E;
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+letter-spacing: -0.36px;
+padding-bottom: 4px;
+}
+.price__item-do {
+  display: flex;
+  gap: 8px;
+}
+.price__item-img {
+  width: 24px;
+height: 24px;
+}
+.price__item-text {
+  color: #595959;
+font-size: 14px;
+}
+
+
 
 .quality {
   &__block {
@@ -743,6 +618,11 @@ input[type="submit"],
   }
 }
 
+.text__link.copied {
+  background-color: $color-orange;
+  color: white;
+}
+
 .job {
   &__inner {
     padding-bottom: 64px;
@@ -924,7 +804,6 @@ input[type="submit"],
   position: absolute;
   top: 0;
   left: 0;
-  // max-width: 50%;
   animation: fade 1s;
 }
 .carousel-slide.active,
@@ -1142,13 +1021,7 @@ input[type="submit"],
 }
 .photo-first {
 }
-.photo-first-top {
-  //  max-height: 264px;
-  //  max-width: 324px;
-}
-.photo-first-bottom {
-  //  max-width: 324px;
-}
+
 .photo__two {
   max-height: 464px;
   max-width: 324px;
@@ -1156,14 +1029,6 @@ input[type="submit"],
 .photo__three {
   max-width: 360px;
   max-height: 384px;
-}
-.photo__four-top {
-  //   max-width: 265px;
-  //  max-height: 240px;
-}
-.photo__four-bottom {
-  //  max-height: 192px;
-  //  max-width: 265px;
 }
 
 .founder {
@@ -1213,11 +1078,6 @@ input[type="submit"],
   &__inner-title {
     align-items: start;
     width: 1010px;
-  }
-  &__inner-title select {
-    align-items: center;
-    width: 140px;
-    margin: 14px 16px;
   }
   &__title {
     padding-bottom: 48px;
@@ -1351,7 +1211,7 @@ input[type="submit"],
   padding-top: 88px;
 }
 .job__left {
-  max-width: 500px;
+  max-width: 590px;
 }
 
 .profitably__text-items {

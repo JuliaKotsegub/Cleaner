@@ -230,72 +230,6 @@ $(document).ready(function () {
     $('.slider-button').css('left', `calc(${sliderPos}% - 32px)`)
   });
 
-  // Form
-
-  $(document).ready(function () {
-    $.datepicker.setDefaults($.datepicker.regional["uk"]);
-    $("#datePicker").datepicker({
-      showOtherMonths: true,
-      selectOtherMonths: true,
-      minDate: 0 
-    });
-  });
-
-  const button = document.querySelector('#button');
-const select = document.querySelector("#dropdown");
-const options = document.querySelectorAll(".option");
-const selectLabel = document.querySelector('#select-label');
-
-button.addEventListener("click", function (e) {
-  e.preventDefault();
-  toggleHidden(select);
-});
-
-options.forEach(function (option) {
-  option.addEventListener("click", function (e) {
-    setSelectTitle(e);
-    toggleHidden(select);
-  });
-});
-
-function toggleHidden(targetSelect) {
-  // Закрити всі селектори, крім вказаного в аргументі
-  const allSelects = document.querySelectorAll(".dropdown");
-  allSelects.forEach(function (select) {
-    if (select !== targetSelect) {
-      select.classList.add("hidden");
-    }
-  });
-  targetSelect.classList.toggle("hidden");
-}
-
-function setSelectTitle(e) {
-  const labelElement = document.querySelector(`label[for="${e.target.id}"]`).innerText;
-  selectLabel.innerText = labelElement;
-}
-
-const buttonSecond = document.querySelector('#button-second');
-const selectSecond = document.querySelector("#dropdown-second");
-const optionsSecond = document.querySelectorAll(".option-second");
-const selectLabelSecond = document.querySelector('#select-label-second');
-
-buttonSecond.addEventListener("click", function (e) {
-  e.preventDefault();
-  toggleHidden(selectSecond);
-});
-
-optionsSecond.forEach(function (option) {
-  option.addEventListener("click", function (e) {
-    setSelectTitleSecond(e);
-    toggleHidden(selectSecond);
-  });
-});
-
-function setSelectTitleSecond(e) {
-  const labelElement = document.querySelector(`label[for="${e.target.id}"]`).innerText;
-  selectLabelSecond.innerText = labelElement;
-}
-
 
 // Animation
 
@@ -451,6 +385,30 @@ ddMenuActivators.forEach(function (activator) {
   } else {
     activator.addEventListener("click", toggleMenu);
   }
+});
+
+
+//  Copy text
+
+var copyLinkButton = document.getElementById('copyLinkButton');
+
+copyLinkButton.addEventListener('click', function() {
+  var pageURL = window.location.href;
+
+  var tempInput = document.createElement('textarea');
+  tempInput.value = pageURL;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempInput);
+
+  // Додаємо клас "copied" після копіювання
+  copyLinkButton.classList.add('copied');
+
+  // Чекаємо певний час (наприклад, 2 секунди) та знімаємо клас
+  setTimeout(function() {
+    copyLinkButton.classList.remove('copied');
+  }, 300);
 });
 
 
