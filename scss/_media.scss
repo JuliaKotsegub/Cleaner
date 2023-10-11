@@ -302,6 +302,10 @@
 // ---790------------------------------
 
 @media (max-width: 790px) {
+  .blog-top__inner {
+    padding: 0 0 56px;
+    gap: 8px;
+  }
   .step-process-flex{
     display: block;
   }
@@ -319,21 +323,26 @@
     justify-content: center;
     gap: 10px;
     max-width: 1000px;
-
   }
   .step-process-flex{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 15px;
     padding-bottom: 40px;
   }
+  .step-process-text{
+    color:  #101828;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 12px;
+  }
 
   .step-process-inner{
-    border-radius: 4px;
     border-top: 1px solid $color-orange;
-    background-size: cover;
     padding: 14px 8px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .video,
@@ -378,6 +387,7 @@
     padding: 30px 0;
   }
 
+  .quality__right-text,
   .partners__blocks-text,
   .top__inner-text {
     font-size: 14px;
@@ -599,16 +609,16 @@
       display: none;
     }
   }
-  .select-wrapper,
-  .select-group{
+  .select-wrapper-adaptive,
+  .select-group-adaptive
+  {
     display: none;
   }
-  .form input[type="submit"].form-btn{
+  .form input[type="submit"].form-btn-adaptive{
     align-items: center;
     text-align: left;
   }
-  input[type="submit"],
-  .form-btn {
+  input[type="submit"].form-btn-adaptive{
     width: 138px;
     display: flex;
 padding: 12px 40px;
@@ -623,7 +633,13 @@ background: rgba(249, 123, 34, 0.98);
 
 
 @media (max-width: 610px) {
- 
+  .blog-top__inner .title-top{
+padding: 15px 0;
+  }
+  .step-process-text{
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
   .menu__list-item-down{
     display: none;
   }
@@ -790,17 +806,20 @@ background: rgba(249, 123, 34, 0.98);
   }
 
   .blog-top__inner {
-    margin-top: -480px;
+    margin-top: -500px;
     padding: 120px 0 30px;
   }
 
-  .services-top__inner,
   .top {
-    margin-top: -370px;
+    margin-top: -400px;
   }
+  .services-top__inner{
+    margin-top: -440px;
+  }
+  .footer__content,
   .about-form__inner,
   .inner {
-    padding: 60px 10px 0;
+    padding: 60px 0px 0;
   }
   .title-medium {
     font-size: 24px;
@@ -876,7 +895,7 @@ background: rgba(249, 123, 34, 0.98);
   }
   .question {
     &__inner {
-      padding: 40px 0 90px;
+      padding: 40px 0 20px;
     }
 
     &__deploy[open] {
@@ -958,7 +977,7 @@ background: rgba(249, 123, 34, 0.98);
     }
   }
   .descriptoin__inner {
-    margin-top: -300px;
+    margin-top: -360px;
     padding: 0px 0 60px;
   }
   .descriptoin-text {
@@ -1147,6 +1166,19 @@ background: rgba(249, 123, 34, 0.98);
 // ---400--------------------------------------
 
 @media (max-width: 400px) {
+  .blog-top__inner .title-top{
+    padding: 5px 0 15px;
+      }
+  .service__block-title,
+  .step-process-text{
+    font-size: 14px;
+    padding-bottom:8px;
+    line-height: 14px;
+  }
+  .step-process-inner p{
+    font-size: 10px;
+    line-height: 12px;
+  }
   .video,
   #progress-content-section .section-content.active {
 	max-width: 250px;
@@ -1163,12 +1195,10 @@ background: rgba(249, 123, 34, 0.98);
     max-width: 400px;
     flex-wrap: nowrap;
   }
+ 
   .content .text-content-link{
     width: 230px;
   }
-  // #progress-bar-container li .step-inner {
-  //   max-width: 150px;
-  // }
   .top__inner-text {
     font-size: 8px;
     line-height: 10px;
@@ -1214,6 +1244,7 @@ background: rgba(249, 123, 34, 0.98);
   .text__item-subtitle {
     font-size: 16px;
   }
+  .quality__right-text,
   .text__item-paragraph {
     font-size: 12px;
   }
