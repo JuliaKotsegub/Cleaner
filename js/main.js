@@ -67,15 +67,15 @@ function showTab(tabIndex) {
     const tabs = document.querySelectorAll('.tab');
 
     tabPanes.forEach((pane, index) => {
-        if (index === tabIndex - 1) {
-            pane.classList.add('active');
-            // Зміна значка (картинки) при активному табі
-            document.getElementById('tabIcon' + tabIndex).src = './images/Home/icon1.png';
-        } else {
-            pane.classList.remove('active');
-            // Зміна значка (картинки) при неактивному табі
-            document.getElementById('tabIcon' + (index + 1)).src = './images/Home/icon2.png';
-        }
+      if (index === tabIndex - 1) {
+        pane.classList.add('active');
+        // Зміна бордера при активному табі icon-tab
+        tabs[index].querySelector('.icon-tab').style.border = '2px solid #f97b22';
+      } else {
+        pane.classList.remove('active');
+        // Зміна бордера при неактивному табі icon-tab
+        tabs[index].querySelector('.icon-tab').style.border = '2px solid #E7E8E9';
+      }
     });
 
     tabs.forEach((tab, index) => {

@@ -1618,7 +1618,161 @@ background-size: contain;
 	}
 }
 
+.icon-tab {
+  width: 16px;
+  height: 16px; /* Колір фону - синій */
+  border: 2px solid #E7E8E9; /* Білий бордер всередині */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 
+    0 0 0 2px white; /* Orange бордер зовні */
+      background-color: white;
+}
 
+.blue__bg-light,
+.blue__bg,
+.orange__bg-light,
+.orange__bg,
+.orange__bg-right,
+.blue__bg-left {
+  position: relative;
+}
+
+.orange__bg-light::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 288.69px;
+  height: 400px;
+  border-radius: 329px;
+  background: linear-gradient(180deg,
+      rgba(253, 64, 22, 0.45) 38.33%,
+      rgba(253, 64, 22, 0.55) 83.65%);
+  filter: blur(258px);
+  opacity: 0.3;
+  z-index: -1;
+  animation: smoothBackground 10s infinite alternate;
+}
+
+.orange__bg::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 488.69px;
+  height: 100%;
+  border-radius: 329px;
+  background: linear-gradient(180deg,
+      rgba(253, 64, 22, 0.65) 38.33%,
+      rgba(253, 64, 22, 0.65) 83.65%);
+  filter: blur(258px);
+  opacity: 0.3;
+  transform: rotate(11.97deg);
+  z-index: -1;
+  animation: smoothBackground 10s infinite alternate;
+}
+
+.orange__bg-right::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 288.69px;
+  height: 400px;
+  border-radius: 329px;
+  background: linear-gradient(180deg,
+      rgba(253, 64, 22, 0.65) 38.33%,
+      rgba(253, 64, 22, 0.55) 83.65%);
+  opacity: 0.3;
+  filter: blur(258px);
+
+  z-index: -1;
+  animation: moveDiagonal 10s infinite alternate;
+}
+
+.blue__bg-light::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 208.69px;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(22, 253, 211, 0.35) 38.33%,
+      rgba(22, 253, 211, 0.30) 83.65%);
+  opacity: 0.3;
+  filter: blur(238.5px);
+  z-index: -1;
+  animation: moveDiagonal 10s infinite alternate;
+}
+
+.blue__bg::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 288.69px;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(22, 253, 211, 0.85) 38.33%,
+      rgba(22, 253, 211, 0.65) 83.65%);
+  opacity: 0.3;
+  filter: blur(238.5px);
+  z-index: -1;
+  animation: moveDiagonal 10s infinite alternate;
+}
+
+.blue__bg-left::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 488.69px;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(22, 253, 211, 0.65) 38.33%,
+      rgba(22, 253, 211, 0.65) 83.65%);
+  opacity: 0.3;
+  filter: blur(238.5px);
+  z-index: -1;
+  animation: smoothBackground 10s infinite alternate;
+}
+@keyframes smoothBackground {
+  0% {
+    transform: translate(0, 0); /* Початкова позиція (верхній лівий кут) */
+  }
+  100% {
+    transform: translate(100%, 100%); /* Позиція в нижньому правому куті */
+  }
+}
+@keyframes moveDiagonal {
+  0% {
+    transform: translate(0, 0); /* Початкова позиція (правий верхній кут) */
+  }
+  100% {
+    transform: translate(-100%, 100%); /* Позиція в лівому нижньому куті */
+  }
+}
+a.menu__btn {
+  background-color: #fff;
+}
+
+a.menu__btn:hover,
+a.form__btn:hover {
+  border: 1px solid #FF974E;
+  background-color: #fff;
+  color: #FF974E;
+}
+
+a.menu__btn:active,
+a.form__btn:active {
+  border: 1px solid #FF974E;
+  background: #F97B22;
+  color: #FFF;
+}
 
 
 @import "media";
