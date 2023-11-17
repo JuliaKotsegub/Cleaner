@@ -1,4 +1,7 @@
 @media (max-width: 1200px) {
+ .bg__image{
+    min-height: 100px;
+  }
   .navbar .dd_menu {
     position: absolute;
     top: 60px;
@@ -65,6 +68,20 @@ font-size: 16px;
 }
 }
 @media (max-width: 992px) {
+  .utensil__inner-left {
+    margin-left: 0px;
+  }
+  .employ-title{
+    font-size: 40px;
+    line-height: 1;
+  }
+  .employ-item{
+    padding-top: 0px;
+  }
+  .employ{
+    min-height: 547px;
+    margin-top: 100px;
+  }
   .price__inner {
     gap: 28px;
     display: grid;
@@ -594,13 +611,30 @@ font-size: 16px;
       display: none;
     }
   }
-
+  .employ-title{
+    font-size: 36px;
+  }
+  .employ{
+    min-height: 447px;
+    margin-top: 60px;
+  }
 }
 
 // -----------------610-------------------------------
 
 
 @media (max-width: 610px) {
+  .employ-title{
+    font-size: 24px;
+  }
+  .employ{
+    min-height: 307px;
+    margin-top: 40px;
+  }
+  .employ-text{
+    padding: 8px 0 10px;
+    font-size: 12px;
+  }
   .form{
     padding: 20px 0;
   }
@@ -676,7 +710,7 @@ padding: 15px 0;
   }
 
   .menu-open-style {
-    background: url("../images/Home/x-close.png");
+    background: url("../images/Home/close.svg");
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
@@ -688,9 +722,11 @@ padding: 15px 0;
     background-size: contain;
   }
 
-  .header__btn-menu .menu-open-styl {
+  .header__btn-menu .menu-open-styl{
     position: absolute;
+    content: "";
     top: 0;
+    right: 0;
   }
   .menu__list-arrow {
     display: block;
@@ -1101,6 +1137,7 @@ padding: 15px 0;
   .menu__list-nav .menu__list-link:hover {
     color: #060606;
   }
+  .menu__btn,
   a.menu__btn:hover,
   a.menu__btn:hover .menu__btn,
   li a.menu__btn:active .menu__btn {
@@ -1255,6 +1292,7 @@ padding: 15px 0;
     line-height: 24px;
     padding-bottom: 6px;
   }
+  .job__left-text,
   .service__block-text {
     font-size: 8px;
     line-height: 12px;
@@ -1297,5 +1335,44 @@ padding: 15px 0;
   line-height: 24px;
   padding: 0 0px;
 }
-
+.join__item-title {
+  font-size: 12px;
+  line-height: 20px; 
+  }
+  .join__item-text {
+  font-size: 8px;
+  line-height: 16px;
+  padding-top: 8px;
+  }
+  .join__item {
+  max-width: 124px;
+  }
+  .join__item-block {
+  width: 24px;
+  height: 24px;
+  margin: 16px auto 6px;
+  }
+  .join__item-numer {
+  font-size: 12px;
+  }
+  .join__items{
+    padding-top: 24px;
+  }
+  .profitably__text-items{
+    line-height: 14px;
+  }
+  .employ-title{
+    font-size: 14px;
+  }
+  .employ{
+    min-height: 167px;
+    margin-top: 40px;
+  }
+  .employ-text{
+    padding: 8px 0 8px;
+    font-size: 8px;
+  }
+  .employ-item .form{
+    padding: 0;
+  }
 }

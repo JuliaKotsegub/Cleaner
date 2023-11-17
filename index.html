@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body data-id-page="index">
 
   <header class="header">
     <div class="container">
@@ -34,18 +34,20 @@
         <nav class="menu navbar">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a class="menu__list-link a_parent" href="index.html">
+              <a data-id-nav="index" id="home-link"  class="menu__list-link a_parent" href="index.html">
                 <span class="menu__list-nav">Головна</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
 
             <li class="menu__list-item dd_menu-activ menu__list-item-down">
-              <a class="menu__list-link a_parent menu__list-first" href="#!">
+              <a class="menu__list-link a_parent menu__list-first" href="services.html" data-id-nav="services">
                 <span class="menu__list-nav">Послуги</span>
-                <span class="a_parent-arrow">
-                  <img class="menu__list-drop" src="images/new/arrow_drop_up.png" alt="">
-                  <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
+                <span class="a_parent-arrow menu__list-drop">
+                  <svg width="9" height="5" viewBox="0 0 9 5" fill="currentColor" 
+                  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.20956 3.28997L3.79956 0.699971C4.18956 0.309971 4.81956 0.309971 5.20956 0.699971L7.79956 3.28997C8.42956 3.91997 7.97956 4.99997 7.08956 4.99997L1.90956 4.99997C1.01956 4.99997 0.579563 3.91997 1.20956 3.28997Z"/>
+                    </svg>
                 </span>
               </a>
               <div class="dd_menu">
@@ -128,7 +130,7 @@
             </li>
 
             <li class="menu__list-item dd_menu-activ menu__list-item-drop">
-              <a class="menu__list-link a_parent menu__list-first" href="#!">
+              <a class="menu__list-link a_parent menu__list-first" href="#!" data-id-nav="">
                 <span class="menu__list-nav" id="services-link">Послуги</span>
                 <span class="a_parent-arrow">
                   <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
@@ -202,19 +204,19 @@
             </li>
 
             <li class="menu__list-item">
-              <a class="menu__list-link" href="about.html">
+              <a class="menu__list-link" href="about.html" data-id-nav="about">
                 <span class="menu__list-nav menu__list-nav-li"> Про нас</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="blog.html">
+              <a class="menu__list-link" href="blog.html" data-id-nav="blog">
                 <span class="menu__list-nav"> Блог</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#!">
+              <a class="menu__list-link" href="job.html" data-id-nav="job">
                 <span class="menu__list-nav">Клінерам</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
@@ -878,7 +880,7 @@
         </div>
       </section>
 
-      <section class="reviews orange__bg">
+      <section class="reviews">
         <div class="container reviews__inner-flex">
           <h3 class="title-medium reviews__title"> Чистота, яку бачать очі: Ваші враження про наш клінінг</h3>
           <div class="reviews__inner">

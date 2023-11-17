@@ -113,6 +113,11 @@ nav button.active {
   color: $color-orange;
 }
 
+.menu__link--active .menu__list-nav,
+.menu__link--active .a_parent-arrow.menu__list-drop {
+  color:#f97b22;
+}
+.menu__link--active .a_parent-arrow.menu__list-drop
 .blog-box__item,
 input[type="submit"],
 .button-offer,

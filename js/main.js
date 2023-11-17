@@ -338,10 +338,12 @@ $(function() {
       $('.header__btn-menu').addClass('menu-open-style');
       $('.header__btn-menu-span').addClass('menu-open-styl');
       $('.logo').addClass('menu-open-logo');
+      $('.header__inner-blocks').addClass('menu__inner-blocks');
     } else {
       $('.header__btn-menu').removeClass('menu-open-style');
       $('.header__btn-menu-span').removeClass('menu-open-styl');
       $('.logo').removeClass('menu-open-logo');
+      $('.header__inner-blocks').removeClass('menu__inner-blocks');
     }
   });
 });
@@ -390,25 +392,45 @@ ddMenuActivators.forEach(function (activator) {
 
 //  Copy text
 
-var copyLinkButton = document.getElementById('copyLinkButton');
+// var copyLinkButton = document.getElementById('copyLinkButton');
 
-copyLinkButton.addEventListener('click', function() {
-  var pageURL = window.location.href;
+// copyLinkButton.addEventListener('click', function() {
+//   var pageURL = window.location.href;
 
-  var tempInput = document.createElement('textarea');
-  tempInput.value = pageURL;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand('copy');
-  document.body.removeChild(tempInput);
+//   var tempInput = document.createElement('textarea');
+//   tempInput.value = pageURL;
+//   document.body.appendChild(tempInput);
+//   tempInput.select();
+//   document.execCommand('copy');
+//   document.body.removeChild(tempInput);
 
-  // Додаємо клас "copied" після копіювання
-  copyLinkButton.classList.add('copied');
+//   // Додаємо клас "copied" після копіювання
+//   copyLinkButton.classList.add('copied');
 
-  // Чекаємо певний час (наприклад, 2 секунди) та знімаємо клас
-  setTimeout(function() {
-    copyLinkButton.classList.remove('copied');
-  }, 300);
+//   // Чекаємо певний час (наприклад, 2 секунди) та знімаємо клас
+//   setTimeout(function() {
+//     copyLinkButton.classList.remove('copied');
+//   }, 300);
+// });
+
+
+
+// Віділене меню
+
+$(document).ready(function () {
+  // Отримуємо поточний URL
+  var currentUrl = window.location.href;
+
+  // Шукаємо елемент меню, який відповідає поточному URL
+  $('.menu__list-link').each(function () {
+      var linkUrl = $(this).attr('href');
+      if (currentUrl.indexOf(linkUrl) !== -1) {
+          $(this).addClass('menu__link--active');
+          $(this).find('.a_parent-arrow.menu__list-drop').css({
+            'color': '#F97B22'
+        });
+      }
+  });
 });
 
 

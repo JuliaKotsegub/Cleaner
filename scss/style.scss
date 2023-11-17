@@ -64,6 +64,11 @@ a.menu__btn {
 .navbar ul li .dd_menu-activ {
   position: relative;
 }
+// New
+.menu__inner-blocks{
+  background-color: white;
+  transition: all 0.3s ease-in;
+}
 
 .navbar .dd_menu {
   position: absolute;
@@ -75,13 +80,23 @@ a.menu__btn {
   padding: 20px 0;
 }
 
-
-.navbar .menu__list-item.dd_menu-activ .a_parent .a_parent-arrow img {
-  transform: rotate(180deg);
+.menu__list-first{
+  align-items: center;
+  gap: 5px;
 }
 
-.navbar .menu__list-item.dd_menu-activ:hover .a_parent .a_parent-arrow img {
+.navbar .menu__list-item.dd_menu-activ .a_parent .a_parent-arrow.menu__list-drop{
+  transform: rotate(180deg);
+  color: #060606;
+  width: 9px;
+  height: 5px;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.navbar .menu__list-item.dd_menu-activ:hover .a_parent .a_parent-arrow.menu__list-drop{
   transform: rotate(0deg);
+  color: #F97B22;
 }
 
 .navbar .menu__list-item.dd_menu-activ .dd_menu {
@@ -374,7 +389,7 @@ background-color: $white;
   width: 100%;
 }
 .bg__image {
-  max-height: 600px;
+  min-height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -1740,39 +1755,143 @@ background-size: contain;
   z-index: -1;
   animation: smoothBackground 10s infinite alternate;
 }
-@keyframes smoothBackground {
-  0% {
-    transform: translate(0, 0); /* Початкова позиція (верхній лівий кут) */
-  }
-  100% {
-    transform: translate(100%, 100%); /* Позиція в нижньому правому куті */
-  }
-}
-@keyframes moveDiagonal {
-  0% {
-    transform: translate(0, 0); /* Початкова позиція (правий верхній кут) */
-  }
-  100% {
-    transform: translate(-100%, 100%); /* Позиція в лівому нижньому куті */
-  }
-}
-a.menu__btn {
-  background-color: #fff;
-}
 
-a.menu__btn:hover,
-a.form__btn:hover {
+// @keyframes smoothBackground {
+//   0% {
+//     transform: translate(0, 0); /* Початкова позиція (верхній лівий кут) */
+//   }
+//   100% {
+//     transform: translate(100%, 100%); /* Позиція в нижньому правому куті */
+//   }
+// }
+// @keyframes moveDiagonal {
+//   0% {
+//     transform: translate(0, 0); /* Початкова позиція (правий верхній кут) */
+//   }
+//   100% {
+//     transform: translate(-100%, 100%); /* Позиція в лівому нижньому куті */
+//   }
+// }
+// .menu__btn {
+//   background-color: #fff;
+// }
+
+.menu__btn:hover,
+.form__btn:hover {
   border: 1px solid #FF974E;
   background-color: #fff;
   color: #FF974E;
 }
 
-a.menu__btn:active,
-a.form__btn:active {
+.menu__btn:active,
+.form__btn:active {
   border: 1px solid #FF974E;
   background: #F97B22;
   color: #FFF;
 }
+
+//  new
+
+
+.utensil__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.utensil__inner-left {
+  margin-left: -80px;
+  max-width: 592px;
+}
+
+
+.utensil__items {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.utensil__item {
+  display: flex;
+  gap: 33px;
+}
+.utensil__item-text {
+  max-width: 494px;
+}
+
+.join__items {
+  padding-top: 56px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ 
+}
+.join__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+text-align: center;
+max-width: 184px;
+}
+.join__item img{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.join__item-block {
+  border-radius: 100px;
+background: #F97B22;
+display: flex;
+width: 48px;
+height: 48px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 32px auto 8px;
+}
+.join__item-numer {
+  color: #FFF;
+font-size: 20px;
+font-weight: 600;
+line-height: 32px; 
+}
+.join__item-title {
+font-size: 18px;
+font-weight: 600;
+line-height: 32px; 
+}
+.join__item-text {
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+padding-top: 16px;
+}
+.job-text{
+padding-top: 24px;
+color: #060606;
+}
+.employ{
+  background: url("../images/new/bg-join.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto; 
+  min-height: 747px;
+}
+
+.employ-item{
+  padding-top: 122px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.employ-text{
+  padding: 16px 0 40px;
+}
+.employ-title{
+text-align: center;
+font-size: 56px;
+font-weight: 700;
+line-height: 80px; 
+}
+
 
 
 @import "media";
