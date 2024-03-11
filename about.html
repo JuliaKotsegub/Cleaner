@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-about">
@@ -36,14 +36,14 @@
         <nav class="menu navbar">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a class="menu__list-link a_parent" href="index.html">
+              <a data-id-nav="index" id="home-link"  class="menu__list-link a_parent" href="index.html">
                 <span class="menu__list-nav">Головна</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
 
             <li class="menu__list-item dd_menu-activ menu__list-item-down">
-              <a class="menu__list-link a_parent menu__list-first" href="#!">
+              <a class="menu__list-link a_parent menu__list-first" href="services.html" data-id-nav="services">
                 <span class="menu__list-nav">Послуги</span>
                 <span class="a_parent-arrow menu__list-drop">
                   <svg width="9" height="5" viewBox="0 0 9 5" fill="currentColor" 
@@ -132,7 +132,7 @@
             </li>
 
             <li class="menu__list-item dd_menu-activ menu__list-item-drop">
-              <a class="menu__list-link a_parent menu__list-first" href="#!">
+              <a class="menu__list-link a_parent menu__list-first" href="#!" data-id-nav="">
                 <span class="menu__list-nav" id="services-link">Послуги</span>
                 <span class="a_parent-arrow">
                   <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
@@ -206,19 +206,19 @@
             </li>
 
             <li class="menu__list-item">
-              <a class="menu__list-link" href="about.html">
+              <a class="menu__list-link" href="about.html" data-id-nav="about">
                 <span class="menu__list-nav menu__list-nav-li"> Про нас</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="blog.html">
+              <a class="menu__list-link" href="blog.html" data-id-nav="blog">
                 <span class="menu__list-nav"> Блог</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="job.html">
+              <a class="menu__list-link" href="job.html" data-id-nav="job">
                 <span class="menu__list-nav">Клінерам</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
@@ -292,14 +292,14 @@
               </div>
               <div class="job__left">
                 <p class="job__left-text">
-                  Quality Cleaning - це ваш надійний партнер у сфері прибирання та обслуговування приміщень. Ми
+                  Kova App - це ваш надійний партнер у сфері прибирання та обслуговування приміщень. Ми
                   розуміємо цінність вашого часу і готові надати послуги швидко та організовано. Наша мобільна бригада
                   завжди готова виїхати на місце і забезпечити прибирання без зайвих затримок.
                   Наша компанія дбає про якість обслуговування своєї техніки, щоб вона завжди була в готовності до
                   роботи. Ми відповідаємо за її надійність.
                   У нас немає складних та непрозорих цінових схем. Ми беремо плату тільки за той обсяг робіт і час, який
                   фактично витрачається на прибирання.
-                  Quality Cleaning - це обіцянка чистоти та порядку за доступну ціну. Обирайте нас, і ми гарантуємо, що
+                  Kova App - це обіцянка чистоти та порядку за доступну ціну. Обирайте нас, і ми гарантуємо, що
                   ваше приміщення буде сяяти чистотою і охайністю, завдяки нашій професійній та відданій команді.
                 </p>
               </div>
@@ -422,7 +422,7 @@
             </div>
             <div class="founder__inner-right">
               <h3 class="title-medium"> Степан Бойко</h3>
-              <h4 class="founder__subtitle color-orange">Founder of Quality Cleaning</h4>
+              <h4 class="founder__subtitle color-orange">Founder of Kova App</h4>
               <p class="founder__text">“Ідея заснувати цю компанію виникла з власного бажання робити різницю в сфері,
                 якою завжди цікавився - прибирання та обслуговування приміщень.
                 <br>
@@ -435,7 +435,7 @@
                 метою було створити компанію, яка відповідає всім сучасним стандартам і надає клієнтам можливість
                 насолоджуватися чистотою та порядком без зайвих витрат.
                 <br>
-                З цією метою я вклав свої знання, енергію та ресурси у створення Quality Cleaning. Наша компанія - це
+                З цією метою я вклав свої знання, енергію та ресурси у створення Kova App. Наша компанія - це
                 символ якості, надійності та відданості задачі забезпечення чистоти та порядку в усіх приміщеннях, які
                 ми обслуговуємо.”</p>
             </div>
@@ -511,7 +511,7 @@
         </div>
       <div class="container">
         <div class="footer__copyright">
-          <div class="footer__copyright-copy">© 2023 Quality Cleaning. Всі права захищено</div>
+          <div class="footer__copyright-copy">© 2023 Kova App. Всі права захищено</div>
           <div class="footer__copyright-link">
             <a class="footer__copyright-l" href="#!">Політика приватності</a>
             <a class="footer__copyright-l" href="#!">Договір публічної оферти</a>

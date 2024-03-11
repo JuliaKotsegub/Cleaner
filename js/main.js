@@ -70,11 +70,11 @@ function showTab(tabIndex) {
       if (index === tabIndex - 1) {
         pane.classList.add('active');
         // Зміна бордера при активному табі icon-tab
-        tabs[index].querySelector('.icon-tab').style.border = '2px solid #f97b22';
+        tabs[index].querySelector('.icon-tab').style.border = '2px solid #405BD8';
       } else {
         pane.classList.remove('active');
         // Зміна бордера при неактивному табі icon-tab
-        tabs[index].querySelector('.icon-tab').style.border = '2px solid #E7E8E9';
+        tabs[index].querySelector('.icon-tab').style.border = '2px solid ##405BD8';
       }
     });
 

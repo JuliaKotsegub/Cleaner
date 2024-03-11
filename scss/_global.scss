@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600&family=Poppins&family=Roboto:wght@400;500&family=Rubik:wght@400;500;600&display=swap");
-
+:root {
+  --primary-color: #405BD8;
+  --primary-light-color: #4e73e3;
+  --primary-dark-color: #3043c5;
+}
 html,
 body {
   height: 100%;
@@ -75,7 +79,7 @@ body {
 }
 
 .color-orange {
-  color: $color-orange;
+  color: var(--primary-color);
 }
 
 
@@ -100,7 +104,7 @@ body {
 .carousel-arrow:active,
 .carousel-arrow:hover {
   color: $white;
-  background-color: $color-orange;
+  background-color: var(--primary-color);
 }
 
 .footer__copyright-l:hover,
@@ -111,7 +115,7 @@ body {
 .menu__list-exit:hover,
 .menu__list-item:hover .menu__list-nav,
 nav button.active {
-  color: $color-orange;
+  color: var(--primary-color);
 }
 
 .menu__link--active .menu__list-nav,
@@ -140,7 +144,7 @@ a.button-offer:active,
 .carousel-arrow:active,
 .carousel-arrow:hover {
   color: $white;
-  background-color: $color-orange;
+  background-color: var(--primary-color);
 }
 
 a.menu__btn:hover {
@@ -165,7 +169,7 @@ input[type="submit"]:hover,
 
 input[type="submit"]:active {
   color: $white;
-  background-color: $color-orange;
+  background-color: var(--primary-color);
 }
 
 .blog-box__item:hover{

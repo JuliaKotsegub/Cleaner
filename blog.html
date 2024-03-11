@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-blog">
@@ -36,14 +36,14 @@
         <nav class="menu navbar">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a class="menu__list-link a_parent" href="index.html">
+              <a data-id-nav="index" id="home-link"  class="menu__list-link a_parent" href="index.html">
                 <span class="menu__list-nav">Головна</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
 
             <li class="menu__list-item dd_menu-activ menu__list-item-down">
-              <a class="menu__list-link a_parent menu__list-first" href="#!">
+              <a class="menu__list-link a_parent menu__list-first" href="services.html" data-id-nav="services">
                 <span class="menu__list-nav">Послуги</span>
                 <span class="a_parent-arrow menu__list-drop">
                   <svg width="9" height="5" viewBox="0 0 9 5" fill="currentColor" 
@@ -132,7 +132,7 @@
             </li>
 
             <li class="menu__list-item dd_menu-activ menu__list-item-drop">
-              <a class="menu__list-link a_parent menu__list-first" href="#!">
+              <a class="menu__list-link a_parent menu__list-first" href="#!" data-id-nav="">
                 <span class="menu__list-nav" id="services-link">Послуги</span>
                 <span class="a_parent-arrow">
                   <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
@@ -206,19 +206,19 @@
             </li>
 
             <li class="menu__list-item">
-              <a class="menu__list-link" href="about.html">
+              <a class="menu__list-link" href="about.html" data-id-nav="about">
                 <span class="menu__list-nav menu__list-nav-li"> Про нас</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="blog.html">
+              <a class="menu__list-link" href="blog.html" data-id-nav="blog">
                 <span class="menu__list-nav"> Блог</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="job.html">
+              <a class="menu__list-link" href="job.html" data-id-nav="job">
                 <span class="menu__list-nav">Клінерам</span>
                 <img class="menu__list-arrow" src="images/Home/chevron-right.png" alt="">
               </a>
@@ -269,7 +269,7 @@
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
                   <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
-                    <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
+                    <img src="images/Home/arrow_back.svg" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
@@ -286,7 +286,7 @@
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
                   <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
-                    <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
+                    <img src="images/Home/arrow_back.svg" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
@@ -303,7 +303,7 @@
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
                   <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
-                    <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
+                    <img src="images/Home/arrow_back.svg" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
@@ -320,7 +320,7 @@
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
                   <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
-                    <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
+                    <img src="images/Home/arrow_back.svg" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
@@ -337,7 +337,7 @@
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
                   <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
-                    <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
+                    <img src="images/Home/arrow_back.svg" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
@@ -354,7 +354,7 @@
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
                   <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
-                    <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
+                    <img src="images/Home/arrow_back.svg" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
@@ -371,7 +371,7 @@
                     тижня. Переконайтесь, що чистота в домі – це просто.</p>
                   <a href="article.html" class="blog-box__blocks">
                     <p class="blog-box__blocks-text color-orange">Читати повний блог</p>
-                    <img src="images/Home/arrow_back.png" alt="" class="blog-box__blocks-arrow">
+                    <img src="images/Home/arrow_back.svg" alt="" class="blog-box__blocks-arrow">
                   </a>
                 </div>
               </div>
@@ -448,7 +448,7 @@
         </div>
       <div class="container">
         <div class="footer__copyright">
-          <div class="footer__copyright-copy">© 2023 Quality Cleaning. Всі права захищено</div>
+          <div class="footer__copyright-copy">© 2023 Kova App. Всі права захищено</div>
           <div class="footer__copyright-link">
             <a class="footer__copyright-l" href="#!">Політика приватності</a>
             <a class="footer__copyright-l" href="#!">Договір публічної оферти</a>
